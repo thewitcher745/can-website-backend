@@ -2,11 +2,13 @@ import os
 import glob
 import yaml
 from flask import Flask, jsonify, abort
+from flask_cors import CORS
 from markdown import markdown
 
 BLOG_DIR = os.path.join(os.path.dirname(__file__), 'blog_posts')
 
 app = Flask(__name__)
+CORS(app)  # This enables CORS for all routes
 
 
 def parse_markdown_file(filepath):
