@@ -70,7 +70,13 @@ def get_post(slug):
 	return jsonify(post)
 
 
+@app.route('/')
+def hello():
+	return jsonify('The CAN platform backend API branches off here!')
+
+
 if __name__ == '__main__':
 	import os
-	port = int(os.environ.get("PORT", 5000))
+
+	port = int(os.environ.get('PORT', 5000))
 	app.run(debug=True, host='0.0.0.0', port=port)
