@@ -1,6 +1,7 @@
 ---
 title: "The Psychology of Trading"
 date: 2025-04-23
+time: 2025-04-30T23:58:44+03:30
 author: "John Smith"
 tags: [psychology, trading, discipline]
 ---

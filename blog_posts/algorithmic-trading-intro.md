@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Algorithmic Trading"
 date: 2025-04-24
+time: 2025-04-30T23:58:44+03:30
 author: "Jane Doe"
 tags: [algorithmic trading, automation, finance]
 ---
