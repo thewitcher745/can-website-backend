@@ -1,9 +1,10 @@
 ---
 title: "Introduction to Algorithmic Trading"
 date: 2025-04-24
-time: 2025-04-30T23:58:44+03:30
+time: 2025-05-01T00:16:47+03:30
 author: "Jane Doe"
 tags: [algorithmic trading, automation, finance]
+desc: This article introduces the basics of algorithmic trading, its benefits, and why it is popular among traders.
 ---
 
 # Introduction to Algorithmic Trading

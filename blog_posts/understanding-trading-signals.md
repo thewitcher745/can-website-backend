@@ -1,9 +1,10 @@
 ---
 title: "Understanding Trading Signals"
 date: 2025-04-20
-time: 2025-04-30T23:58:44+03:30
+time: 2025-05-01T00:17:17+03:30
 author: "Jane Doe"
 tags: [trading, signals, strategy]
+desc: This article explains what trading signals are, how they are generated, and how traders can use them to make decisions.
 ---
 
 # Understanding Trading Signals

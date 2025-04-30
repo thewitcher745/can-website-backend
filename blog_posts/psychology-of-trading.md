@@ -1,9 +1,10 @@
 ---
 title: "The Psychology of Trading"
 date: 2025-04-23
-time: 2025-04-30T23:58:44+03:30
+time: 2025-05-01T00:16:57+03:30
 author: "John Smith"
 tags: [psychology, trading, discipline]
+desc: This article explores the role of emotions in trading and offers tips to improve trading discipline and mindset.
 ---
 
 # The Psychology of Trading

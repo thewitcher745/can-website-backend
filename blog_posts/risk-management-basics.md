@@ -1,9 +1,10 @@
 ---
 title: "Risk Management Basics"
 date: 2025-04-21
-time: 2025-04-30T23:58:44+03:30
+time: 2025-05-01T00:17:07+03:30
 author: "John Smith"
 tags: [risk, management, finance]
+desc: This article covers essential risk management strategies every trader should know to protect their capital.
 ---
 
 # Risk Management Basics
