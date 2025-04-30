@@ -49,7 +49,7 @@ def list_posts():
 			'tags': meta.get('tags', []),
 		}
 		posts.append(post)
-	posts.sort(key=lambda x: x['date'], reverse=True)
+	posts.sort(key=lambda x: x['time'], reverse=True)
 	return jsonify(posts)
 
 
@@ -64,7 +64,7 @@ def get_post(slug):
 	post = {
 		'slug': slug,
 		'title': meta.get('title', slug),
-		'date': meta.get('date', ''),
+		'time': meta.get('time', ''),
 		'author': meta.get('author', ''),
 		'tags': meta.get('tags', []),
 		'content_html': html_content,
