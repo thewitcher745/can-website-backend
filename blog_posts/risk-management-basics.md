@@ -7,8 +7,6 @@ tags: [risk, management, finance]
 desc: This article covers essential risk management strategies every trader should know to protect their capital.
 ---
 
-# Risk Management Basics
-
 Risk management is a crucial aspect of successful trading. It involves identifying, assessing, and controlling threats to your capital.
 
 ![Risk management concept](https://placehold.co/600x400?text=Risk+Management)

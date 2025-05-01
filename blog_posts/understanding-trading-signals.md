@@ -7,8 +7,6 @@ tags: [trading, signals, strategy]
 desc: This article explains what trading signals are, how they are generated, and how traders can use them to make decisions.
 ---
 
-# Understanding Trading Signals
-
 Trading signals are triggers for action, either to buy or sell a security, based on a predefined set of criteria. These signals can be generated using technical analysis, fundamental analysis, or a combination of both.
 
 ![Trading chart example](https://placehold.co/600x400?text=Trading+Chart)

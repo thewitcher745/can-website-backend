@@ -7,8 +7,6 @@ tags: [psychology, trading, discipline]
 desc: This article explores the role of emotions in trading and offers tips to improve trading discipline and mindset.
 ---
 
-# The Psychology of Trading
-
 Emotions play a significant role in trading outcomes. Successful traders learn to manage fear, greed, and overconfidence.
 
 ![Trader thinking](https://placehold.co/600x400?text=Trading+Psychology)
