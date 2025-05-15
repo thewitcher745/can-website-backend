@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Algorithmic Trading"
-time: 2025-05-01T00:16:47+03:30
+title: "ETHUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
+time: 2025-05-15T12:50:15+03:30
 author: "Jane Doe"
 tags: [analysis, roadmap]
 desc: This article introduces the basics of algorithmic trading, its benefits, and why it is popular among traders.
