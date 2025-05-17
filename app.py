@@ -6,12 +6,13 @@ from flask_cors import CORS
 from markdown import markdown
 
 BLOG_DIR = os.path.join(os.path.dirname(__file__), 'blog_posts')
+ANALYSIS_DIR = os.path.join(os.path.dirname(__file__), 'analysis_posts')
 
 app = Flask(__name__)
 CORS(app)  # This enables CORS for all routes
 
 
-def parse_markdown_file(filepath):
+def parse_blog_markdown_file(filepath):
 	# Read the file content and return the metadata and markdown content
 	with open(filepath, 'r', encoding='utf-8') as f:
 		content = f.read()
@@ -39,7 +40,7 @@ def list_posts():
 	# List all blog posts
 	posts = []
 	for filepath in glob.glob(os.path.join(BLOG_DIR, '*.md')):
-		meta, _ = parse_markdown_file(filepath)
+		meta, _ = parse_blog_markdown_file(filepath)
 		slug = get_slug(filepath)
 		post = {
 			'slug': slug,
@@ -60,7 +61,7 @@ def get_post(slug):
 	filepath = os.path.join(BLOG_DIR, f'{slug}.md')
 	if not os.path.isfile(filepath):
 		abort(404)
-	meta, md_content = parse_markdown_file(filepath)
+	meta, md_content = parse_blog_markdown_file(filepath)
 	html_content = markdown(md_content)
 	post = {
 		'slug': slug,
@@ -78,6 +79,70 @@ def get_post(slug):
 def hello():
 	return jsonify('The CAN platform backend API branches off here!')
 
+
+@app.route('/api/analysis/', methods=['GET'])
+def list_analysis_posts():
+	# List all analysis posts
+	posts = []
+	for filepath in glob.glob(os.path.join(ANALYSIS_DIR, '*.md')):
+		meta, _ = parse_blog_markdown_file(filepath)
+		slug = get_slug(filepath)
+		post = {
+			'slug': slug,
+			'title': meta.get('title', slug),
+			'time': meta.get('time', ''),
+			'author': meta.get('author', ''),
+			'tags': meta.get('tags', []),
+			'desc': meta.get('desc', ''),
+		}
+		posts.append(post)
+	posts.sort(key=lambda x: x['time'], reverse=True)
+	return jsonify(posts)
+
+def parse_multi_markdown_file(filepath):
+	"""
+	Parse a markdown file with multiple YAML sections (---). Returns a list of dicts:
+	[{meta: ..., body: ...}, ...]
+	"""
+	with open(filepath, 'r', encoding='utf-8') as f:
+		content = f.read()
+	sections = content.split('---')
+	results = []
+	idx = 1 if sections[0].strip() == '' else 0
+	while idx < len(sections) - 1:
+		meta = yaml.safe_load(sections[idx]) if sections[idx].strip() else {}
+		body = sections[idx+1].strip() if idx+1 < len(sections) else ''
+		results.append({'meta': meta, 'body': body})
+		idx += 2
+	return results
+
+@app.route('/api/analysis/<slug>', methods=['GET'])
+def get_analysis_post(slug):
+	# Get a specific analysis post (main + updates)
+	filepath = os.path.join(ANALYSIS_DIR, f'{slug}.md')
+	if not os.path.isfile(filepath):
+		abort(404)
+	sections = parse_multi_markdown_file(filepath)
+	results = []
+	for i, section in enumerate(sections):
+		meta = section.get('meta', {})
+		body = section.get('body', '')
+		item = {
+			'content_html': markdown(body)
+		}
+		if i == 0:
+			item.update({
+				'slug': slug,
+				'title': meta.get('title', slug),
+				'time': meta.get('time', ''),
+				'author': meta.get('author', ''),
+				'tags': meta.get('tags', []),
+				'desc': meta.get('desc', ''),
+			})
+		else:
+			item['time'] = meta.get('time', '')
+		results.append(item)
+	return jsonify(results)
 
 if __name__ == '__main__':
 	import os
