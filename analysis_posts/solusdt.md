@@ -8,8 +8,8 @@ desc: "Fast, low-cost, and highly scalable, Solana powers a growing DeFi and NFT
 
 At current discounted prices, Solana offers a strategic long-term accumulation opportunity for spot investors. This is a coin worth hodling for those looking to capitalize on future ecosystem growth and recovery momentum. 
 
-![SOL chart](https://www.tradingview.com/x/qFn9eQHh/)
-[View full chart](https://www.tradingview.com/x/qFn9eQHh/)
+![SOL chart](https://www.tradingview.com/x/kt2HxYNT/)
+[View full chart](https://www.tradingview.com/x/kt2HxYNT/)
 
 Here are the entry details for this signal:
  

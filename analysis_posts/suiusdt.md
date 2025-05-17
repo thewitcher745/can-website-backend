@@ -8,8 +8,8 @@ desc: "This analysis depicts a possible triangle pattern forming on #SUI that CA
 
 After months of correction, this leg could be the final round of blood for #SUI as the highlighted triangle pattern could finish wave E so that we CAN see a nice pump to higher levels.
 
-![SUI chart](https://www.tradingview.com/x/TkQlvdpQ/)
-[View full chart](https://www.tradingview.com/x/TkQlvdpQ/)
+![SUI chart](https://www.tradingview.com/x/ekSTnYjN/)
+[View full chart](https://www.tradingview.com/x/ekSTnYjN/)
 
 Pay close attention to support levels, if you are planning to buy this coin.💡  
 
