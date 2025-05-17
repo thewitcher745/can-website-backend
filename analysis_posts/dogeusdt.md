@@ -3,12 +3,13 @@ title: "DOGEUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-02-05T18:36:45+03:30
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
-desc: Doge is about to reach an important support zone that CAN actually turn it into a viable coin for investment again.   
+desc: "Doge is about to reach an important support zone that CAN actually turn it into a viable coin for investment again.   "
 ---
 
 With the big sell off that we got in the crypto market, the big picture does not look so well at current prices. The best approach is to wait for safer entries as explained below. 
 
 ![DOGE chart](https://www.tradingview.com/x/udOWoYNm/)
+[View full chart](https://www.tradingview.com/x/udOWoYNm/)
 
 Do not forget to apply proper risk management. 
 

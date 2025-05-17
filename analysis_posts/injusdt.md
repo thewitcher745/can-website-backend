@@ -1,14 +1,15 @@
 ---
-title: "ARUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
+title: "INJUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-05-02T11:08:23+03:30
 author: "CAN Premium"
 tags: [analysis, roadmap]
-desc: Injective Coin delivered a formidable amount of profit on our last analysis. Let us try to break it down for one more profitable move again.
+desc: "Injective Coin delivered a formidable amount of profit on our last analysis. Let us try to break it down for one more profitable move again."
 ---
 
 Since our last update, Injective (INJ) has continued its impressive rebound, completing nearly a 70% recovery move on the weekly chart. 
 
 ![INJ chart](https://www.tradingview.com/x/CEo8GbvD/)
+[View full chart](https://www.tradingview.com/x/CEo8GbvD/)
 
 Since our last update, Injective (INJ) has continued its impressive rebound, completing nearly a 70% recovery move on the weekly chart.
 
