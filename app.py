@@ -82,22 +82,28 @@ def hello():
 
 @app.route('/api/analysis/', methods=['GET'])
 def list_analysis_posts():
-	# List all analysis posts
+	# List all analysis posts, sorted by latest update time
 	posts = []
 	for filepath in glob.glob(os.path.join(ANALYSIS_DIR, '*.md')):
-		meta, _ = parse_blog_markdown_file(filepath)
+		sections = parse_multi_markdown_file(filepath)
+		if not sections:
+			continue
+		# Use the last metadata section for the latest update
+		latest_meta = sections[-1]['meta'] if 'meta' in sections[-1] else {}
+		first_meta = sections[0]['meta'] if 'meta' in sections[0] else {}
 		slug = get_slug(filepath)
 		post = {
 			'slug': slug,
-			'title': meta.get('title', slug),
-			'time': meta.get('time', ''),
-			'author': meta.get('author', ''),
-			'tags': meta.get('tags', []),
-			'desc': meta.get('desc', ''),
+			'title': first_meta.get('title', slug),
+			'time': latest_meta.get('time', ''),  # Use latest update time
+			'author': first_meta.get('author', ''),
+			'tags': first_meta.get('tags', []),
+			'desc': first_meta.get('desc', ''),
 		}
 		posts.append(post)
 	posts.sort(key=lambda x: x['time'], reverse=True)
 	return jsonify(posts)
+
 
 def parse_multi_markdown_file(filepath):
 	"""
@@ -111,10 +117,11 @@ def parse_multi_markdown_file(filepath):
 	idx = 1 if sections[0].strip() == '' else 0
 	while idx < len(sections) - 1:
 		meta = yaml.safe_load(sections[idx]) if sections[idx].strip() else {}
-		body = sections[idx+1].strip() if idx+1 < len(sections) else ''
+		body = sections[idx + 1].strip() if idx + 1 < len(sections) else ''
 		results.append({'meta': meta, 'body': body})
 		idx += 2
 	return results
+
 
 @app.route('/api/analysis/<slug>', methods=['GET'])
 def get_analysis_post(slug):
@@ -127,22 +134,23 @@ def get_analysis_post(slug):
 	for i, section in enumerate(sections):
 		meta = section.get('meta', {})
 		body = section.get('body', '')
-		item = {
-			'content_html': markdown(body)
-		}
+		item = {'content_html': markdown(body)}
 		if i == 0:
-			item.update({
-				'slug': slug,
-				'title': meta.get('title', slug),
-				'time': meta.get('time', ''),
-				'author': meta.get('author', ''),
-				'tags': meta.get('tags', []),
-				'desc': meta.get('desc', ''),
-			})
+			item.update(
+				{
+					'slug': slug,
+					'title': meta.get('title', slug),
+					'time': meta.get('time', ''),
+					'author': meta.get('author', ''),
+					'tags': meta.get('tags', []),
+					'desc': meta.get('desc', ''),
+				}
+			)
 		else:
 			item['time'] = meta.get('time', '')
 		results.append(item)
 	return jsonify(results)
+
 
 if __name__ == '__main__':
 	import os
