@@ -45,6 +45,12 @@ def parse_datetime(time_str):
 	except (ValueError, TypeError):
 		return datetime.min
 
+def format_datetime(dt):
+	"""Format datetime object to string in ISO format"""
+	if dt == datetime.min:
+		return ''
+	return dt.isoformat()
+
 
 @app.route('/api/blog/', methods=['GET'])
 def list_posts():
@@ -106,7 +112,7 @@ def list_analysis_posts():
 		post = {
 			'slug': slug,
 			'title': first_meta.get('title', slug),
-			'time': parse_datetime(latest_meta.get('time', '')),  # Use latest update time
+			'time': format_datetime(parse_datetime(latest_meta.get('time', ''))),  # Use latest update time
 			'thumbnail_link': first_meta.get('thumbnail_link', ''),
 			'author': first_meta.get('author', ''),
 			'tags': first_meta.get('tags', []),
