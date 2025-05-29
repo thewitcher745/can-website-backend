@@ -1,6 +1,7 @@
 ---
 title: "SUIUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-04-02T11:45:30+03:30
+thumbnail_link: "/images/logos/sui.svg"
 author: "CAN Premium"
 thumbnail_link: "/images/logos/ar.svg"
 tags: [analysis, roadmap]

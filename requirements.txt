@@ -3,3 +3,4 @@ pyyaml
 markdown
 gunicorn
 flask-cors
+python-dateutil

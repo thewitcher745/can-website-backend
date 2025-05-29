@@ -1,6 +1,6 @@
 ---
 title: "INJUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
-time: 2025-05-02T11:08:23+03:30
+thumbnail_link: "/images/logos/inj.svg"
 author: "CAN Premium"
 thumbnail_link: "/images/logos/ar.svg"
 tags: [analysis, roadmap]
