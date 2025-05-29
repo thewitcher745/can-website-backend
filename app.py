@@ -46,7 +46,6 @@ def list_posts():
 			'slug': slug,
 			'title': meta.get('title', slug),
 			'time': meta.get('time', ''),
-			'thumbnail_link': meta.get('thumbnail_link', ''),
 			'author': meta.get('author', ''),
 			'tags': meta.get('tags', []),
 			'desc': meta.get('desc', ''),
