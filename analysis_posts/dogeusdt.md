@@ -2,6 +2,7 @@
 title: "DOGEUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-02-05T18:36:45+03:30
 author: "CAN Premium"
+thumbnail_link: "/images/logos/ar.svg"
 tags: [analysis, roadmap, signal]
 desc: "Doge is about to reach an important support zone that CAN actually turn it into a viable coin for investment again.   "
 ---

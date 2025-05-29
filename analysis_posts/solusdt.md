@@ -2,6 +2,7 @@
 title: "SOLUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-02-01T13:43:36+03:30
 author: "CAN Premium"
+thumbnail_link: "/images/logos/ar.svg"
 tags: [analysis, roadmap, signal]
 desc: "Fast, low-cost, and highly scalable, Solana powers a growing DeFi and NFT ecosystem with strong backing. Its speed and adoption make it a top crypto choice. It is definitely worth hodling at cheaper prices."
 ---
