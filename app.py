@@ -46,6 +46,7 @@ def list_posts():
 			'slug': slug,
 			'title': meta.get('title', slug),
 			'time': meta.get('time', ''),
+			'thumbnail_link': meta.get('thumbnail_link', ''),
 			'author': meta.get('author', ''),
 			'tags': meta.get('tags', []),
 			'desc': meta.get('desc', ''),
@@ -96,6 +97,7 @@ def list_analysis_posts():
 			'slug': slug,
 			'title': first_meta.get('title', slug),
 			'time': latest_meta.get('time', ''),  # Use latest update time
+			'thumbnail_link': first_meta.get('thumbnail_link', ''),
 			'author': first_meta.get('author', ''),
 			'tags': first_meta.get('tags', []),
 			'desc': first_meta.get('desc', ''),

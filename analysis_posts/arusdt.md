@@ -1,6 +1,7 @@
 ---
 title: "ARUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-05-03T10:03:08+03:30
+thumbnail_link: "/images/logos/ar.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 desc: "Recovery in Motion – Is AR Gearing Up for a Profitable Move?"

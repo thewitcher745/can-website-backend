@@ -1,6 +1,7 @@
 ---
 title: "ETHUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-05-15T12:50:15+03:30
+thumbnail_link: "/images/logos/eth.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 desc: "This article introduces the basics of algorithmic trading, its benefits, and why it is popular among traders."
