@@ -4,6 +4,8 @@ import yaml
 from flask import Flask, jsonify, abort
 from flask_cors import CORS
 from markdown import markdown
+from dateutil import parser
+from datetime import datetime
 
 BLOG_DIR = os.path.join(os.path.dirname(__file__), 'blog_posts')
 ANALYSIS_DIR = os.path.join(os.path.dirname(__file__), 'analysis_posts')
@@ -35,6 +37,15 @@ def get_slug(filename):
 	return os.path.splitext(os.path.basename(filename))[0]
 
 
+def parse_datetime(time_str):
+	if not time_str:
+		return datetime.min
+	try:
+		return parser.parse(time_str)
+	except (ValueError, TypeError):
+		return datetime.min
+
+
 @app.route('/api/blog/', methods=['GET'])
 def list_posts():
 	# List all blog posts
@@ -45,7 +56,7 @@ def list_posts():
 		post = {
 			'slug': slug,
 			'title': meta.get('title', slug),
-			'time': meta.get('time', ''),
+			'time': parse_datetime(meta.get('time', '')),
 			'author': meta.get('author', ''),
 			'tags': meta.get('tags', []),
 			'desc': meta.get('desc', ''),
@@ -95,7 +106,7 @@ def list_analysis_posts():
 		post = {
 			'slug': slug,
 			'title': first_meta.get('title', slug),
-			'time': latest_meta.get('time', ''),  # Use latest update time
+			'time': parse_datetime(latest_meta.get('time', '')),  # Use latest update time
 			'thumbnail_link': first_meta.get('thumbnail_link', ''),
 			'author': first_meta.get('author', ''),
 			'tags': first_meta.get('tags', []),
