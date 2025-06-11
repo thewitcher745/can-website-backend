@@ -3,7 +3,6 @@ title: "INJUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 thumbnail_link: "/images/logos/inj.svg"
 author: "CAN Premium"
 time: 2025-02-05T18:36:45+03:30
-thumbnail_link: "/images/logos/ar.svg"
 tags: [analysis, roadmap]
 desc: "Injective Coin delivered a formidable amount of profit on our last analysis. Let us try to break it down for one more profitable move again."
 ---
