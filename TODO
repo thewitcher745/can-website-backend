@@ -1,0 +1,2 @@
+- Change analysis and blog and points to omit the / at the end when fetching the lists
+- Use relative imports instead
