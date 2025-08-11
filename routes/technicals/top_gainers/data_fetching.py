@@ -38,11 +38,11 @@ class TopGainers:
 
             top_gainers.append(
                 {
-                    "coin_full_name": coin_full_name,
-                    "coin_symbol": coin_symbol,
-                    "coin_price": coin_price,
-                    "coin_change": coin_change,
-                    "coin_volume": coin_volume,
+                    "name": coin_full_name,
+                    "symbol": coin_symbol,
+                    "price": coin_price,
+                    "change": coin_change,
+                    "volume": coin_volume,
                 }
             )
 
@@ -131,4 +131,3 @@ class TopGainers:
             return row_cols[4].get_text(strip=True).replace("$", "")
         except Exception:
             return ""
-
