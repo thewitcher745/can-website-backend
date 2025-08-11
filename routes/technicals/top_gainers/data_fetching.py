@@ -29,20 +29,20 @@ class TopGainers:
 
         top_gainers = []
         for row in table_rows:
-            row_cols = TopGainers.get_row_cols(row)
-            coin_full_name = TopGainers.get_coin_full_name(row_cols)
-            coin_symbol = TopGainers.get_coin_symbol(row_cols)
-            coin_price = TopGainers.get_coin_price(row_cols)
-            coin_change = TopGainers.get_coin_change(row_cols)
-            coin_volume = TopGainers.get_coin_volume(row_cols)
+            cols = TopGainers.get_row_cols(row)
+            name = TopGainers.get_name(cols)
+            symbol = TopGainers.get_symbol(cols)
+            price = TopGainers.get_price(cols)
+            change = TopGainers.get_change(cols)
+            volume = TopGainers.get_volume(cols)
 
             top_gainers.append(
                 {
-                    "name": coin_full_name,
-                    "symbol": coin_symbol,
-                    "price": coin_price,
-                    "change": coin_change,
-                    "volume": coin_volume,
+                    "name": name,
+                    "symbol": symbol,
+                    "price": price,
+                    "change": change,
+                    "volume": volume,
                 }
             )
 
@@ -60,7 +60,7 @@ class TopGainers:
         return row.find_all("td")
 
     @staticmethod
-    def get_coin_full_name(row_cols: list) -> str:
+    def get_name(row_cols: list) -> str:
         """
         This method will extract the coin full name from a row.
         Args:
@@ -75,7 +75,7 @@ class TopGainers:
             return ""
 
     @staticmethod
-    def get_coin_symbol(row_cols: list) -> str:
+    def get_symbol(row_cols: list) -> str:
         """
         This method will extract the coin symbol from a row.
         Args:
@@ -91,7 +91,7 @@ class TopGainers:
             return ""
 
     @staticmethod
-    def get_coin_price(row_cols: list) -> str:
+    def get_price(row_cols: list) -> str:
         """
         This method will extract the coin price from a row.
         Args:
@@ -105,7 +105,7 @@ class TopGainers:
             return ""
 
     @staticmethod
-    def get_coin_change(row_cols: list) -> str:
+    def get_change(row_cols: list) -> str:
         """
         This method will extract the coin change from a row.
         Args:
@@ -119,7 +119,7 @@ class TopGainers:
             return ""
 
     @staticmethod
-    def get_coin_volume(row_cols: list) -> str:
+    def get_volume(row_cols: list) -> str:
         """
         This method will extract the coin volume from a row.
         Args:
