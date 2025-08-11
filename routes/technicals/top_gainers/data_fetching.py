@@ -45,6 +45,11 @@ class TopGainers:
                     "price": price,
                     "change": change,
                     "volume": volume,
+                    "name": name,
+                    "symbol": symbol,
+                    "price": price,
+                    "change": change,
+                    "volume": volume,
                 }
             )
 
