@@ -5,7 +5,7 @@ This is done through webscraping currently (now with BeautifulSoup).
 
 import requests
 from bs4 import BeautifulSoup
-from .urls import TOP_GAINERS
+from ..urls import TOP_GAINERS
 
 
 class TopGainers:
