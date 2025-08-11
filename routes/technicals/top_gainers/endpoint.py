@@ -14,7 +14,6 @@ def get_top_gainers():
 
     # If no cache is found, fetch data again, and set the cache.
     if not data:
-        print("Scraping data")
         data = TopGainers.scrape_data()
         cache.set("top_gainers", data, timeout=10800)
 

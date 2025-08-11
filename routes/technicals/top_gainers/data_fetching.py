@@ -29,20 +29,22 @@ class TopGainers:
 
         top_gainers = []
         for row in table_rows:
-            row_cols = TopGainers.get_row_cols(row)
-            coin_full_name = TopGainers.get_coin_full_name(row_cols)
-            coin_symbol = TopGainers.get_coin_symbol(row_cols)
-            coin_price = TopGainers.get_coin_price(row_cols)
-            coin_change = TopGainers.get_coin_change(row_cols)
-            coin_volume = TopGainers.get_coin_volume(row_cols)
+            # Find the columns of the row to extract the data from.
+            cols = TopGainers.get_row_cols(row)
+
+            name = TopGainers.get_name(cols)
+            symbol = TopGainers.get_symbol(cols)
+            price = TopGainers.get_price(cols)
+            change = TopGainers.get_change(cols)
+            volume = TopGainers.get_volume(cols)
 
             top_gainers.append(
                 {
-                    "name": coin_full_name,
-                    "symbol": coin_symbol,
-                    "price": coin_price,
-                    "change": coin_change,
-                    "volume": coin_volume,
+                    "name": name,
+                    "symbol": symbol,
+                    "price": price,
+                    "change": change,
+                    "volume": volume,
                 }
             )
 
@@ -50,84 +52,45 @@ class TopGainers:
 
     @staticmethod
     def get_row_cols(row) -> list:
-        """
-        This method will return the list of columns in a row.
-        Args:
-            row: The row to get the columns from.
-        Returns:
-            list: The list of columns in the row.
-        """
+        """This method will return the list of columns in a row."""
         return row.find_all("td")
 
     @staticmethod
-    def get_coin_full_name(row_cols: list) -> str:
-        """
-        This method will extract the coin full name from a row.
-        Args:
-            row: The row to extract the coin full name from.
-        Returns:
-            str: The coin full name.
-        """
+    def get_name(cols: list) -> str:
+        """Extract the full name of the coin."""
         try:
-            # Adjust selector if the structure changes
-            return row_cols[1].select_one("a.cmc-link div div p").get_text(strip=True)
+            return cols[1].select_one("a.cmc-link div div p").get_text(strip=True)
         except Exception:
             return ""
 
     @staticmethod
-    def get_coin_symbol(row_cols: list) -> str:
-        """
-        This method will extract the coin symbol from a row.
-        Args:
-            row: The row to extract the coin symbol from.
-        Returns:
-            str: The coin symbol.
-        """
+    def get_symbol(cols: list) -> str:
+        """Extract the symbol of the coin."""
         try:
-            return (
-                row_cols[1].select_one("a.cmc-link div div div p").get_text(strip=True)
-            )
+            return cols[1].select_one("a.cmc-link div div div p").get_text(strip=True)
         except Exception:
             return ""
 
     @staticmethod
-    def get_coin_price(row_cols: list) -> str:
-        """
-        This method will extract the coin price from a row.
-        Args:
-            row: The row to extract the coin price from.
-        Returns:
-            str: The coin price.
-        """
+    def get_price(cols: list) -> str:
+        """Extract the price of the coin."""
         try:
-            return row_cols[2].find("span").get_text(strip=True).replace("$", "")
+            return cols[2].find("span").get_text(strip=True).replace("$", "")
         except Exception:
             return ""
 
     @staticmethod
-    def get_coin_change(row_cols: list) -> str:
-        """
-        This method will extract the coin change from a row.
-        Args:
-            row: The row to extract the coin change from.
-        Returns:
-            str: The coin change.
-        """
+    def get_change(cols: list) -> str:
+        """Extract the change of the coin."""
         try:
-            return row_cols[3].find("span").get_text(strip=True)
+            return cols[3].find("span").get_text(strip=True)
         except Exception:
             return ""
 
     @staticmethod
-    def get_coin_volume(row_cols: list) -> str:
-        """
-        This method will extract the coin volume from a row.
-        Args:
-            row: The row to extract the coin volume from.
-        Returns:
-            str: The coin volume.
-        """
+    def get_volume(cols: list) -> str:
+        """Extract the volume of the coin."""
         try:
-            return row_cols[4].get_text(strip=True).replace("$", "")
+            return cols[4].get_text(strip=True).replace("$", "")
         except Exception:
             return ""
