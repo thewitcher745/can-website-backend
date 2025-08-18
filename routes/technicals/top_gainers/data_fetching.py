@@ -45,11 +45,6 @@ class TopGainers:
                     "price": price,
                     "change": change,
                     "volume": volume,
-                    "name": name,
-                    "symbol": symbol,
-                    "price": price,
-                    "change": change,
-                    "volume": volume,
                 }
             )
 
@@ -80,7 +75,7 @@ class TopGainers:
     def get_price(cols: list) -> str:
         """Extract the price of the coin."""
         try:
-            return cols[2].find("span").get_text(strip=True).replace("$", "")
+            return float(cols[2].find("span").get_text(strip=True).replace("$", "").replace(",", ""))
         except Exception:
             return ""
 
@@ -88,7 +83,7 @@ class TopGainers:
     def get_change(cols: list) -> str:
         """Extract the change of the coin."""
         try:
-            return cols[3].find("span").get_text(strip=True)
+            return float(cols[3].find("span").get_text(strip=True).replace("%", ""))
         except Exception:
             return ""
 
@@ -96,6 +91,6 @@ class TopGainers:
     def get_volume(cols: list) -> str:
         """Extract the volume of the coin."""
         try:
-            return cols[4].get_text(strip=True).replace("$", "")
+            return int(cols[4].get_text(strip=True).replace("$", "").replace(",", ""))
         except Exception:
             return ""

@@ -79,7 +79,9 @@ class TrendingCoins:
     def get_price(cols):
         """Extract the price of the coin."""
         try:
-            return cols[3].get_text(strip=True).replace("$", "")
+            return float(
+                cols[3].get_text(strip=True).replace("$", "").replace(",", "")
+            )
         except Exception:
             return ""
 
@@ -138,7 +140,7 @@ class TrendingCoins:
     def get_market_cap(cols):
         """Extract the market cap of the coin."""
         try:
-            return cols[7].get_text(strip=True).replace("$", "")
+            return int(cols[7].get_text(strip=True).replace("$", "").replace(",", ""))
         except Exception:
             return ""
 
@@ -146,6 +148,6 @@ class TrendingCoins:
     def get_volume_24h(cols):
         """Extract the 24h volume of the coin."""
         try:
-            return cols[8].get_text(strip=True).replace("$", "")
+            return int(cols[8].get_text(strip=True).replace("$", "").replace(",", ""))
         except Exception:
             return ""
