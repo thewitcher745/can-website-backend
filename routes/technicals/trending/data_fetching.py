@@ -85,9 +85,20 @@ class TrendingCoins:
 
     @staticmethod
     def get_change_24h(cols):
-        """Extract the 24h price change percentage of the coin."""
+        """
+        Extract the 24h price change percentage of the coin. Gets the sign of
+        the change from a classname of the 'caret' icon elemet.
+        """
         try:
-            return cols[4].find("span").get_text(strip=True)
+            caret_element = cols[4].find("span").find("span")
+            # If the element has a class of "icon-Caret-down", the sign is negative.
+            if "icon-Caret-down" in caret_element.get("class"):
+                return -float(
+                    cols[4].find("span").get_text(strip=True).replace("%", "")
+                )
+            # If the element has a class of "icon-Caret-up", the sign is positive.
+            else:
+                return float(cols[4].find("span").get_text(strip=True).replace("%", ""))
         except Exception:
             return ""
 
@@ -95,7 +106,15 @@ class TrendingCoins:
     def get_change_7d(cols):
         """Extract the 7d price change percentage of the coin."""
         try:
-            return cols[5].find("span").get_text(strip=True)
+            caret_element = cols[5].find("span").find("span")
+            # If the element has a class of "icon-Caret-down", the sign is negative.
+            if "icon-Caret-down" in caret_element.get("class"):
+                return -float(
+                    cols[5].find("span").get_text(strip=True).replace("%", "")
+                )
+            # If the element has a class of "icon-Caret-up", the sign is positive.
+            else:
+                return float(cols[5].find("span").get_text(strip=True).replace("%", ""))
         except Exception:
             return ""
 
@@ -103,7 +122,15 @@ class TrendingCoins:
     def get_change_30d(cols):
         """Extract the 30d price change percentage of the coin."""
         try:
-            return cols[6].find("span").get_text(strip=True)
+            caret_element = cols[6].find("span").find("span")
+            # If the element has a class of "icon-Caret-down", the sign is negative.
+            if "icon-Caret-down" in caret_element.get("class"):
+                return -float(
+                    cols[6].find("span").get_text(strip=True).replace("%", "")
+                )
+            # If the element has a class of "icon-Caret-up", the sign is positive.
+            else:
+                return float(cols[6].find("span").get_text(strip=True).replace("%", ""))
         except Exception:
             return ""
 
