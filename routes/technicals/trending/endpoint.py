@@ -13,7 +13,7 @@ def get_trending():
     """
     Endpoint to get the list of trending cryptocurrencies.
     Uses caching to avoid frequent scraping.
-    
+
     Returns:
         JSON response containing the list of trending coins.
     """
@@ -22,6 +22,6 @@ def get_trending():
     # If no cache is found, fetch data and set the cache.
     if not data:
         data = TrendingCoins.scrape_data()
-        cache.set("trending_coins", data, timeout=10800)  # Cache for 3 hours
+        cache.set("trending_coins", data, timeout=120)  # Cache for 3 hours
 
     return jsonify(data)

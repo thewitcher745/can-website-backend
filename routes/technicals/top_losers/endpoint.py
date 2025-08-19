@@ -15,6 +15,6 @@ def get_top_losers():
     # If no cache is found, fetch data again, and set the cache.
     if not data:
         data = TopLosers.scrape_data()
-        cache.set("top_losers", data, timeout=10800)
+        cache.set("top_losers", data, timeout=120)
 
     return jsonify(data)
