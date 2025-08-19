@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from ..urls import TOP_GAINERS_LOSERS
 
 
-class TopGainers:
+class TopLosers:
     @staticmethod
     def scrape_data() -> list[dict]:
         """
@@ -22,23 +22,23 @@ class TopGainers:
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        table = soup.select_one(".cmc-table tbody")
+        table = soup.select(".cmc-table")[1].find("tbody")
         if not table:
             return []
         table_rows = table.find_all("tr")
 
-        top_gainers = []
+        top_losers = []
         for row in table_rows:
             # Find the columns of the row to extract the data from.
-            cols = TopGainers.get_row_cols(row)
+            cols = TopLosers.get_row_cols(row)
 
-            name = TopGainers.get_name(cols)
-            symbol = TopGainers.get_symbol(cols)
-            price = TopGainers.get_price(cols)
-            change = TopGainers.get_change(cols)
-            volume = TopGainers.get_volume(cols)
+            name = TopLosers.get_name(cols)
+            symbol = TopLosers.get_symbol(cols)
+            price = TopLosers.get_price(cols)
+            change = TopLosers.get_change(cols)
+            volume = TopLosers.get_volume(cols)
 
-            top_gainers.append(
+            top_losers.append(
                 {
                     "name": name,
                     "symbol": symbol,
@@ -48,7 +48,7 @@ class TopGainers:
                 }
             )
 
-        return top_gainers
+        return top_losers
 
     @staticmethod
     def get_row_cols(row) -> list:
