@@ -1,9 +1,8 @@
 """
-This file contains the code related to fetching the data for the top gainers chart/table.
+This file contains the code related to fetching the data for the crypto heatmap chart.
 This is done through webscraping currently (now with BeautifulSoup).
 """
 
-from tkinter import E
 import requests
 from bs4 import BeautifulSoup
 
@@ -12,13 +11,12 @@ from ..urls import HEATMAP
 
 class CryptoHeatmap:
     @staticmethod
-    def scrape_data() -> list[dict]:
+    def scrape_data():
         """
-        This method will fetch the list of trending cryptocurrencies through webscraping and return
-        it in a dict format.
+        This method will fetch the crypto heatmap chart through webscraping.
 
         Returns:
-            list[dict]: The list of trending coins with the related information.
+            The crypto heatmap chart element as raw HTML.
         """
         response = requests.get(HEATMAP)
         response.raise_for_status()

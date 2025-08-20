@@ -79,9 +79,7 @@ class TrendingCoins:
     def get_price(cols):
         """Extract the price of the coin."""
         try:
-            return float(
-                cols[3].get_text(strip=True).replace("$", "").replace(",", "")
-            )
+            return float(cols[3].get_text(strip=True).replace("$", "").replace(",", ""))
         except Exception:
             return ""
 

@@ -1,5 +1,5 @@
 """
-This module will contain the endpoint handlers for the top_gainers table.
+This module will contain the endpoint handlers for the top_losers table.
 """
 
 from flask import jsonify
