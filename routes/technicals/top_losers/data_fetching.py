@@ -1,5 +1,5 @@
 """
-This file contains the code related to fetching the data for the top gainers chart/table.
+This file contains the code related to fetching the data for the top losers chart/table.
 This is done through webscraping currently (now with BeautifulSoup).
 """
 
@@ -12,11 +12,11 @@ class TopLosers:
     @staticmethod
     def scrape_data() -> list[dict]:
         """
-        This method will fetch the list of top gainers through webscraping and return
+        This method will fetch the list of top losers through webscraping and return
         it in a dict format.
 
         Returns:
-            list[dict]: The list of top gainers with the related information.
+            list[dict]: The list of top losers with the related information.
         """
         response = requests.get(TOP_GAINERS_LOSERS)
         response.raise_for_status()
