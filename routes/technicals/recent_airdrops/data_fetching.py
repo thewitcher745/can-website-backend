@@ -19,7 +19,14 @@ class RecentAirdrops:
         Returns:
             list[dict]: The list of recent airdrops with the related information.
         """
-        response = requests.get(RECENT_AIRDROPS)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Referer": "https://airdrops.io/",
+            "Connection": "keep-alive",
+        }
+        response = requests.get(RECENT_AIRDROPS, headers=headers)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
