@@ -14,7 +14,7 @@ def get_heatmap():
 
     # If no cache is found, fetch data again, and set the cache.
     if not data:
-        data = CryptoHeatmap.scrape_data()
-        cache.set("heatmap", data, timeout=10800)
+        data = CryptoHeatmap.fetch_data()
+        cache.set("heatmap", data, timeout=120)
 
     return jsonify(data)

@@ -1,123 +1,55 @@
 """
 This file contains the code related to fetching the data for the crypto heatmap chart.
-This is done through webscraping currently (now with BeautifulSoup).
+This is done through a REST API.
 """
 
 import requests
-from bs4 import BeautifulSoup
-
 from ..urls import HEATMAP
 
 
 class CryptoHeatmap:
     @staticmethod
-    def scrape_data():
+    def fetch_data():
         """
-        This method will fetch the crypto heatmap chart through webscraping.
+        Fetches crypto heatmap data from the HEATMAP API endpoint using a regular GET request.
 
         Returns:
-            The crypto heatmap chart element as raw HTML.
+            A list of dictionaries, each representing a cryptocurrency and its market data as per the expected JSON structure.
+
+        Raises:
+            requests.HTTPError: If the request fails.
+            ValueError: If the response is not valid JSON or is not a list.
         """
-        response = requests.get(HEATMAP)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Connection": "keep-alive",
+        }
+        response = requests.get(HEATMAP, headers=headers)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
 
-        table = soup.select_one(".cmc-table tbody")
-        if not table:
-            return []
-        table_rows = table.find_all("tr")
+        data = response.json()
 
-        crypto_heatmap = []
-        for row in table_rows:
-            row_cols = CryptoHeatmap.get_row_cols(row)
+        if not isinstance(data, list):
+            raise ValueError(
+                "Expected a list of cryptocurrencies in the JSON response."
+            )
 
-            name = CryptoHeatmap.get_name(row_cols)
-            symbol = CryptoHeatmap.get_symbol(row_cols)
-            price = CryptoHeatmap.get_price(row_cols)
-            change_24h = CryptoHeatmap.get_change_24h(row_cols)
-            market_cap = CryptoHeatmap.get_market_cap(row_cols)
-            volume_24h = CryptoHeatmap.get_volume_24h(row_cols)
-
-            crypto_heatmap.append(
+        # Keep only the parts of the data that we need.
+        filtered = []
+        for coin in data:
+            filtered.append(
                 {
-                    "name": name,
-                    "symbol": symbol,
-                    "price": price,
-                    "change_24h": change_24h,
-                    "market_cap": market_cap,
-                    "volume_24h": volume_24h,
+                    "name": coin.get("name"),
+                    "symbol": coin.get("symbol").upper(),
+                    "market_cap": int(coin.get("market_cap")),
+                    "total_volume": float(coin.get("total_volume")),
+                    "current_price": float(coin.get("current_price")),
+                    "price_change_percentage_24h": float(
+                        coin.get("price_change_percentage_24h")
+                    ),
                 }
             )
 
-        return crypto_heatmap
-
-    @staticmethod
-    def get_row_cols(row):
-        """Extract all columns from a table row."""
-        return row.find_all("td")
-
-    @staticmethod
-    def get_name(cols):
-        """Extract the full name of the coin."""
-        try:
-            return cols[2].select_one(".coin-item-name").get_text(strip=True)
-        except Exception:
-            return ""
-
-    @staticmethod
-    def get_symbol(cols):
-        """Extract the symbol of the coin."""
-        try:
-            return cols[2].select_one(".coin-item-symbol").get_text(strip=True)
-        except Exception:
-            return ""
-
-    @staticmethod
-    def get_price(cols):
-        """Extract the price of the coin."""
-        try:
-            return float(cols[3].get_text(strip=True).replace("$", "").replace(",", ""))
-        except Exception:
-            return ""
-
-    @staticmethod
-    def get_change_24h(cols):
-        """
-        Extract the 24h price change percentage of the coin. Gets the sign of
-        the change from a classname of the 'caret' icon elemet.
-        """
-        try:
-            caret_element = cols[4].find("span").find("span")
-            # If the element has a class of "icon-Caret-down", the sign is negative.
-            if "icon-Caret-down" in caret_element.get("class"):
-                return -float(
-                    cols[5].find("span").get_text(strip=True).replace("%", "")
-                )
-            # If the element has a class of "icon-Caret-up", the sign is positive.
-            else:
-                return float(cols[5].find("span").get_text(strip=True).replace("%", ""))
-        except Exception:
-            return ""
-
-    @staticmethod
-    def get_market_cap(cols):
-        """Extract the market cap of the coin."""
-        try:
-            return (
-                cols[7]
-                .find("p")
-                .find_all("span")[-1]
-                .get_text(strip=True)
-                .replace("$", "")
-                .replace(",", "")
-            )
-        except Exception:
-            return ""
-
-    @staticmethod
-    def get_volume_24h(cols):
-        """Extract the 24h volume of the coin."""
-        try:
-            return int(cols[8].get_text(strip=True).replace("$", "").replace(",", ""))
-        except Exception:
-            return ""
+        return filtered
