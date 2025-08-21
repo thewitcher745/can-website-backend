@@ -15,6 +15,6 @@ def get_recent_airdrops():
     # If no cache is found, fetch data again, and set the cache.
     if not data:
         data = RecentAirdrops.scrape_data()
-        cache.set("recent_airdrops", data, timeout=120)
+        cache.set("recent_airdrops", data, timeout=3600)
 
     return jsonify(data)
