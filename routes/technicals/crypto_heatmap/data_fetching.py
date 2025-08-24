@@ -29,8 +29,8 @@ class CryptoHeatmap:
         response = requests.get(HEATMAP, headers=headers)
         response.raise_for_status()
 
-        data = response.json()
-
+        data = response.json().get("Data").get("LIST")
+        
         if not isinstance(data, list):
             raise ValueError(
                 "Expected a list of cryptocurrencies in the JSON response."
@@ -41,13 +41,15 @@ class CryptoHeatmap:
         for coin in data:
             filtered.append(
                 {
-                    "name": coin.get("name"),
-                    "symbol": coin.get("symbol").upper(),
-                    "market_cap": int(coin.get("market_cap")),
-                    "total_volume": float(coin.get("total_volume")),
-                    "current_price": float(coin.get("current_price")),
+                    "name": coin.get("NAME"),
+                    "symbol": coin.get("SYMBOL").upper(),
+                    "market_cap": int(coin.get("TOTAL_MKT_CAP_USD")),
+                    "total_volume": float(
+                        coin.get("SPOT_MOVING_24_HOUR_QUOTE_VOLUME_DIRECT_USD")
+                    ),
+                    "current_price": float(coin.get("PRICE_USD")),
                     "price_change_percentage_24h": float(
-                        coin.get("price_change_percentage_24h")
+                        coin.get("SPOT_MOVING_24_HOUR_CHANGE_PERCENTAGE_USD")
                     ),
                 }
             )
