@@ -58,8 +58,6 @@ class CryptoHeatmap:
                     "market_cap": int(coin.get("TOTAL_MKT_CAP_USD")),
                     "total_volume": float(price_format % volume),
                     "current_price": float(price_format % price),
-                    "total_volume": float(price_format % volume),
-                    "current_price": float(price_format % price),
                     "price_change_percentage_24h": float(
                         coin.get("SPOT_MOVING_24_HOUR_CHANGE_PERCENTAGE_USD")
                     ),
