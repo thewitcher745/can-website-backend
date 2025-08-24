@@ -39,15 +39,25 @@ class CryptoHeatmap:
         # Keep only the parts of the data that we need.
         filtered = []
         for coin in data:
+            price = float(coin.get("PRICE_USD"))
+            volume = float(coin.get("SPOT_MOVING_24_HOUR_QUOTE_VOLUME_DIRECT_USD"))
+
+            if price >= 5:
+                decimal_points = 4
+            elif price >= 1:
+                decimal_points = 3
+            else:
+                decimal_points = 4
+
+            price_format = f"%.{decimal_points}f"
+            
             filtered.append(
                 {
                     "name": coin.get("NAME"),
                     "symbol": coin.get("SYMBOL").upper(),
                     "market_cap": int(coin.get("TOTAL_MKT_CAP_USD")),
-                    "total_volume": float(
-                        coin.get("SPOT_MOVING_24_HOUR_QUOTE_VOLUME_DIRECT_USD")
-                    ),
-                    "current_price": float(coin.get("PRICE_USD")),
+                    "total_volume": float(price_format % volume),
+                    "current_price": float(price_format % price),
                     "price_change_percentage_24h": float(
                         coin.get("SPOT_MOVING_24_HOUR_CHANGE_PERCENTAGE_USD")
                     ),
