@@ -2,7 +2,6 @@
 This file contains the endpoints for the analysis section-related stuff.
 """
 
-
 import yaml
 from os import path, getcwd
 import glob
@@ -12,7 +11,7 @@ from markdown import markdown
 from app_prepare import app
 from utils import get_slug
 
-ANALYSIS_DIR = path.join(getcwd(), "analysis_posts")
+ANALYSIS_DIR = path.join(getcwd(), "static/analysis_posts")
 
 
 @app.route("/api/analysis/", methods=["GET"])

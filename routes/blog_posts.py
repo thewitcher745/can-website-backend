@@ -11,7 +11,7 @@ from markdown import markdown
 from app_prepare import app
 from utils import get_slug
 
-BLOG_DIR = path.join(getcwd(), "blog_posts")
+BLOG_DIR = path.join(getcwd(), "static/blog_posts")
 
 
 def parse_blog_markdown_file(filepath):
