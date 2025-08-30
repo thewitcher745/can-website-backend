@@ -1,0 +1,1 @@
+from .endpoint import get_logo_link
