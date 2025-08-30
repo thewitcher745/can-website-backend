@@ -2,4 +2,6 @@ venv/
 __pycache__/
 */__pycache__/
 *.pyc
-test.py
+**/logo_links.txt
+**/process_logo_links.py
+**/logo_texts.txt
