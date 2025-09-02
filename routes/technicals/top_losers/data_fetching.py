@@ -89,7 +89,7 @@ class TopLosers:
     def get_change(cols: list) -> str:
         """Extract the change of the coin."""
         try:
-            return float(cols[3].find("span").get_text(strip=True).replace("%", ""))
+            return -float(cols[3].find("span").get_text(strip=True).replace("%", ""))
         except Exception:
             return ""
 
