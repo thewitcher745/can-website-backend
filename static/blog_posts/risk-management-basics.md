@@ -1,6 +1,5 @@
 ---
 title: "Risk Management Basics"
-date: 2025-04-21
 time: 2025-05-01T00:17:07+03:30
 author: "John Smith"
 tags: [risk, management, finance]

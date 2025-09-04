@@ -1,6 +1,5 @@
 ---
 title: "Using Technical Indicators for Trading"
-date: 2025-04-22
 time: 2025-05-01T00:17:27+03:30
 author: "Jane Doe"
 tags: [technical analysis, indicators, trading]

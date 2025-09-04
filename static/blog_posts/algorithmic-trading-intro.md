@@ -1,4 +1,3 @@
-
 ---
 title: "Glassnode: Ethereum’s Price Is More Influenced by the Derivatives Market"
 time: 2025-09-03T17:10:00+03:30

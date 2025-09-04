@@ -1,6 +1,5 @@
 ---
 title: "Understanding Trading Signals"
-date: 2025-04-20
 time: 2025-05-01T00:17:17+03:30
 author: "Jane Doe"
 tags: [trading, signals, strategy]
