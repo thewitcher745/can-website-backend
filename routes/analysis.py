@@ -11,7 +11,7 @@ from markdown import markdown
 from app_prepare import app
 from utils import get_slug
 
-ANALYSIS_DIR = path.join(getcwd(), "static/analysis_posts")
+ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis")
 
 
 @app.route("/api/analysis", methods=["GET"])
