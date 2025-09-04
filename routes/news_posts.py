@@ -1,0 +1,78 @@
+"""
+This file contains the endpoints for the news section.
+"""
+
+import yaml
+from os import path, getcwd
+import glob
+from flask import abort, jsonify
+from markdown import markdown
+
+from app_prepare import app
+from utils import get_slug
+
+NEWS_DIR = path.join(getcwd(), "static/news")
+
+def parse_news_markdown_file(filepath):
+    # Read the file content and return the metadata and markdown content
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) >= 3:
+            meta = yaml.safe_load(parts[1])
+            md_content = parts[2].strip()
+        else:
+            meta = {}
+            md_content = content
+    else:
+        meta = {}
+        md_content = content
+
+    return meta, md_content
+
+@app.route("/api/news", methods=["GET"])
+def list_news_articles():
+    # List all news articles
+    articles = []
+
+    for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
+        meta, _ = parse_news_markdown_file(filepath)
+        slug = get_slug(filepath)
+        article = {
+            "slug": slug,
+            "title": meta.get("title", slug),
+            "time": meta.get("time", ""),
+            "author": meta.get("author", ""),
+            "tags": meta.get("tags", []),
+            "desc": meta.get("desc", ""),
+        }
+        articles.append(article)
+
+    # Sort by time, newest first
+    articles.sort(key=lambda x: x["time"], reverse=True)
+
+    return jsonify(articles)
+
+@app.route("/api/news/<slug>", methods=["GET"])
+def get_news_article(slug):
+    # Get a specific news article
+    filepath = path.join(NEWS_DIR, f"{slug}.md")
+
+    if not path.isfile(filepath):
+        abort(404)
+
+    meta, md_content = parse_news_markdown_file(filepath)
+    html_content = markdown(md_content)
+    article = {
+        "slug": slug,
+        "title": meta.get("title", slug),
+        "time": meta.get("time", ""),
+        "author": meta.get("author", ""),
+        "tags": meta.get("tags", []),
+        "desc": meta.get("desc", ""),
+        "content_html": html_content,
+    }
+
+    return jsonify(article)
