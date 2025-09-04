@@ -2,7 +2,8 @@
 This module contains the handlers for all endpoints.
 """
 
-import routes.analysis
+import routes.technical_analysis
+import routes.fundamental_analysis
 import routes.blog
 import routes.news
 import routes.general
