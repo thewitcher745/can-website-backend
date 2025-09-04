@@ -14,7 +14,7 @@ from utils import get_slug
 ANALYSIS_DIR = path.join(getcwd(), "static/analysis_posts")
 
 
-@app.route("/api/analysis/", methods=["GET"])
+@app.route("/api/analysis", methods=["GET"])
 def list_analysis_posts():
     # List all analysis posts, sorted by latest update time
     posts = []
