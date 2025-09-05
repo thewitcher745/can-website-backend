@@ -79,3 +79,25 @@ def get_news_article(slug):
     }
 
     return jsonify(article)
+
+@app.route("/api/recent_news", methods=["GET"])
+def get_top_news():
+    # Get the top 5 headlines
+    articles = []
+
+    for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
+        meta, _ = parse_news_markdown_file(filepath)
+        slug = get_slug(filepath)
+        article = {
+            "slug": slug,
+            "title": meta.get("title", slug),
+            "time": meta.get("time", ""),
+        }
+        articles.append(article)
+
+    # Sort by time, newest first
+    articles.sort(key=lambda x: x["time"], reverse=True)
+
+    articles = articles[:5]
+
+    return jsonify(articles)

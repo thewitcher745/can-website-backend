@@ -79,3 +79,25 @@ def get_fundamental_analysis_article(slug):
     }
 
     return jsonify(article)
+
+@app.route("/api/recent_fundamental", methods=["GET"])
+def get_top_fundamental():
+    # Get the top 5 fundamental analysis articles
+    articles = []
+
+    for filepath in glob.glob(path.join(FUNDAMENTAL_ANALYSIS_DIR, "*.md")):
+        meta, _ = parse_fundamental_analysis_markdown_file(filepath)
+        slug = get_slug(filepath)
+        article = {
+            "slug": slug,
+            "title": meta.get("title", slug),
+            "time": meta.get("time", ""),
+        }
+        articles.append(article)
+
+    # Sort by time, newest first
+    articles.sort(key=lambda x: x["time"], reverse=True)
+
+    articles = articles[:5]
+
+    return jsonify(articles)
