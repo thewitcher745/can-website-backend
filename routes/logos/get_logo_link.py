@@ -1,7 +1,7 @@
 from json import load
 from os import path
 
-LOGOS_DIR = "./static/"
+LOGOS_DIR = "./static/cmc-cache"
 
 # Load the JSON data once when the module is imported
 with open(path.join(LOGOS_DIR, "logo_links.json")) as f:
