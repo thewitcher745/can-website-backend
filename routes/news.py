@@ -50,7 +50,9 @@ def list_news_articles():
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),
             "desc": meta.get("desc", ""),
-            "thumbnail": meta.get("thumbnail", get_random_thumbnail()),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
+            # The seed being provided from the slug in the entire news listing items AND the recent news items causes the same post in both
+            # lists to have the same thumbnail
         }
         articles.append(article)
 
@@ -95,6 +97,7 @@ def get_top_news():
             "slug": slug,
             "title": meta.get("title", slug),
             "time": meta.get("time", ""),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }
         articles.append(article)
 

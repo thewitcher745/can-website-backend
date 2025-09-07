@@ -49,7 +49,7 @@ def list_fundamental_analysis_articles():
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),
             "desc": meta.get("desc", ""),
-            "thumbnail": meta.get("thumbnail", get_random_thumbnail()),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }
         articles.append(article)
 
@@ -94,6 +94,7 @@ def get_top_fundamental():
             "slug": slug,
             "title": meta.get("title", slug),
             "time": meta.get("time", ""),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }
         articles.append(article)
 
