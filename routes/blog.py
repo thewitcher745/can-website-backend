@@ -9,7 +9,7 @@ from flask import abort, jsonify
 from markdown import markdown
 
 from app_prepare import app
-from utils import get_slug
+from utils import get_slug, get_random_thumbnail
 
 BLOG_DIR = path.join(getcwd(), "static/blog")
 
@@ -49,7 +49,7 @@ def list_blog_posts():
             "slug": slug,
             "title": meta.get("title", slug),
             "time": meta.get("time", ""),
-            "thumbnail_link": meta.get("thumbnail_link", ""),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail()),
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),
             "desc": meta.get("desc", ""),

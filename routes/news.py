@@ -9,7 +9,8 @@ from flask import abort, jsonify
 from markdown import markdown
 
 from app_prepare import app
-from utils import get_slug
+from utils import get_slug, get_random_thumbnail
+
 
 NEWS_DIR = path.join(getcwd(), "static/news")
 
@@ -49,6 +50,7 @@ def list_news_articles():
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),
             "desc": meta.get("desc", ""),
+            "thumbnail": meta.get("thumbnail", get_random_thumbnail()),
         }
         articles.append(article)
 
@@ -79,6 +81,7 @@ def get_news_article(slug):
     }
 
     return jsonify(article)
+
 
 @app.route("/api/recent_news", methods=["GET"])
 def get_top_news():
