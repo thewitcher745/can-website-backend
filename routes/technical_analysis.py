@@ -34,6 +34,7 @@ def list_analysis_posts():
             "thumbnail_link": first_meta.get("thumbnail_link", ""),
             "author": first_meta.get("author", ""),
             "tags": first_meta.get("tags", []),
+            "coins": first_meta.get("coins", []),
             "desc": first_meta.get("desc", ""),
         }
 

@@ -4,6 +4,7 @@ thumbnail_link: "/images/logos/inj.svg"
 author: "CAN Premium"
 time: 2025-02-05T18:36:45+03:30
 tags: [analysis, roadmap]
+coins: [inj]
 desc: "Injective Coin delivered a formidable amount of profit on our last analysis. Let us try to break it down for one more profitable move again."
 ---
 

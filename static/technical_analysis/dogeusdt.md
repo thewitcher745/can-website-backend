@@ -4,6 +4,7 @@ time: 2025-02-05T18:36:45+03:30
 thumbnail_link: "/images/logos/doge.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
+coins: [doge]
 desc: "Doge is about to reach an important support zone that CAN actually turn it into a viable coin for investment again.   "
 ---
 

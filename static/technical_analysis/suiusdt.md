@@ -4,6 +4,7 @@ time: 2025-04-02T11:45:30+03:30
 thumbnail_link: "/images/logos/sui.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap]
+coins: [sui]
 desc: "This analysis depicts a possible triangle pattern forming on #SUI that CAN actually lead to higher target prices."
 ---
 

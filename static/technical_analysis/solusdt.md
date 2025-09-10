@@ -4,6 +4,7 @@ time: 2025-02-01T13:43:36+03:30
 thumbnail_link: "/images/logos/sol.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
+coins: [sol]
 desc: "Fast, low-cost, and highly scalable, Solana powers a growing DeFi and NFT ecosystem with strong backing. Its speed and adoption make it a top crypto choice. It is definitely worth hodling at cheaper prices."
 ---
 
