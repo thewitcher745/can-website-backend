@@ -1,7 +1,7 @@
 ---
 title: "DOGEUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-02-05T18:36:45+03:30
-thumbnail_link: "/images/logos/doge.svg"
+thumbnail: "/images/logos/doge.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
 coins: [doge]

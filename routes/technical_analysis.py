@@ -31,7 +31,7 @@ def list_analysis_posts():
             "slug": slug,
             "title": first_meta.get("title", slug),
             "time": latest_meta.get("time", ""),  # Use latest update time
-            "thumbnail_link": first_meta.get("thumbnail_link", ""),
+            "thumbnail": first_meta.get("thumbnail", ""),
             "author": first_meta.get("author", ""),
             "tags": first_meta.get("tags", []),
             "coins": first_meta.get("coins", []),

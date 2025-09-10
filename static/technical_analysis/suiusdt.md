@@ -1,7 +1,7 @@
 ---
 title: "SUIUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-04-02T11:45:30+03:30
-thumbnail_link: "/images/logos/sui.svg"
+thumbnail: "/images/logos/sui.svg"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [sui]
