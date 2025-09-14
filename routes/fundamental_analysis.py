@@ -94,6 +94,7 @@ def get_top_fundamental():
             "slug": slug,
             "title": meta.get("title", slug),
             "time": meta.get("time", ""),
+            "desc": meta.get("desc", ""),
             "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }
         articles.append(article)
