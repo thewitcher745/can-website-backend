@@ -2,6 +2,7 @@
 title: "SOLUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-02-01T13:43:36+03:30
 thumbnail: "/images/logos/sol.svg"
+image: "https://www.tradingview.com/x/kt2HxYNT/"
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
 coins: [sol]

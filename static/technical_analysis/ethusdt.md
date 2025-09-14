@@ -2,6 +2,7 @@
 title: "ETHUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-05-15T12:50:15+03:30
 thumbnail: "/images/logos/eth.svg"
+image: "https://www.tradingview.com/x/Jzi6dZdI/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [eth]

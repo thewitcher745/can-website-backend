@@ -2,6 +2,7 @@
 title: "ARUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-05-03T10:03:08+03:30
 thumbnail: "/images/logos/ar.svg"
+image: "https://www.tradingview.com/x/mRbjtavz/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [ar]

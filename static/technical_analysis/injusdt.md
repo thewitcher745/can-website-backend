@@ -1,6 +1,7 @@
 ---
 title: "INJUSDT 1D CHART ROADMAP & ANALYSIS UPDATE"
 thumbnail: "/images/logos/inj.svg"
+image: "https://www.tradingview.com/x/CEo8GbvD/"
 author: "CAN Premium"
 time: 2025-02-05T18:36:45+03:30
 tags: [analysis, roadmap]

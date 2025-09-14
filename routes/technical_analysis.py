@@ -15,7 +15,7 @@ ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis")
 
 
 @app.route("/api/analysis", methods=["GET"])
-def list_analysis_posts():
+def list_analysis_posts(n: int = 0):
     # List all analysis posts, sorted by latest update time
     posts = []
     for filepath in glob.glob(path.join(ANALYSIS_DIR, "*.md")):
@@ -32,6 +32,7 @@ def list_analysis_posts():
             "title": first_meta.get("title", slug),
             "time": latest_meta.get("time", ""),  # Use latest update time
             "thumbnail": first_meta.get("thumbnail", ""),
+            "image": first_meta.get("image", ""),
             "author": first_meta.get("author", ""),
             "tags": first_meta.get("tags", []),
             "coins": first_meta.get("coins", []),
@@ -42,7 +43,10 @@ def list_analysis_posts():
 
     posts.sort(key=lambda x: x["time"], reverse=True)
 
-    return jsonify(posts)
+    if n == 0:
+        return jsonify(posts)
+
+    return jsonify(posts[:n])
 
 
 def parse_multi_markdown_file(filepath):
