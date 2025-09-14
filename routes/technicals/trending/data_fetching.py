@@ -37,12 +37,12 @@ class TrendingCoins:
             name = item.get("name", "")
             symbol = item.get("symbol", "")
             price = float(item.get("data", {}).get("price", ""))
-            change_24h = float(
+            change = float(
                 item.get("data", {})
                 .get("price_change_percentage_24h", {})
                 .get("usd", "")
             )
-            total_volume = float(
+            volume = float(
                 item.get("data", {})
                 .get("total_volume", "")
                 .replace(",", "")
@@ -55,8 +55,8 @@ class TrendingCoins:
                     "name": name,
                     "symbol": symbol,
                     "price": price,
-                    "change_24h": change_24h,
-                    "total_volume": total_volume,
+                    "change": change,
+                    "volume": volume,
                     "sparkline": sparkline,
                 }
             )
