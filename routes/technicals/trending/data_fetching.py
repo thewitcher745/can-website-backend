@@ -48,6 +48,12 @@ class TrendingCoins:
                 .replace(",", "")
                 .replace("$", "")
             )
+            market_cap = float(
+                item.get("data", {})
+                .get("market_cap", "")
+                .replace(",", "")
+                .replace("$", "")
+            )
             sparkline = item.get("data", {}).get("sparkline", None)
 
             trending_coins.append(
@@ -57,6 +63,7 @@ class TrendingCoins:
                     "price": price,
                     "change": change,
                     "volume": volume,
+                    "market_cap": market_cap,
                     "sparkline": sparkline,
                 }
             )
