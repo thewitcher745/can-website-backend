@@ -22,6 +22,6 @@ def get_trending():
     # If no cache is found, fetch data and set the cache.
     if not data:
         data = TrendingCoins.scrape_data()
-        cache.set("trending_coins", data, timeout=120)  # Cache for 3 hours
+        cache.set("trending_coins", data, timeout=1800)
 
     return jsonify(data)
