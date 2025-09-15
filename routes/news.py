@@ -36,6 +36,7 @@ def parse_news_markdown_file(filepath):
 
 
 @app.route("/api/news", methods=["GET"])
+@app.route("/api/news/", methods=["GET"])
 def list_news_articles():
     # List all news articles
     articles = []

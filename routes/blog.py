@@ -38,6 +38,7 @@ def parse_blog_markdown_file(filepath):
 
 
 @app.route("/api/blog", methods=["GET"])
+@app.route("/api/blog/", methods=["GET"])
 def list_blog_posts():
     # List all blog posts
     posts = []

@@ -15,6 +15,7 @@ ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis")
 
 
 @app.route("/api/analysis", methods=["GET"])
+@app.route("/api/analysis/", methods=["GET"])
 def list_analysis_posts(n: int = 0):
     # List all analysis posts, sorted by latest update time
     posts = []

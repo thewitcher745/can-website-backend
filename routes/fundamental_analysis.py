@@ -35,6 +35,7 @@ def parse_fundamental_analysis_markdown_file(filepath):
 
 
 @app.route("/api/fundamental", methods=["GET"])
+@app.route("/api/fundamental/", methods=["GET"])
 def list_fundamental_analysis_articles():
     # List all fundamental analysis articles
     articles = []
@@ -83,6 +84,7 @@ def get_fundamental_analysis_article(slug):
 
 
 @app.route("/api/recent_fundamental", methods=["GET"])
+@app.route("/api/recent_fundamental/", methods=["GET"])
 def get_top_fundamental():
     # Get the top 5 fundamental analysis articles
     articles = []
