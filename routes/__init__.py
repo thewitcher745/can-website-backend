@@ -13,6 +13,7 @@ import routes.technicals.trending
 import routes.technicals.recent_airdrops
 import routes.technicals.coins_tables_summary
 import routes.technicals.fng
-import routes.technicals.market_data
+import routes.technicals.global_market_data
+import routes.technicals.dominance
 import routes.logos.get_logo_link
 import routes.technicals.crypto_heatmap

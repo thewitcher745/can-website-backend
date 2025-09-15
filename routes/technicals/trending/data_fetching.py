@@ -24,8 +24,7 @@ class TrendingCoins:
                 "CoinGecko API key missing in environment variable 'x-cg-demo-api-key'."
             )
 
-        url = TRENDING.replace("x_cg_demo_api_key", api_key)
-        response = requests.get(url)
+        response = requests.get(TRENDING)
         response.raise_for_status()
         data = response.json()
 
