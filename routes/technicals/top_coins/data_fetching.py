@@ -58,7 +58,7 @@ class TopCoins:
                     "name": name,
                     "symbol": symbol,
                     "price": price,
-                    "2h_change": price_change_percentage_24h,
+                    "24h_change": price_change_percentage_24h,
                     "7d_change": price_change_percentage_7d,
                     "30d_change": price_change_percentage_30d,
                     "volume": volume,
