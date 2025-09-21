@@ -33,4 +33,17 @@ Three: 580.22
 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 ---
+time: 2025-09-18T18:53:37+03:30
+---
+
+This is an update.
+
+We have successfully breached the first target area. Solana is now above 392.35. We have set a new stoploss at 283.19.
+
+![SOL chart](https://www.tradingview.com/x/kt2HxYNT/)
+[View full chart](https://www.tradingview.com/x/kt2HxYNT/)
+
+We will monitor the action in the run-up to the second target area, 580.22.
+
+---
 

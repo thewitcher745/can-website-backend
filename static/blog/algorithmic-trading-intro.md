@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Algorithmic Trading"
 time: 2025-05-01T00:16:47+03:30
+thumbnail: "https://cdn.corporatefinanceinstitute.com/assets/algorithmic-trading-1024x683.jpeg"
 author: "Jane Doe"
 tags: [algorithmic trading, automation, finance]
 desc: This article introduces the basics of algorithmic trading, its benefits, and why it is popular among traders.
@@ -8,7 +9,7 @@ desc: This article introduces the basics of algorithmic trading, its benefits, a
 
 Algorithmic trading uses computer programs to execute trades automatically based on predefined criteria. It helps eliminate human error and can process large volumes of data quickly.
 
-![Algorithmic trading](https://placehold.co/600x400?text=Algorithmic+Trading)
+![Algorithmic trading](https://cdn.corporatefinanceinstitute.com/assets/algorithmic-trading-1024x683.jpeg)
 
 ## Benefits
 - Speed and efficiency
