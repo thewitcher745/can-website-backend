@@ -2,7 +2,6 @@
 This module contains the handlers related to the youtube videos section.
 """
 
-import os
 import requests
 from xml.etree import ElementTree
 from flask import jsonify
@@ -10,15 +9,30 @@ from flask import jsonify
 from app_prepare import app, cache
 
 
+from flask import request
+
+
 @app.route("/api/videos/latest")
-def get_latest_videos(n: int = 5):
+def get_latest_videos():
+    """
+    Get the latest videos from the youtube channel with a given ID and parse the XML
+    response to return a list of videos.
+    """
+    # Get number of videos from query parameter
+    n_param = request.args.get("n", default=None, type=int)
+    if n_param is None:
+        n = 5
+    else:
+        n = n_param
+    fetch_all = n == 0
+
     """
     Get the latest videos from the youtube channel with a given ID and parse the XML
     response to return a list of videos.
     """
     data = cache.get("recent_videos")
 
-    if data:
+    if data and n == 5:
         return jsonify(data)
 
     # YOUTUBE_CHANNEL_ID = os.getenv("YOUTUBE_CHANNEL_ID")
@@ -30,11 +44,7 @@ def get_latest_videos(n: int = 5):
     RSS_response = requests.get(RSS_URL)
     RSS_response.raise_for_status()
 
-    RSS_content = RSS_response.content
-
-    # Use an XML parsing library to get the n most recent videos
-    root = ElementTree.fromstring(RSS_content)
-
+    root = ElementTree.fromstring(RSS_response.content)
     recent_videos = []
     counter = 0
     for entry in root.findall("{http://www.w3.org/2005/Atom}entry"):
@@ -43,22 +53,21 @@ def get_latest_videos(n: int = 5):
         if "shorts" in link:
             continue
 
-        counter += 1
         recent_videos.append(
             {
-                "id": entry.find(
-                    "{http://www.youtube.com/xml/schemas/2015}videoId"
-                ).text,
                 "title": entry.find("{http://www.w3.org/2005/Atom}title").text,
                 "link": entry.find("{http://www.w3.org/2005/Atom}link").get("href"),
                 "thumbnail": entry.find("{http://search.yahoo.com/mrss/}group")
                 .find("{http://search.yahoo.com/mrss/}thumbnail")
                 .get("url"),
+                "description": entry.find("{http://search.yahoo.com/mrss/}group")
+                .find("{http://search.yahoo.com/mrss/}description")
+                .text,
                 "published": entry.find("{http://www.w3.org/2005/Atom}published").text,
             }
         )
-
-        if counter == n:
+        counter += 1
+        if not fetch_all and counter >= n:
             break
 
     cache.set("recent_videos", recent_videos, timeout=600)
