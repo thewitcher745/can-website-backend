@@ -14,7 +14,6 @@ from utils import get_slug
 TOKENS_DIR = path.join(getcwd(), "static/high_potential_tokens")
 
 
-
 @app.route("/api/high_potential_tokens", methods=["GET"])
 @app.route("/api/high_potential_tokens/", methods=["GET"])
 def list_high_potential_tokens():

@@ -26,7 +26,7 @@ def fetch_global_market_data():
     response.raise_for_status()
     data = response.json().get("data", {})
     quote_data = data.get("quote", {}).get("USD", {})
-
+    total_market_cap = data.get("quote", {}).get("USD", {}).get("total_market_cap")
     market_cap_change_percentage_24h_usd = quote_data.get(
         "total_market_cap_yesterday_percentage_change"
     )
@@ -35,6 +35,7 @@ def fetch_global_market_data():
     )
 
     return {
+        "totalMarketCap": total_market_cap,
         "marketCapChangePercentage24h": market_cap_change_percentage_24h_usd,
         "volumeChangePercentage24h": volume_change_percentage_24h,
     }
