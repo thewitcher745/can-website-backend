@@ -3,9 +3,8 @@ name: Layer Brett
 symbol: lbrett
 category: bronze
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/38230.png"
+image: "https://images2.imgbox.com/a6/38/vBDzPSG1_o.png"
 ---
-
-![Layer Brett](https://images2.imgbox.com/a6/38/vBDzPSG1_o.png)
 
 ## Fundamentals & News
 

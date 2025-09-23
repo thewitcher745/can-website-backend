@@ -3,9 +3,8 @@ name: Hyperlane
 symbol: hyper
 category: silver
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/36281.png"
+image: "https://images2.imgbox.com/59/3e/4TOaAOmz_o.png"
 ---
-
-![Hyperlane](https://images2.imgbox.com/59/3e/4TOaAOmz_o.png)
 
 ## Technical Setup
 

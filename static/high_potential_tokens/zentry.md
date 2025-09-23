@@ -3,9 +3,8 @@ name: Zentry
 symbol: zent
 category: gold
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/30963.png"
+image: "https://images2.imgbox.com/fa/0c/dPP2sbMS_o.png"
 ---
-
-![Zentry](https://images2.imgbox.com/fa/0c/dPP2sbMS_o.png)
 
 ## Technical Setup
 

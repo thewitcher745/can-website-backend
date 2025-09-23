@@ -3,9 +3,8 @@ name: Codatta
 symbol: xny
 category: silver
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/36933.png"
+image: "https://images2.imgbox.com/00/5a/zMbLywlm_o.png"
 ---
-
-![Codatta](https://images2.imgbox.com/00/5a/zMbLywlm_o.png)
 
 ## Technical Setup
 

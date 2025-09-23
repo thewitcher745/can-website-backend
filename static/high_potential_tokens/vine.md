@@ -3,9 +3,8 @@ name: VineCoin
 symbol: vine
 category: bronze
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/35421.png"
+image: "https://images2.imgbox.com/b8/df/7B4DG3DK_o.png"
 ---
-
-![VineCoin](https://images2.imgbox.com/b8/df/7B4DG3DK_o.png)
 
 ## Technical Setup
 

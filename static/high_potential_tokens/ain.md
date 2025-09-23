@@ -3,9 +3,8 @@ name: "Infinity Ground"
 symbol: "ain"
 category: "silver"
 logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/36770.png"
+image: "https://images2.imgbox.com/f5/df/fcBCIGkq_o.png"
 ---
-
-![Infinity Ground](https://images2.imgbox.com/f5/df/fcBCIGkq_o.png)
 
 ## Technical Setup
 
