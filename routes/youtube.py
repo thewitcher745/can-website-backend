@@ -25,7 +25,6 @@ def get_latest_videos():
     else:
         n = n_param
     fetch_all = n == 0
-
     """
     Get the latest videos from the youtube channel with a given ID and parse the XML
     response to return a list of videos.
@@ -52,9 +51,9 @@ def get_latest_videos():
         link = entry.find("{http://www.w3.org/2005/Atom}link").get("href")
         if "shorts" in link:
             continue
-
         recent_videos.append(
             {
+                "id": entry.find("{http://www.youtube.com/xml/schemas/2015}videoId").text,
                 "title": entry.find("{http://www.w3.org/2005/Atom}title").text,
                 "link": entry.find("{http://www.w3.org/2005/Atom}link").get("href"),
                 "thumbnail": entry.find("{http://search.yahoo.com/mrss/}group")
