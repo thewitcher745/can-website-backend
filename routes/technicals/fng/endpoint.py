@@ -7,7 +7,7 @@ import requests
 import os
 
 from app_prepare import app, cache
-from ..urls import FEAR_AND_GREED
+from ..urls import FEAR_AND_GREED, FEAR_AND_GREED_HISTORICAL
 
 
 @app.route("/api/fng")
@@ -23,5 +23,26 @@ def get_fng():
         }
         data = requests.get(FEAR_AND_GREED, headers=headers).json().get("data", {})
         cache.set("fng", data, timeout=3600)
+
+    return jsonify(data)
+
+
+@app.route("/api/fng_historical")
+def get_fng_historical():
+    data = cache.get("fng_historical")
+
+    # If no cache is found, fetch data again, and set the cache.
+    if not data:
+        API_KEY = os.getenv("CMC_API_KEY")
+        headers = {
+            "Accepts": "application/json",
+            "X-CMC_PRO_API_KEY": API_KEY,
+        }
+        data = (
+            requests.get(f"{FEAR_AND_GREED_HISTORICAL}?limit=180", headers=headers)
+            .json()
+            .get("data", {})
+        )
+        cache.set("fng_historical", data, timeout=86400)
 
     return jsonify(data)
