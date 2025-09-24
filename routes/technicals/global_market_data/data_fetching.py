@@ -24,9 +24,16 @@ def fetch_global_market_data():
     }
     response = requests.get(MARKET_DATA, headers=headers)
     response.raise_for_status()
+
     data = response.json().get("data", {})
     quote_data = data.get("quote", {}).get("USD", {})
+
+    active_exchanges = data.get("active_exchanges")
+    active_currencies = data.get("active_cryptocurrencies")
+
+    
     total_market_cap = data.get("quote", {}).get("USD", {}).get("total_market_cap")
+    total_volume_24h = data.get("quote", {}).get("USD", {}).get("total_volume_24h")
     market_cap_change_percentage_24h_usd = quote_data.get(
         "total_market_cap_yesterday_percentage_change"
     )
@@ -35,7 +42,10 @@ def fetch_global_market_data():
     )
 
     return {
+        "activeExchanges": active_exchanges,
+        "activeCurrencies": active_currencies,
         "totalMarketCap": total_market_cap,
         "marketCapChangePercentage24h": market_cap_change_percentage_24h_usd,
         "volumeChangePercentage24h": volume_change_percentage_24h,
+        "totalVolume24h": total_volume_24h,
     }
