@@ -10,6 +10,7 @@ from markdown import markdown
 
 from app_prepare import app
 from utils import get_slug
+from routes.logos.get_logo_link import get_logo_link_from_symbol
 
 ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis")
 
@@ -32,7 +33,9 @@ def list_analysis_posts(n: int = 0):
             "slug": slug,
             "title": first_meta.get("title", slug),
             "time": latest_meta.get("time", ""),  # Use latest update time
-            "thumbnail": first_meta.get("thumbnail", ""),
+            "thumbnail": first_meta.get(
+                "thumbnail", get_logo_link_from_symbol(first_meta.get("coins", [])[0])
+            ),
             "image": first_meta.get("image", ""),
             "author": first_meta.get("author", ""),
             "tags": first_meta.get("tags", []),
