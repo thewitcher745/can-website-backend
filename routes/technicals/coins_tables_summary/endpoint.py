@@ -9,7 +9,7 @@ from app_prepare import app, cache
 from ..trending.data_fetching import TrendingCoins
 from ..top_gainers.data_fetching import TopGainers
 from ..top_losers.data_fetching import TopLosers
-
+from ..top_coins.data_fetching import TopCoins
 
 def select_top_n(full_list: list, n: int = 5) -> list:
     return full_list[: min(n, len(full_list))]
@@ -25,6 +25,7 @@ def get_coins_tables_summary():
             "trending": select_top_n(TrendingCoins.scrape_data()),
             "top_gainers": select_top_n(TopGainers.scrape_data()),
             "top_losers": select_top_n(TopLosers.scrape_data()),
+            "top_volume": select_top_n(TopCoins.fetch_data(n=5, sort_by="volume_24h")),
         }
         cache.set("coins_tables_summary", data, timeout=600)
 
