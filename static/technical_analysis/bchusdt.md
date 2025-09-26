@@ -1,7 +1,6 @@
 ---
 title: "BCHUSDT 3D CHART ROADMAP & ANALYSIS UPDATE"
 time: 2025-09-26T16:20:00+03:30
-thumbnail: "/images/logos/bch.svg"
 image: "https://www.tradingview.com/x/VOUNLjd5/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
