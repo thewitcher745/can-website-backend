@@ -18,7 +18,7 @@ The price action of **Bitcoin Cash (BCHUSDT)** on the 3-day chart is approaching
 
 There is a possibility that BCH will attempt a retracement toward its previous highs established in 2024. If buyers step in, this move could grab liquidity sitting above these resistance levels and potentially pave the way for further continuation. Such a setup would likely attract momentum traders looking for breakout confirmation.
 
-## Bearish Scenario: Breaking the Trendline Support
+## Bearish Scenario: Breaking the Trendline Support levels
 
 On the other hand, BCH is also hovering dangerously close to losing its key trendline support. A confirmed breakdown here could trigger a correction toward deeper support levels, opening the door for a bearish extension. This path would likely flush out weak hands before any stronger recovery attempt.
 
