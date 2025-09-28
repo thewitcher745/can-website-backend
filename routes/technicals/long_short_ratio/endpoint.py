@@ -18,12 +18,15 @@ def get_long_short_ratio():
         JSON response containing the long/short ratio data.
     """
     symbol = request.args.get("symbol")
+    print(symbol)
+
+    data = cache.get("long_short_ratio")
 
     # If no cache is found, fetch data and set the cache.
     if not symbol:
         return jsonify({"error": "Symbol not provided"}), 400
 
     data = LongShortRatio(symbol).fetch_data()
-    cache.set("market_data", data, timeout=3600)
+    cache.set("long_short_ratio", data, timeout=3600)
 
     return jsonify(data)
