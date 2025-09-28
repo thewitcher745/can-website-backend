@@ -21,13 +21,12 @@ class LongShortRatio:
         try:
             response = requests.get(TICKER.format(symbol=self.symbol))
             response.raise_for_status()
+
+            result = response.json().get("result", None)
             self.ticker = float(
-                response.json()
-                .get("result", None)
-                .get("list", None)[0]
-                .get("last_price", None)
+                result.get(list(result.keys())[0], None).get("c", None)[0]
             )
-        except (requests.exceptions.HTTPError, TypeError, IndexError, KeyError):
+        except (requests.exceptions.HTTPError, TypeError, IndexError, KeyError) as e:
             self.ticker = None
 
     def fetch_data(self):

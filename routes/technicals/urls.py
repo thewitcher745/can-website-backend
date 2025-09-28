@@ -21,4 +21,4 @@ LONG_SHORT_RATIO_BITGET = "https://api.bitget.com/api/v3/market/orderbook?catego
 LONG_SHORT_RATIO_KRAKEN = (
     "https://api.kraken.com/0/public/Depth?pair={symbol}USDT&count=500"
 )
-TICKER = "https://api.bybit.com/v5/market/tickers?category=linear&symbol={symbol}USDT"
+TICKER = "https://api.kraken.com/0/public/Ticker?pair={symbol}USDT"
