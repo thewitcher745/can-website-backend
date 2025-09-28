@@ -16,7 +16,9 @@ LONG_SHORT_RATIO_BYBIT = "https://api.bybit.com/v5/market/orderbook?category=lin
 LONG_SHORT_RATIO_BINANCE = (
     "https://fapi.binance.com/fapi/v1/depth?symbol={symbol}USDT&limit=1000"
 )
-LONG_SHORT_RATIO_OKX = "https://www.okx.com/api/v5/market/books?instId={symbol}-USDT"
+LONG_SHORT_RATIO_OKX = (
+    "https://www.okx.com/api/v5/market/books-full?instId={symbol}-USDT&sz=500"
+)
 LONG_SHORT_RATIO_BITGET = "https://api.bitget.com/api/v3/market/orderbook?category=USDT-FUTURES&symbol={symbol}USDT&limit=200"
 LONG_SHORT_RATIO_KRAKEN = (
     "https://api.kraken.com/0/public/Depth?pair={symbol}USDT&count=500"

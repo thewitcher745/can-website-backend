@@ -26,6 +26,6 @@ def get_long_short_ratio():
     # If no cache is found, fetch data and set the cache.
     if not data:
         data = LongShortRatio(symbol).fetch_data()
-        cache.set("long_short_ratio_" + symbol.lower(), data, timeout=3600)
+        cache.set("long_short_ratio_" + symbol.lower(), data, timeout=900)
 
     return jsonify(data)
