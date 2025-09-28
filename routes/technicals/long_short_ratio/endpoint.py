@@ -18,7 +18,6 @@ def get_long_short_ratio():
         JSON response containing the long/short ratio data.
     """
     symbol = request.args.get("symbol")
-    print(symbol)
 
     data = cache.get("long_short_ratio")
 
