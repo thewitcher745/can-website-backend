@@ -12,3 +12,13 @@ FEAR_AND_GREED_HISTORICAL = (
 )
 MARKET_DATA = "https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest"
 TOP_COINS = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+LONG_SHORT_RATIO_BYBIT = "https://api.bybit.com/v5/market/orderbook?category=linear&symbol={symbol}USDT&limit=500"
+LONG_SHORT_RATIO_BINANCE = (
+    "https://fapi.binance.com/fapi/v1/depth?symbol={symbol}USDT&limit=1000"
+)
+LONG_SHORT_RATIO_OKX = "https://www.okx.com/api/v5/market/books?instId={symbol}-USDT"
+LONG_SHORT_RATIO_BITGET = "https://api.bitget.com/api/v3/market/orderbook?category=USDT-FUTURES&symbol={symbol}USDT&limit=200"
+LONG_SHORT_RATIO_KRAKEN = (
+    "https://api.kraken.com/0/public/Depth?pair={symbol}USDT&count=500"
+)
+TICKER_BINANCE = "https://fapi.binance.com/fapi/v2/ticker/price?symbol={symbol}USDT"

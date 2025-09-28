@@ -15,6 +15,7 @@ import routes.technicals.recent_airdrops
 import routes.technicals.coins_tables_summary
 import routes.technicals.fng
 import routes.technicals.global_market_data
+import routes.technicals.long_short_ratio
 import routes.technicals.top_coins
 import routes.technicals.dominance
 import routes.technicals.crypto_heatmap
