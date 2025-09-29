@@ -1,7 +1,6 @@
 ---
 title: "SOLUSDT 3D Chart Analysis"
 time: 2025-02-01T14:08:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/qFn9eQHh/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

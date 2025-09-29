@@ -1,7 +1,6 @@
 ---
 title: "ALCHUSDT 1D Chart Analysis"
-time: 22025-09-24T13:24:25+03:30
-thumbnail: ""
+time: 2025-09-24T13:24:25+03:30
 image: "https://www.tradingview.com/x/618PSg6y/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

@@ -1,7 +1,6 @@
 ---
 title: "FETUSDT 1W Chart Analysis"
 time: 2025-04-24T18:52:30+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/jwuSu7Rq/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

@@ -1,7 +1,6 @@
 ---
 title: "Avalanche 3D Chart Analysis"
 time: 2025-06-03T17:57:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/ePPXzOF8/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
@@ -93,5 +92,5 @@ time: 2025-09-19T09:52:25+03:30
 
 🔎 **Profit Outlook**  
 AVAX achieved 50% gains on spot without significant drawdown. As price nears the end of this leg, gradual profit booking is advised. Market reactions at the highlighted zone will guide the next steps.
-  
+
 ---

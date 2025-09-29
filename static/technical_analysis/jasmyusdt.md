@@ -1,7 +1,6 @@
 ---
 title: "JASMYUSDT 1D Chart Analysis"
 time: 2025-09-27T11:51:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/U65joPpD/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

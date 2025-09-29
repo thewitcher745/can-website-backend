@@ -1,7 +1,6 @@
 ---
 title: "ZECUSDT 3D Chart Analysis"
 time: 2025-09-21T18:57:30+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/19c81P7n/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

@@ -1,7 +1,6 @@
 ---
 title: "SQDUSDT 1D Chart Analysis"
 time: 2025-06-30T19:33:25+03:30
-thumbnail: 
 image: "https://www.tradingview.com/x/RWGONHwi/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

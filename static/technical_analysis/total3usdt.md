@@ -1,8 +1,7 @@
 ---
 title: "TOTAL3 1D Chart Analysis"
 time: 2025-08-15T09:34:25+03:30
-thumbnail: ""
-image: "https://www.tradingview.com/x/uTIBpEWB/"
+image: "https://www.tradingview.com/x/rRrTIaJj/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [total3]
@@ -11,8 +10,8 @@ desc: "TOTAL3 index begins correctional wave B, setting up potential buy zones f
 
 The TOTAL3 index, which tracks the altcoin market excluding Bitcoin and Ethereum, appears to have officially entered the correctional wave B phase that was anticipated in previous outlooks. This move aligns with the broader roadmap, suggesting that despite the current retracement, opportunities remain for strategic accumulation in upcoming support zones.
 
-![TOTAL3 chart](https://www.tradingview.com/x/uTIBpEWB/)  
-[View full chart](https://www.tradingview.com/x/uTIBpEWB/)  
+![TOTAL3 chart](https://www.tradingview.com/x/rRrTIaJj/)  
+[View full chart](https://www.tradingview.com/x/rRrTIaJj/)  
 
 💡 **Market Insight**  
 With the correction wave unfolding, TOTAL3 has already delivered around 20% growth according to plan. The market is now approaching key support ranges that could define the next stages of altcoin performance.  

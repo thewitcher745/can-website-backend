@@ -1,7 +1,6 @@
 ---
 title: "TLMUSDT 1D Chart Analysis"
 time: 2025-09-23T10:35:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/P3huxDuz/" 
 author: "CAN Premium"
 tags: [analysis, roadmap]

@@ -1,7 +1,6 @@
 ---
 title: "Ripple 1D Chart Analysis"
 time: 2025-09-27T00:00:00+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/jyNG66cV/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

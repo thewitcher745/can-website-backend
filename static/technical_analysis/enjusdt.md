@@ -1,7 +1,6 @@
 ---
 title: "ENJUSDT 1W Chart Analysis"
 time: 2025-04-05T10:00:00+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/SUX8KZPS/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
