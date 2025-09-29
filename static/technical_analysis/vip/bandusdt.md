@@ -1,7 +1,6 @@
 ---
 title: "BANDUUSDT 1W ANALYSIS"
 time: 2025-09-26T12:16:45+03:30
-thumbnail:
 image: "https://www.tradingview.com/x/rhz9PZqG/"
 author: "CAN Premium"
 tags: [analysis, roadmap, signal]
