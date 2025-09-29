@@ -6,6 +6,9 @@ This is done by calling the CoinGecko TRENDING REST API.
 import requests
 import os
 from ..urls import TRENDING
+from utils import round_to_precision
+from routes.general import get_ticker_price, get_tickers
+from utils import get_price_precision
 
 
 class TrendingCoins:
@@ -35,7 +38,9 @@ class TrendingCoins:
             item = coin_entry.get("item", {})
             name = item.get("name", "")
             symbol = item.get("symbol", "")
-            price = float(item.get("data", {}).get("price", ""))
+            default_price = float(item.get("data", {}).get("price", ""))
+            price = get_ticker_price(symbol, default_price)
+
             change = float(
                 item.get("data", {})
                 .get("price_change_percentage_24h", {})
@@ -59,11 +64,12 @@ class TrendingCoins:
                 {
                     "name": name,
                     "symbol": symbol,
-                    "price": price,
+                    "price": float(round_to_precision(price, symbol)),
                     "change": change,
-                    "volume": volume,
+                    "volume": float(round_to_precision(volume, symbol)),
                     "market_cap": market_cap,
                     "sparkline": sparkline,
                 }
             )
+
         return trending_coins

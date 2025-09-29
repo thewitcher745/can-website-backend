@@ -5,6 +5,8 @@ This is done through a REST API.
 
 import requests
 from ..urls import HEATMAP
+from utils import round_to_precision
+from routes.general import get_ticker_price
 
 
 class CryptoHeatmap:
@@ -39,25 +41,18 @@ class CryptoHeatmap:
         # Keep only the parts of the data that we need.
         filtered = []
         for coin in data:
-            price = float(coin.get("PRICE_USD"))
+            default_price = float(coin.get("PRICE_USD"))
+            price = get_ticker_price(coin.get("SYMBOL").upper(), default_price)
             volume = float(coin.get("SPOT_MOVING_24_HOUR_QUOTE_VOLUME_DIRECT_USD"))
-
-            if price >= 5:
-                decimal_points = 2
-            elif price >= 1:
-                decimal_points = 3
-            else:
-                decimal_points = 4
-
-            price_format = f"%.{decimal_points}f"
+            symbol = coin.get("SYMBOL").upper()
 
             filtered.append(
                 {
                     "name": coin.get("NAME"),
-                    "symbol": coin.get("SYMBOL").upper(),
+                    "symbol": symbol,
                     "market_cap": int(coin.get("TOTAL_MKT_CAP_USD")),
-                    "total_volume": float(price_format % volume),
-                    "current_price": float(price_format % price),
+                    "total_volume": float(round_to_precision(volume, symbol)),
+                    "current_price": float(round_to_precision(price, symbol)),
                     "price_change_percentage_24h": float(
                         coin.get("SPOT_MOVING_24_HOUR_CHANGE_PERCENTAGE_USD")
                     ),

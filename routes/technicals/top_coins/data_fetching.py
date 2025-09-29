@@ -7,7 +7,8 @@ import requests
 import os
 
 from ..urls import TOP_COINS
-
+from routes.general import get_ticker_price
+from utils import round_to_precision
 
 class TopCoins:
     @staticmethod
@@ -45,7 +46,8 @@ class TopCoins:
             name = coin_entry.get("name", "")
             symbol = coin_entry.get("symbol", "")
             quote_data = coin_entry.get("quote").get("USD")
-            price = float(quote_data.get("price", ""))
+            default_price = float(quote_data.get("price", ""))
+            price = get_ticker_price(symbol, default_price)
             price_change_percentage_24h = float(
                 quote_data.get("percent_change_24h", "")
             )
@@ -53,16 +55,16 @@ class TopCoins:
                 quote_data.get("percent_change_7d", "")
             )
             market_cap = float(quote_data.get("market_cap", ""))
-            volume = float(quote_data.get("volume_24h", ""))
+            volume = (float(quote_data.get("volume_24h", "")))
 
             top_coins.append(
                 {
                     "name": name,
                     "symbol": symbol,
-                    "price": price,
+                    "price": float(round_to_precision(price, symbol)),
                     "change_24h": price_change_percentage_24h,
                     "change_7d": price_change_percentage_7d,
-                    "volume_24h": volume,
+                    "volume_24h": float(round_to_precision(volume, symbol)),
                     "market_cap": market_cap,
                 }
             )

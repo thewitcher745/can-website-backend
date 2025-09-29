@@ -6,6 +6,8 @@ This is done through webscraping currently (now with BeautifulSoup).
 import requests
 from bs4 import BeautifulSoup
 from ..urls import TOP_GAINERS_LOSERS
+from utils import round_to_precision
+from routes.general import get_ticker_price
 
 
 class TopLosers:
@@ -34,7 +36,8 @@ class TopLosers:
 
             name = TopLosers.get_name(cols)
             symbol = TopLosers.get_symbol(cols)
-            price = TopLosers.get_price(cols)
+            default_price = TopLosers.get_price(cols)
+            price = get_ticker_price(symbol, default_price)
             change = TopLosers.get_change(cols)
             volume = TopLosers.get_volume(cols)
 
@@ -42,9 +45,9 @@ class TopLosers:
                 {
                     "name": name,
                     "symbol": symbol,
-                    "price": price,
+                    "price": float(round_to_precision(price, symbol)),
                     "change": change,
-                    "volume": volume,
+                    "volume": float(round_to_precision(volume, symbol)),
                 }
             )
 

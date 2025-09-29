@@ -15,3 +15,13 @@ def get_random_thumbnail(seed: str = None):
         if seed:
             random.seed(seed)
         return random.choice(json.load(f))
+
+
+def get_price_precision(symbol: str):
+    with open(path.join(getcwd(), "static/precisions.json"), "r") as f:
+        return json.load(f).get(symbol, 7)
+
+
+def round_to_precision(price: float, symbol: str):
+    "Returns the rounded price based on the symbol's precision in string format, with exactly the right number of decimal points."
+    return f"{float(price):.{get_price_precision(symbol)}f}"
