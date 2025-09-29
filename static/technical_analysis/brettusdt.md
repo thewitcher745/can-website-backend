@@ -1,7 +1,6 @@
 ---
 title: "BRETTUSDT 1D Chart Analysis"
 time: 2025-09-24T19:51:45+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/Qe4Q9xfR/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

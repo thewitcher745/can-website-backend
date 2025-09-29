@@ -1,7 +1,6 @@
 ---
 title: "Ethena 12H Chart Analysis"
 time: 2025-09-06T18:10:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/EvtdMK5t/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

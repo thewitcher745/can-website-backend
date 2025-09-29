@@ -1,7 +1,6 @@
 ---
 title: "1000BONKUSDT 1D Chart Analysis"
 time: 2025-09-23T12:47:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/7tLRzPzT/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

@@ -1,7 +1,6 @@
 ---
 title: "MORPHOUSDT 1D Chart Analysis"
 time: 2025-08-28T11:13:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/4VoQZ1nX/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

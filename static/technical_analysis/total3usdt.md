@@ -1,7 +1,6 @@
 ---
 title: "TOTAL3 1D Chart Analysis"
 time: 2025-08-15T09:34:25+03:30
-thumbnail: ""
 image: "https://www.tradingview.com/x/uTIBpEWB/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
