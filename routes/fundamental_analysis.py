@@ -43,6 +43,11 @@ def list_fundamental_analysis_articles():
     for filepath in glob.glob(path.join(FUNDAMENTAL_ANALYSIS_DIR, "*.md")):
         meta, _ = parse_fundamental_analysis_markdown_file(filepath)
         slug = get_slug(filepath)
+        time = meta.get("time", "")
+
+        if type(time) is str:
+            continue
+
         article = {
             "slug": slug,
             "title": meta.get("title", slug),
@@ -70,6 +75,7 @@ def get_fundamental_analysis_article(slug):
 
     meta, md_content = parse_fundamental_analysis_markdown_file(filepath)
     html_content = markdown(md_content)
+
     article = {
         "slug": slug,
         "title": meta.get("title", slug),
@@ -92,10 +98,15 @@ def get_top_fundamental():
     for filepath in glob.glob(path.join(FUNDAMENTAL_ANALYSIS_DIR, "*.md")):
         meta, _ = parse_fundamental_analysis_markdown_file(filepath)
         slug = get_slug(filepath)
+        time = meta.get("time", "")
+
+        if type(time) is str:
+            continue
+
         article = {
             "slug": slug,
             "title": meta.get("title", slug),
-            "time": meta.get("time", ""),
+            "time": time,
             "desc": meta.get("desc", ""),
             "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }

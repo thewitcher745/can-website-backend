@@ -29,11 +29,17 @@ def list_analysis_posts(n: int = 0):
         # Use the last metadata section for the latest update
         latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
         first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
+        time = latest_meta.get("time", "")
+
+        # If the time field is mistyped, skip this post.
+        if type(time) is str:
+            continue
+
         slug = get_slug(filepath)
         post = {
             "slug": slug,
             "title": first_meta.get("title", slug),
-            "time": latest_meta.get("time", ""),  # Use latest update time
+            "time": time,  # Use latest update time
             "thumbnail": first_meta.get(
                 "thumbnail", get_logo_link_from_symbol(first_meta.get("coins", [])[0])
             ),
@@ -67,11 +73,17 @@ def list_vip_analysis_posts(n: int = 0):
         # Use the last metadata section for the latest update
         latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
         first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
+        time = latest_meta.get("time", "")
+
+        # If the time field is mistyped, skip this post.
+        if type(time) is str:
+            continue
+
         slug = get_slug(filepath)
         post = {
             "slug": slug,
             "title": first_meta.get("title", slug),
-            "time": latest_meta.get("time", ""),  # Use latest update time
+            "time": time,  # Use latest update time
             "thumbnail": first_meta.get(
                 "thumbnail", get_logo_link_from_symbol(first_meta.get("coins", [])[0])
             ),
@@ -149,6 +161,7 @@ def get_analysis_post(slug):
         results.append(item)
 
     return jsonify(results)
+
 
 @app.route("/api/vip_analysis/<slug>", methods=["GET"])
 def get_vip_analysis_post(slug):

@@ -46,10 +46,15 @@ def list_blog_posts():
     for filepath in glob.glob(path.join(BLOG_DIR, "*.md")):
         meta, _ = parse_blog_markdown_file(filepath)
         slug = get_slug(filepath)
+        time = meta.get("time", "")
+
+        if type(time) is str:
+            continue
+
         post = {
             "slug": slug,
             "title": meta.get("title", slug),
-            "time": meta.get("time", ""),
+            "time": time,
             "thumbnail": meta.get("thumbnail", get_random_thumbnail()),
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),

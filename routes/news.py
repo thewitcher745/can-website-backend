@@ -44,10 +44,15 @@ def list_news_articles():
     for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
         meta, _ = parse_news_markdown_file(filepath)
         slug = get_slug(filepath)
+        time = meta.get("time", "")
+
+        if type(time) is str:
+            continue
+
         article = {
             "slug": slug,
             "title": meta.get("title", slug),
-            "time": meta.get("time", ""),
+            "time": time,
             "author": meta.get("author", ""),
             "tags": meta.get("tags", []),
             "desc": meta.get("desc", ""),
@@ -94,10 +99,15 @@ def get_top_news():
     for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
         meta, _ = parse_news_markdown_file(filepath)
         slug = get_slug(filepath)
+        time = meta.get("time", "")
+        
+        if type(time) is str:
+            continue
+
         article = {
             "slug": slug,
             "title": meta.get("title", slug),
-            "time": meta.get("time", ""),
+            "time": time,
             "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
         }
         articles.append(article)
