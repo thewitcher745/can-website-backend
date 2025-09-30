@@ -4,13 +4,14 @@ This module contains the data fetching logic for long/short ratio data.
 
 import requests
 
+from routes.general import get_ticker_price
+
 from ..urls import (
     LONG_SHORT_RATIO_BYBIT,
     LONG_SHORT_RATIO_BINANCE,
     LONG_SHORT_RATIO_OKX,
     LONG_SHORT_RATIO_BITGET,
     LONG_SHORT_RATIO_KRAKEN,
-    TICKER,
 )
 
 
@@ -19,14 +20,8 @@ class LongShortRatio:
         self.symbol = symbol.upper()
 
         try:
-            response = requests.get(TICKER.format(symbol=self.symbol))
-            response.raise_for_status()
-
-            result = response.json().get("result", None)
-            self.ticker = float(
-                result.get(list(result.keys())[0], None).get("c", None)[0]
-            )
-        except (requests.exceptions.HTTPError, TypeError, IndexError, KeyError) as e:
+            self.ticker = float(get_ticker_price(self.symbol, None))
+        except (requests.exceptions.HTTPError, TypeError, IndexError, KeyError):
             self.ticker = None
 
     def fetch_data(self):
