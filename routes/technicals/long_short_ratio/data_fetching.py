@@ -19,7 +19,7 @@ class LongShortRatio:
         self.symbol = symbol.upper()
 
         try:
-            response = requests.get(TICKER.format(symbol=self.symbol))
+            response = requests.get(f"{TICKER}?symbol={self.symbol}USDT")
             response.raise_for_status()
 
             result = response.json().get("result", None)
