@@ -44,6 +44,11 @@ def get_latest_videos():
     RSS_response.raise_for_status()
 
     root = ElementTree.fromstring(RSS_response.content)
+    channel_link = (
+        root.find("{http://www.w3.org/2005/Atom}author")
+        .find("{http://www.w3.org/2005/Atom}uri")
+        .text
+    )
     recent_videos = []
     counter = 0
     for entry in root.findall("{http://www.w3.org/2005/Atom}entry"):
@@ -53,7 +58,10 @@ def get_latest_videos():
             continue
         recent_videos.append(
             {
-                "id": entry.find("{http://www.youtube.com/xml/schemas/2015}videoId").text,
+                "channel_link": channel_link,
+                "id": entry.find(
+                    "{http://www.youtube.com/xml/schemas/2015}videoId"
+                ).text,
                 "title": entry.find("{http://www.w3.org/2005/Atom}title").text,
                 "link": entry.find("{http://www.w3.org/2005/Atom}link").get("href"),
                 "thumbnail": entry.find("{http://search.yahoo.com/mrss/}group")
