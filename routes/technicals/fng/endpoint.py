@@ -2,7 +2,7 @@
 This module will contain the endpoint handlers for the fear and greed gadget.
 """
 
-from flask import jsonify
+from flask import jsonify, request
 import requests
 import os
 
@@ -29,7 +29,8 @@ def get_fng():
 
 @app.route("/api/fng_historical")
 def get_fng_historical():
-    data = cache.get("fng_historical")
+    limit = request.args.get("limit", 180)
+    data = cache.get(f"fng_historical_{limit}")
 
     # If no cache is found, fetch data again, and set the cache.
     if not data:
@@ -39,10 +40,11 @@ def get_fng_historical():
             "X-CMC_PRO_API_KEY": API_KEY,
         }
         data = (
-            requests.get(f"{FEAR_AND_GREED_HISTORICAL}?limit=180", headers=headers)
+            requests.get(f"{FEAR_AND_GREED_HISTORICAL}?limit={limit}", headers=headers)
             .json()
             .get("data", {})
         )
-        cache.set("fng_historical", data, timeout=86400)
+        print(len(data))
+        cache.set(f"fng_historical_{limit}", data, timeout=86400)
 
     return jsonify(data)
