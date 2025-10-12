@@ -37,4 +37,5 @@ ETHBTC continues to mirror the projected path toward the lower end of wave D, ma
 
 📌 **Outlook**  
 Minor price fluctuations may occur as liquidity is gathered on the way down, but the overall structure still supports the potential for a recovery phase once this corrective leg completes. Traders are advised to stay focused on the macro structure for positioning ahead of the next major move.  
+
 ---

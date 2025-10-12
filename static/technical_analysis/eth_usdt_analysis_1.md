@@ -115,4 +115,5 @@ time: 2025-09-25T18:43:25+03:30
 
 📌 Correction Phase:  
 After a 20% pullback from ATH, Ethereum is aligning with the expected ABC correction under wave (X). Momentum suggests price may test deeper support within the highlighted zone before resuming bullish structure. Traders should avoid rushing into long positions.  
+
 ---

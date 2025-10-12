@@ -42,4 +42,5 @@ Subsquid delivered a remarkable 150% rally, even as broader market conditions tu
 
 🪙 **Trade Management**  
 Traders who followed the plan could secure over 80% profit. Taking profits at these levels ensures gains are locked in while allowing flexibility for any extended upside.
+
 ---

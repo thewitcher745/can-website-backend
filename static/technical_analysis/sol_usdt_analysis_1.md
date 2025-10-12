@@ -144,4 +144,5 @@ time: 2025-09-24T17:12:05+03:30
 
 📌 **Correction Phase**  
 A 20% retracement has unfolded, confirming wave B is in play. The next bullish impulse (wave C) requires a sharp reversal for momentum to sustain. Until then, accumulation near the highlighted box remains the focus for positioning.
+
 ---

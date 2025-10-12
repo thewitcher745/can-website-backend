@@ -38,5 +38,6 @@ SOMIUSDT entered the buy zone as planned, leading to a solid **30% gain on SPOT 
 
 💰 **Action Plan**  
 With **TP1 achieved**, consider taking **50% profit** and adjusting stop-loss to the entry level for risk-free management.  
+
 ---
 
