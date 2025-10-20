@@ -24,7 +24,9 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)  
 
 ---
+
 time: 2025-06-21T12:38:52+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/fHvLu03L/)  
@@ -34,7 +36,9 @@ time: 2025-06-21T12:38:52+03:30
 AVAX declined by over 25% since the last update, aligning with earlier projections. The highlighted zone remains a crucial level where institutional buyers may step in.  
 
 ---
+
 time: 2025-07-08T08:59:45+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/V9WxGRPG/)  
@@ -44,7 +48,9 @@ time: 2025-07-08T08:59:45+03:30
 Following a nearly 30% correction, AVAX rebounded 17% from the highlighted support zone. This level remains valid and future revisits could offer buying opportunities, while upside targets remain in play if the zone holds.  
 
 ---
+
 time: 2025-07-12T16:48:25+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/g4q0eMYw/)  
@@ -54,7 +60,9 @@ time: 2025-07-12T16:48:25+03:30
 AVAX recovered 30% after moving from supply to demand levels. With wave F now in progress, another breakout may follow after a brief pullback to support.  
 
 ---
+
 time: 2025-07-26T16:38:25+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/bZeuHiru/)  
@@ -64,7 +72,9 @@ time: 2025-07-26T16:38:25+03:30
 Despite a 60% recovery, AVAX has yet to reach official targets. Current corrections appear minor within the broader uptrend. Expected targets remain at $28.8 to $47.8.  
 
 ---
+
 time: 2025-08-17T09:57:45+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/OIvf8xvX/)  
@@ -74,7 +84,9 @@ time: 2025-08-17T09:57:45+03:30
 After 70% growth, the key focus is now the red flip zone. Failure to break above may trigger a rejection and extended downside, but a breakout could lead to a strong rally toward previous resistance levels.  
 
 ---
+
 time: 2025-09-10T17:24:25+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/4BWtOgrL/)  
@@ -84,7 +96,9 @@ time: 2025-09-10T17:24:25+03:30
 AVAX has now delivered 77% growth since the bottom call and 23% profit since the last update. A breakout above the flip zone could target $38, with further updates expected at the completion of wave (F).  
 
 ---
+
 time: 2025-09-19T09:52:25+03:30  
+
 ---
 
 ![AVAX chart](https://www.tradingview.com/x/Z6eN2rpG/)  
@@ -94,3 +108,22 @@ time: 2025-09-19T09:52:25+03:30
 AVAX achieved 50% gains on spot without significant drawdown. As price nears the end of this leg, gradual profit booking is advised. Market reactions at the highlighted zone will guide the next steps.
 
 ---
+
+time: 2025-10-12T11:43:25+03:30
+
+---
+
+![AVAX chart](https://www.tradingview.com/x/wDeeFkke/)  
+[View full chart](https://www.tradingview.com/x/wDeeFkke/)
+
+## 📊 Quick Recap
+
+Our AVAX roadmap played out almost perfectly — wave G extended all the way to the bottom support zone, delivering over 75% downside before staging an impressive 90% recovery. 🔄
+
+## 🧭 Current Outlook
+
+Even with the recent market-wide correction, it looks like wave G isn’t fully complete yet. We’re closely watching the two highlighted zones to pinpoint the exact end of this wave before the next potential rally begins. 📈
+
+## 🔮 Bigger Picture
+
+The broader outlook remains unchanged — the structure is still aligned with our original analysis. We’ll continue following this roadmap and aim for higher targets once confirmation arrives. ✔️

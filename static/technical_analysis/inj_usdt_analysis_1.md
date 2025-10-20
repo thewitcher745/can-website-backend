@@ -25,3 +25,23 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
+
+time: 2025-10-11T17:03:25+03+30
+
+---
+
+![INJ chart](https://www.tradingview.com/x/Y47NZzfH/)
+[View full chart](https://www.tradingview.com/x/Y47NZzfH/)
+
+## 🌐 Big-Picture Recap
+
+We’re zooming out on Injective (INJ) to get a clearer view of where things stand. Our earlier roadmap projected a long corrective journey downward starting from the $13 rejection zone, and that’s exactly what happened. ☄️
+
+## ⚡ Rapid Play-Out
+
+Although the original plan was meant to unfold over weeks or months, market makers moved fast, compressing that entire move into just minutes. Since then, INJ has bounced over 135% from deep within our buy zone, confirming that the setup played out beautifully. ⚡️
+
+## 💱 What’s Next
+
+At this stage, the smartest move is to secure profits and wait for another pullback toward lower supports before re-entering. If the market gives us another opportunity, that’s where the next high-probability trade will be waiting. 📉
+

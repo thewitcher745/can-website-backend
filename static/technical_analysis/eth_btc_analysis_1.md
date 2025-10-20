@@ -26,7 +26,9 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
+
 time: 2025-10-01T15:52:25+03:30
+
 ---
 
 ![ETHBTC chart](https://www.tradingview.com/x/xwh9ORNJ/)  
@@ -39,3 +41,19 @@ ETHBTC continues to mirror the projected path toward the lower end of wave D, ma
 Minor price fluctuations may occur as liquidity is gathered on the way down, but the overall structure still supports the potential for a recovery phase once this corrective leg completes. Traders are advised to stay focused on the macro structure for positioning ahead of the next major move.  
 
 ---
+
+time: 2025-10-14T17:33:25+03:30
+
+---
+
+![ETHBTC chart](https://www.tradingview.com/x/NYOiamRi/)  
+[View full chart](https://www.tradingview.com/x/NYOiamRi/)
+
+📉 **Correction from Top**: -22%
+📈 **Recovery from Support**: +13%
+
+The ETH/BTC pair continues to show a bearish structure, currently moving midway through wave D of its broader corrective phase.
+
+As it stands, the price action suggests a possible continuation toward lower support levels, with the next targets sitting between two key zones — and potentially even the bottom of the second support line. ⚠️
+
+However, everything now depends on how Ethereum reacts to the highlighted orange zone. A strong rejection here could trigger short-term relief, while a weak one may open the path for deeper movement. 👀
