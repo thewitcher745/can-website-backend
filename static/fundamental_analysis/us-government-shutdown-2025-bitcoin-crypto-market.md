@@ -1,7 +1,7 @@
 ---
 title: "U.S. Government Shutdown 2025: What It Means for Bitcoin and the Crypto Market"
 time: 2025-10-01T09:00:00+03:30
-thumbnail: "https://images2.imgbox.com/33/d4/PxbnQqMi_o.png"
+thumbnail: "https://images2.imgbox.com/e6/1f/I6vZbWQI_o.png"
 author: "CAN Analysis Team"
 tags: [Bitcoin, crypto market, U.S. government shutdown, economy, safe haven, inflation, political instability]
 desc: The 2025 U.S. government shutdown could reshape investor sentiment — with Bitcoin potentially emerging once again as a safe-haven asset amid rising political and economic uncertainty.
