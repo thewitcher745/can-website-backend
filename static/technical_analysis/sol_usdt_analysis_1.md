@@ -1,7 +1,7 @@
 ---
 title: "SOLUSDT 3D Chart Analysis"
 time: 2025-02-01T14:08:25+03:30
-image: "https://www.tradingview.com/x/qFn9eQHh/"
+image: "https://www.tradingview.com/x/ZAboP5OM/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [sol]
@@ -14,7 +14,7 @@ CAN_BAG Coin No. 3
 
 Fast, low-cost, and highly scalable, Solana powers a rapidly expanding DeFi and NFT ecosystem with strong institutional backing. Its speed and adoption make it one of the leading blockchain platforms, and it is worth accumulating at favorable technical levels.  
 
-![SOL chart](https://www.tradingview.com/x/qFn9eQHh/)  
+![SOL chart](https://www.tradingview.com/x/ZAboP5OM/)  
 
 🔼 **Direction:** LONG  
 🛍 **Leverage:** SPOT  
@@ -30,8 +30,8 @@ Fast, low-cost, and highly scalable, Solana powers a rapidly expanding DeFi and 
 
 Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time trading signals and premium market insights. 
 
-[View full chart](https://www.tradingview.com/x/qFn9eQHh/)  
-[VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
+[View full chart](https://www.tradingview.com/x/ZAboP5OM/)  
+[Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
 
