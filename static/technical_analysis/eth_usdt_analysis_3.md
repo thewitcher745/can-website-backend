@@ -42,3 +42,18 @@ time: 2025-10-17T13:04:25+03:30
 Ethereum retraced to our highlighted orange zone as planned ✔️. The correction has progressed around 9% 🛍, following our previous ETH price analysis.
 
 The main reaction point for the next recovery move remains the orange zone 📌. If the blue scenario plays out, we’ll provide a fresh update to keep traders informed. 💡
+
+---
+
+time: 2025-10-24T10:08:20+03:30
+
+---
+
+![ETH chart](https://www.tradingview.com/x/UYx74cIS/)
+[View full chart](https://www.tradingview.com/x/UYx74cIS/)
+
+The overall plan is still a distribution phase for **Ethereum** but since the previous highlighted zone that price is playing around right now is not strong enough it seems we have more games at hand. 🕯
+
+As we are seeing strength in **BTC**, we CAN expect **ETH** to follow as well. 🔜
+
+Let's see if price CAN break above the highlighted trendline to reach the LPSY (Last Point of Supply) before it is ready to continue its distribution or not? ⁉️

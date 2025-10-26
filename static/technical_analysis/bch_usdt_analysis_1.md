@@ -10,7 +10,7 @@ desc: "An in-depth BCHUSDT roadmap and chart analysis exploring key support and 
 
 The price action of **Bitcoin Cash (BCHUSDT)** on the 3-day chart is approaching a critical juncture, where the market must soon decide its next major move. Traders are carefully monitoring both bullish and bearish scenarios that could define the mid-term roadmap.
 
-![Bitcoin Cash chart](https://www.tradingview.com/x/VOUNLjd5/)
+![BCH chart](https://www.tradingview.com/x/VOUNLjd5/)
 
 ## Bullish Scenario: Retracement to Previous Highs
 
@@ -32,3 +32,18 @@ Both the bullish retracement and bearish correction paths create potential oppor
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
+
+time: 2025-10-18T10:29:30+03:30
+
+---
+
+![BCH chart](https://www.tradingview.com/x/IqLLMNl3/)
+[View full chart](https://www.tradingview.com/x/IqLLMNl3/)
+
+🔴 Correction into Roadmap Direction 27%
+
+The bearish scenario we had in mind for **Bitcoin** cash played out nicely so far. 📉
+
+Price is half way down to Target 1. You CAN book partial profits and make your positions safe until we reach the main target levels. 💰
+
+The overall direction is clear on this chart and the roadmap is valid. ✔️
