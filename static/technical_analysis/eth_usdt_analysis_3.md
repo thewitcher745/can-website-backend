@@ -27,9 +27,6 @@ The main objective is spotting an SC (Selling Climax) on Ethereum. 🕯 This is 
 
 **Phase transition:** Moving from distribution to accumulation signals a longer-term bullish trend.
 
-## VIP Crypto Signals:
-Join our VIP crypto signals and analysis community for real-time ETH technical analysis, exclusive Ethereum price analysis, and high-probability trade alerts. Don’t miss your chance to get ahead in the crypto market.
-
 [View full chart](https://www.tradingview.com/x/Ken9KIuA/)
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 

@@ -24,7 +24,9 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
+
 time: 2025-06-23T18:52:30+03:30
+
 ---
 
 ![FET chart](https://www.tradingview.com/x/D8Z0Qh3R/)  
@@ -34,7 +36,9 @@ time: 2025-06-23T18:52:30+03:30
 The roadmap has played out as expected, with price rejecting perfectly from resistance and falling nearly 40%. A key blue support line may hold price, offering potential for a recovery move with two resistance zones identified as future upside targets.  
 
 ---
+
 time: 2025-09-25T10:29:30+03:30
+
 ---
 
 ![FET chart](https://www.tradingview.com/x/7OkI8UQ5/)  
@@ -44,3 +48,24 @@ time: 2025-09-25T10:29:30+03:30
 Since the last update, FET has dropped more than 40% further into the support zone. While not attractive for long-term investment yet, the highlighted blue support area could provide short-term trading opportunities on lower timeframes. 
  
 ---
+
+time: 2025-10-13T09:59:25+03:30
+
+---
+
+![FET chart](https://www.tradingview.com/x/nnP1PjfV/)  
+[View full chart](https://www.tradingview.com/x/nnP1PjfV/) 
+
+## 📊 Performance snapshot
+
+If you followed our sell signals, wave C closed out your target, profits were met. After touching our buy zone, JASMY has recovered over 100%, so traders who re-entered early are in a strong position. 🛍
+
+## 🔁 Two pullback scenarios to watch
+
+Mid-shadow buy, add into the middle of the wick left by the sell-off.
+
+Revisit initial support, wait for price to test our original buy zone again. 🧲
+
+## 🧭 Plan of action
+
+We’ll take it step-by-step: watch how price behaves around the shadow and the initial support, then decide which scenario confirms first before adding size. Stay focused on price structure and volume for the confirmation. ⌛

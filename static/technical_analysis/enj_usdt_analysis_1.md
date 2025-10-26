@@ -65,3 +65,25 @@ After a 50% correction, ENJ has finally revisited its monthly support zone, alig
 
 📌 Forward Plan: A gradual DCA approach within the highlighted support zone may prove effective for building strong spot positions ahead of a potential breakout at the conclusion of wave C.  
 
+---
+
+time: 2025-10-15T10:39:25+03:30
+
+---
+
+![ENJ chart](https://www.tradingview.com/x/jc9UOYQX/)  
+[View full chart](https://www.tradingview.com/x/jc9UOYQX/)  
+
+## Market Playing Right Into the Plan 💱:
+
+It looks like the bears have had their fun with Enjin Coin (ENJ) lately, just as we expected. The price pushed even lower during the last market drop, completing a deeper correction that we had been eyeing for weeks. ☄️
+
+## Buy Zones Triggered:
+
+Both of our planned buy zones were activated during the recent dip, and those entries are now sitting roughly 40% in profit. It’s a solid reminder that patience pays off when you trust your roadmap and let the setup play out. ➕
+
+## What’s Next for ENJ?
+
+For now, the broader outlook still leans bearish, but that doesn’t mean opportunities are over. If you’ve been riding this move, it might be smart to lock in some gains here and wait for how the next leg unfolds.
+
+We’re watching closely for two potential scenarios — one of which could complete wave (C) and set up the next strong buy opportunity. 🟢

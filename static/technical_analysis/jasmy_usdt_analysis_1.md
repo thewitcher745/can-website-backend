@@ -24,3 +24,24 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 [VIP Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
+
+time: 2025-10-14T10:12:25+03+30
+
+---
+
+![JASMY chart](https://www.tradingview.com/x/xFfqH5gq/)
+[View full chart](https://www.tradingview.com/x/xFfqH5gq/)
+
+## 📊 Performance snapshot:
+
+If you followed our sell signals, wave C closed out your target profits were met. After touching our buy zone, JASMY has recovered over 100%, so traders who re-entered early are in a strong position. 🛍
+
+## 🔁 Two pullback scenarios to watch
+
+Mid-shadow buy. add into the middle of the wick left by the sell-off (aggressive entry).
+
+Revisit initial support. wait for price to test our original buy zone again (safer entry). 🧲
+
+## 🧭 Plan of action
+
+We’ll take it step-by-step: watch how price behaves around the shadow and the initial support, then decide which scenario confirms first before adding size. Stay focused on price structure and volume for the confirmation. ⌛
