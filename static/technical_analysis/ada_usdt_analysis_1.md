@@ -5,7 +5,7 @@ image: "https://www.tradingview.com/x/FDUowqp9/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [ada]
-Desc: "Cardano (ADA) continues to face downward pressure as market sentiment weakens. In this analysis, we’ll look at ADA’s current structure, possible reversal zones, and what traders can expect from the upcoming wave movements in the short and long term."
+desc: "Cardano (ADA) continues to face downward pressure as market sentiment weakens. In this analysis, we’ll look at ADA’s current structure, possible reversal zones, and what traders can expect from the upcoming wave movements in the short and long term."
 ---
 
 The recent market correction hasn’t been kind to Cardano (ADA). After the latest sell-off, ADA’s structure suggests the decline might not be over yet. The coin seems to be entering the early stages of a new corrective phase, which could lead to lower prices before a true recovery begins. ▶️

@@ -5,7 +5,7 @@ image: "https://www.tradingview.com/x/vvbzjCNz/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [fartcoin]
-Desc: "FARTCOIN came close to retesting its all-time high (ATH) back in mid-August, but as structure shows, that move was part of a corrective retracement within a much larger ABC pattern. Let’s break down the current roadmap and what to expect next."
+desc: "FARTCOIN came close to retesting its all-time high (ATH) back in mid-August, but as structure shows, that move was part of a corrective retracement within a much larger ABC pattern. Let’s break down the current roadmap and what to expect next."
 
 ---
 The rally toward ATH was actually wave B of an inner ABC move, nested inside a broader ABC correction. This layered structure indicates that the current market move is still in correction mode, not yet a full breakout phase.

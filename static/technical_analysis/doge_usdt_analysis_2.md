@@ -5,7 +5,7 @@ image: "https://www.tradingview.com/x/ADfnWTKj/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
 coins: [doge]
-Desc: "Dogecoin’s recent price action suggests that lower support zones may come back into play soon. In this analysis, we’ll take a higher-timeframe look at DOGE’s structure, its ongoing diametric pattern, and what could drive the next wave of movement. 🐕"
+desc: "Dogecoin’s recent price action suggests that lower support zones may come back into play soon. In this analysis, we’ll take a higher-timeframe look at DOGE’s structure, its ongoing diametric pattern, and what could drive the next wave of movement. 🐕"
 ---
 
 Zooming out to the weekly chart gives us a clearer perspective on Dogecoin (DOGE) and its broader structure. By focusing on the higher timeframe, we can see through short-term volatility and better anticipate major price movements.
