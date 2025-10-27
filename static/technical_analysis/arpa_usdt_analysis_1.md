@@ -29,8 +29,3 @@ Traders should carefully monitor price action and candle formations at these sup
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
 ---
-
-time:
-
----
-

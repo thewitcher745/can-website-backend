@@ -1,6 +1,6 @@
 ---
 title: "EIGENUSDT 1D ANALYSIS"
-time: 2025-10-16T09:52-25+03:30
+time: 2025-10-16T09:52:25+03:30
 image: "https://www.tradingview.com/x/ka4hhOBI/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

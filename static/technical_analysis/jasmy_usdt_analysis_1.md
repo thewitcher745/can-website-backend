@@ -25,7 +25,7 @@ Stay ahead of the crypto market — Join our VIP Telegram Channel for real-time 
 
 ---
 
-time: 2025-10-14T10:12:25+03+30
+time: 2025-10-14T10:12:25+03:30
 
 ---
 

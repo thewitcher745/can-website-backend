@@ -1,6 +1,6 @@
 ---
 title: "TRBUSDT 1W ANALYSIS"
-time: 2025-10-17T11:37:25+03+30
+time: 2025-10-17T11:37:25+03:30
 image: "https://www.tradingview.com/x/C7rQkGrc/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

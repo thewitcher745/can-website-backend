@@ -1,6 +1,6 @@
 ---
 title: "STXUSDT 1W ANALYSIS"
-time: 2025-10-12T13:59:30+03+30
+time: 2025-10-12T13:59:30+03:30
 image: "https://www.tradingview.com/x/gJHIjkNL/"
 author: "CAN Premium"
 tags: [analysis, roadmap]

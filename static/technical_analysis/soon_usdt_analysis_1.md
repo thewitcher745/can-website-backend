@@ -1,6 +1,6 @@
 ---
 title: "SOONUSDT 12H ANALYSIS"
-time: 2025-10-23T14:21:30
+time: 2025-10-23T14:21:30+03:30
 image: "https://www.tradingview.com/x/JWbXQ44U/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
