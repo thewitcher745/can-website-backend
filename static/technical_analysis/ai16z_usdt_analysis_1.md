@@ -37,7 +37,7 @@ Let's see if market makers will follow the rest of this readmap or not? 🥸
 
 ---
 
-time: 2025-23-23T10:16:20+03:30
+time: 2025-10-23T10:16:20+03:30
 
 ---
 
