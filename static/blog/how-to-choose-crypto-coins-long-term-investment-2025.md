@@ -1,7 +1,7 @@
 ---
 
 title: "How to Choose Crypto Coins for Long-Term Investment (2025 Edition)"
-time: 2025-10-26T12:00:00+03:30
+time: 2025-10-15T12:00:00+03:30
 thumbnail: "https://images2.imgbox.com/32/a8/cZdq2mF8_o.png"
 author: "CAN Analysis Team"
 tags: [crypto investment, long-term strategy, Bitcoin, altcoins, portfolio management, Cardano, Chainlink]
