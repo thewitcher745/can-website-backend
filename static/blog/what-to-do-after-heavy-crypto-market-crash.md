@@ -1,7 +1,7 @@
 ---
 
 title: "What Should We Do After a Heavy Crypto Market Crash?"
-time: 2025-10-26T14:00:00+03:30
+time: 2025-10-20T14:00:00+03:30
 thumbnail: "https://images2.imgbox.com/9d/09/c5x7WUmQ_o.png"
 author: "CAN Analysis Team"
 tags: [crypto market crash, trading strategy, spot trading, futures trading, range trading, Bitcoin, altcoins]
