@@ -2,6 +2,7 @@
 This file contains the endpoints for the analysis section-related stuff.
 """
 
+from datetime import datetime
 import yaml
 from os import path, getcwd
 import glob
@@ -22,35 +23,43 @@ def list_analysis_posts(n: int = 0):
     # List all analysis posts, sorted by latest update time
     posts = []
     for filepath in glob.glob(path.join(ANALYSIS_DIR, "*.md")):
-        sections = parse_multi_markdown_file(filepath)
-        if not sections:
+        try:
+            sections = parse_multi_markdown_file(filepath)
+
+            if not sections:
+                continue
+
+            # Use the last metadata section for the latest update
+            latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
+            first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
+            time = latest_meta.get("time", "")
+
+            # If the time field is mistyped, skip this post.
+            if type(time) is not datetime or time.tzinfo is None:
+                print(f"Invalid time format in {filepath}: {time}")
+                continue
+
+            slug = get_slug(filepath)
+            post = {
+                "slug": slug,
+                "title": first_meta.get("title", slug),
+                "time": time,  # Use latest update time
+                "thumbnail": first_meta.get(
+                    "thumbnail",
+                    get_logo_link_from_symbol(first_meta.get("coins", [])[0]),
+                ),
+                "image": first_meta.get("image", ""),
+                "author": first_meta.get("author", ""),
+                "tags": first_meta.get("tags", []),
+                "coins": first_meta.get("coins", []),
+                "desc": first_meta.get("desc", ""),
+            }
+
+            posts.append(post)
+
+        except Exception as e:
+            print(f"Error parsing {filepath}: {e}")
             continue
-
-        # Use the last metadata section for the latest update
-        latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
-        first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
-        time = latest_meta.get("time", "")
-
-        # If the time field is mistyped, skip this post.
-        if type(time) is str:
-            continue
-
-        slug = get_slug(filepath)
-        post = {
-            "slug": slug,
-            "title": first_meta.get("title", slug),
-            "time": time,  # Use latest update time
-            "thumbnail": first_meta.get(
-                "thumbnail", get_logo_link_from_symbol(first_meta.get("coins", [])[0])
-            ),
-            "image": first_meta.get("image", ""),
-            "author": first_meta.get("author", ""),
-            "tags": first_meta.get("tags", []),
-            "coins": first_meta.get("coins", []),
-            "desc": first_meta.get("desc", ""),
-        }
-
-        posts.append(post)
 
     posts.sort(key=lambda x: x["time"], reverse=True)
 
