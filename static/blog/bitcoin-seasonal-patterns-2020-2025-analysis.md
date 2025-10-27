@@ -10,8 +10,6 @@ desc: A comprehensive six-year analysis of Bitcoin’s month-to-month performanc
 
 ![Bitcoin Seasonal Patterns](https://images2.imgbox.com/a9/a7/BQVK1hxz_o.png)
 
-# 📈 Bitcoin’s Seasonal Patterns: A 6-Year Analysis (2020–2025)
-
 Over the past six years, from 2020 to 2025, our team analyzed Bitcoin’s month-to-month price performance to see if it behaves similarly to traditional markets like stocks or commodities — markets known for seasonal trends such as the *January Effect* or the saying *“Sell in May and Go Away.”*
 
 The goal was simple:
