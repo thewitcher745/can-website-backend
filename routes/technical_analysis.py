@@ -161,7 +161,7 @@ def get_analysis_post(slug):
                     "author": meta.get("author", ""),
                     "tags": meta.get("tags", []),
                     "desc": meta.get("desc", ""),
-                    "thumbnail": meta.get("thumbnail", ""),
+                    "image": meta.get("image", ""),
                 }
             )
 
@@ -198,7 +198,7 @@ def get_vip_analysis_post(slug):
                     "author": meta.get("author", ""),
                     "tags": meta.get("tags", []),
                     "desc": meta.get("desc", ""),
-                    "thumbnail": meta.get("thumbnail", ""),
+                    "image": meta.get("image", ""),
                 }
             )
 
