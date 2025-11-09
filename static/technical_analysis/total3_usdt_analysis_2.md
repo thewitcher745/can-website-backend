@@ -20,5 +20,18 @@ This roadmap acts as a guide for managing altcoin exposure in the near term. A c
 [View full chart](https://www.tradingview.com/x/C3yrgYXf/)
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
+---
 
+time:2025-10-28T14:11:25+03:30
 
+---
+
+![TOTAL3 Chart](https://www.tradingview.com/x/gmr0WzDl/)
+[View full chart](https://www.tradingview.com/x/gmr0WzDl/)
+
+🟢 #Altcoins show solid recovery has gone up by +11%! 🟢
+Buyers continue to push prices higher as TOTAL3, the altcoin market index, extends its rally by 11% from the recent low. ➕
+
+Now, the index has reached the expected resistance zone, marking a critical turning point. Two scenarios are possible: a rejection from the highlighted orange zone, or a break above the previous high to clear remaining liquidity. 🕯
+
+At this stage, traders should remain selective with open positions and cautious about direction, as the market sits at a decisive resistance level. ⚠️

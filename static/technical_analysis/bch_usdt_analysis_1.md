@@ -47,3 +47,22 @@ The bearish scenario we had in mind for **Bitcoin** cash played out nicely so fa
 Price is half way down to Target 1. You CAN book partial profits and make your positions safe until we reach the main target levels. 💰
 
 The overall direction is clear on this chart and the roadmap is valid. ✔️
+
+---
+
+time: 2025-10-28T10:55:30+03:30
+
+---
+
+![BCH chart](https://www.tradingview.com/x/xC2cumJN/)
+[View full chart](https://www.tradingview.com/x/xC2cumJN/)
+
+🟢 Recovery on track with +27% growth! 🟢
+We’ve been tracking #BCH closely, and price continues to move perfectly along our projected roadmap. 🔄
+
+From here, two key scenarios may unfold:
+
+🥇 Scenario 1: A rejection from the orange resistance zone, confirming the black bearish setup. 📉
+🥈 Scenario 2: A liquidity grab above previous highs, signaling potential continuation of the bullish move.
+
+If you’re trading this setup, make sure to prepare for both outcomes and manage your risk with proper stop-loss placements. ✔️

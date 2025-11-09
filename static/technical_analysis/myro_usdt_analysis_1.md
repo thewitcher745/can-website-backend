@@ -1,6 +1,6 @@
 ---
 title: "MYROUSDT 3D ANALYSIS"
-time: 2025-06-18T11:16:25+03+30
+time: 2025-06-18T11:16:25+03:30
 image: "https://www.tradingview.com/x/Js6JSkyB/"
 author: "CAN Premium"
 tags: [analysis, roadmap]
@@ -30,7 +30,7 @@ The MYROUSDT 3D chart shows clear corrective movement under controlled market co
 
 ---
 
-time: 2025-07-03T09:36:25+03+30
+time: 2025-07-03T09:36:25+03:30
 
 ---
 
@@ -41,7 +41,7 @@ Inner wave movements are unfolding perfectly, delivering a sharp +30% growth rig
 
 ---
 
-time: 2025-08-01T09:36:25+03+30
+time: 2025-08-01T09:36:25+03:30
 
 ---
 
@@ -54,7 +54,7 @@ At the moment, this coin isn’t viable for new investment unless price retraces
 
 ---
 
-time: 2025-10-27T13:09:25+03+30
+time: 2025-10-27T13:09:25+03:30
 
 ---
 

@@ -98,3 +98,38 @@ time: 2025-10-26T10:20:25+03:30
 
 BTC made a key move following our minor red scenario, with the orange zone showing signs of weakening resistance after multiple touches. 🟢 Long scalp trades are up +5.5% so far. Traders may consider taking partial profits now, targeting the main resistance at the gray zone for full profit realization. ⚠️ Watch for potential rejection at that level.
 
+---
+
+time: 2025-10-27T12:14:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/nHhRgt95/)
+[View full chart](https://www.tradingview.com/x/nHhRgt95/)
+
+Bitcoin has reached the main resistance zone, marking a solid 9.4% gain for those who followed the long scalp setup. 🪙
+
+However, hitting this zone does not mean it’s time to open short positions blindly. ⁉️
+
+Market makers often play liquidity games around key levels, so without a clear bearish pattern or a strong rejection candle, it’s safer to wait for confirmation before entering new short trades. ⛔️
+
+Patience and precision remain key in this BTCUSDT trading setup, so stay alert for the next signal. ⚡️
+
+---
+
+time: 2025-10-30T09:57:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/3NOrTbCi/)
+[View full chart](https://www.tradingview.com/x/3NOrTbCi/)
+
+Bitcoin continues to follow our main BTCUSDT analysis perfectly, dropping over 6.5% after a clean rejection from the key resistance zone. 📉
+
+Now, the market is setting up for a possible retracement before the next major swing move. Here are the two potential Bitcoin price scenarios:
+
+1️⃣ **Retracement to the broken trendline:** A short-term pullback into the orange highlighted zone could test liquidity before continuation. 🚩
+
+2️⃣ **Extended retracement to main resistance:** Price may attempt to reclaim the upper resistance zone, aiming to sweep stops above previous highs before the next drop. ⚠️
+
+Stay alert and manage trades carefully as BTC approaches these crucial zones, volatility is likely to spike. ⚡️

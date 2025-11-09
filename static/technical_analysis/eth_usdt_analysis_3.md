@@ -57,3 +57,48 @@ The overall plan is still a distribution phase for **Ethereum** but since the pr
 As we are seeing strength in **BTC**, we CAN expect **ETH** to follow as well. 🔜
 
 Let's see if price CAN break above the highlighted trendline to reach the LPSY (Last Point of Supply) before it is ready to continue its distribution or not? ⁉️
+
+---
+
+time: 2025-10-27T18:02:20+03:30
+
+---
+
+![ETH chart](https://www.tradingview.com/x/j01QPJJb/)
+[View full chart](https://www.tradingview.com/x/j01QPJJb/)
+
+⚡️ ETHUSDT has gained +10% since our last update! ⚡️ Although some red candles have appeared on lower timeframes, liquidity above the previous high still remains untapped. ⚠️
+
+This suggests that opening short positions may still be risky, as market makers could be setting a trap to catch early shorters before the next major correction. 🚨 If this scenario unfolds, the highlighted zone marks the potential area for LPSY (Last Point of Supply) before momentum shifts. 📈
+
+---
+
+time: 2025-10-29T20:39:20+03:30
+
+---
+
+![ETH chart](https://www.tradingview.com/x/j01QPJJb/)
+[View full chart](https://www.tradingview.com/x/j01QPJJb/)
+
+Ethereum’s lower-timeframe structure is forming a complex diametric pattern, now approaching the end of wave (f). ⚙️
+
+As price hits the support zone for the third time, the next bounce may be weaker than expected, showing signs of exhaustion. ⚠️
+
+The upcoming wave (g) recovery could depend heavily on the FOMC meeting results, which might trigger either a short-term lift or deeper correction. 📉
+
+Stay patient, manage risk carefully, and watch for a confirmed breakout before entering new ETH trades. 🚀
+
+---
+
+time: 2025-10-31T10:03:20+03:30
+
+---
+
+![ETH chart](https://www.tradingview.com/x/msN2FDJ5/)
+[View full chart](https://www.tradingview.com/x/msN2FDJ5/)
+
+Ethereum’s third touch of the support zone has successfully held so far, showing strong buying interest despite earlier weakness. 📈
+
+As price consolidates within this zone, there’s a potential for a double bottom formation, which could trigger the next wave (g) to the upside if confirmed. 🚀
+
+However, this bullish scenario depends on whether ETHUSDT can produce a strong breakout from the highlighted zone soon. Until then, patience is key. Let the structure confirm before entering. 🔑
