@@ -12,11 +12,11 @@ desc: A comprehensive monthly-chart study of Bitcoin from 2011–2025 using NEO 
 
 Bitcoin’s price history is one of the most fascinating and complex charts in financial markets. From its early days of exponential growth to its evolving cycles of reduced momentum, BTC has developed a long-term structure that now demands deep, multi-framework analysis.
 In this complete study, we break down Bitcoin’s macro chart using:
-• Long-term impulse/correction structure
-• NEO Wave Theory
-• Momentum decay analysis
-• Major support/resistance reactions
-• Multiple bullish and bearish macro scenarios
+- Long-term impulse/correction structure
+- NEO Wave Theory
+- Momentum decay analysis
+- Major support/resistance reactions
+- Multiple bullish and bearish macro scenarios
 Let’s begin with the monthly chart, where the entire 2011–2025 structure becomes visible.
 
 ## Part 1: Understanding the Final Leg of a Long-Term Symmetric Pattern
@@ -31,19 +31,19 @@ Because this is a monthly timeframe analysis, we are not focusing on lower-timef
 Bitcoin’s long-term chart shows a sequence of major legs (A, B, C, D, E, F, G, H, and I), forming a complex structure that resembles a symmetric or arching formation. This shape has formed because each leg has progressively extended in duration and amplitude, creating a broadening curvature.
 Currently, BTC is advancing within the final leg — Wave I.
 This does not mean the top is confirmed, but it does mean:
-• The structure is reaching maturity.
-• The long-term wave count is almost complete.
-• BTC is entering a phase where macro tops become more probable.
+- The structure is reaching maturity.
+- The long-term wave count is almost complete.
+- BTC is entering a phase where macro tops become more probable.
 To increase clarity, we dig deeper into how each leg performed historically.
 
 ### Momentum Declining Across Each Major Leg
 
 A key insight revealed by deep analysis of each upward leg is the consistent reduction in growth percentage over time:
-• Wave A: ~315,573% gain
-• Wave C: ~3,859% gain
-• Wave E: ~1,576% gain
-• Wave G: ~254% gain
-• Wave I (current): ~87% so far
+- Wave A: ~315,573% gain
+- Wave C: ~3,859% gain
+- Wave E: ~1,576% gain
+- Wave G: ~254% gain
+- Wave I (current): ~87% so far
 
 This sharp decline in percentage growth tells us:
 
@@ -59,15 +59,15 @@ This sharp decline in percentage growth tells us:
 An important rule from NEO Wave Theory states:
 A single wave pattern cannot have more than 9 legs.
 This adds major context:
-• Bitcoin’s long-term pattern already contains 9 major legs (A to I).
-• Therefore, once Wave I completes, this entire macro-sequence must end.
-• A new pattern of higher degree must form afterward.
+- Bitcoin’s long-term pattern already contains 9 major legs (A to I).
+- Therefore, once Wave I completes, this entire macro-sequence must end.
+- A new pattern of higher degree must form afterward.
 
 This is a pivotal insight. It means the market is not just ending a rally — it is ending a multi-cycle structural pattern that began nearly 14 years ago. This raises the big question:
 What comes after Wave I finishes?
-• A new bullish pattern?
-• A massive correction?
-• A multi-year consolidation?
+- A new bullish pattern?
+- A massive correction?
+- A multi-year consolidation?
 These scenarios will be the focus of the next part of the analysis.
 
 ## Part 2: The Potential X-Wave and the Start of a New Macro Cycle
@@ -79,9 +79,9 @@ With the long-term 9-leg symmetric pattern nearing completion, the next logical 
 ### The X-Wave Scenario: A Connector to the next Cycle?
 
 In complex corrective structures, an X-wave often appears between two large formations to serve as a transitional phase. When applied to Bitcoin’s macro-structure, the X-wave would:
-• Connect the ending of the decade-long pattern (A–I)
-• Reset market conditions that have weakened
-• Prepare the chart for the next 9-wave bullish cycle
+- Connect the ending of the decade-long pattern (A–I)
+- Reset market conditions that have weakened
+- Prepare the chart for the next 9-wave bullish cycle
 
 Because momentum has been decreasing dramatically over the years in comparison—as shown in Part 1—Bitcoin cannot continue forming massive impulsive legs without first resetting through a corrective phase. This loss of momentum is not bearish by itself, but it is a warning that a cyclical correction may be approaching.
 
@@ -91,20 +91,20 @@ The chart gives us two main clues:
 
 1. The bottom of the Bow (Primary Support)
    The “bow-shaped” structure that has guided Bitcoin’s macro trend for over a decade has a major significance here. Because the bottom of the bow curve aligns precisely with:
-   • Previous cycle tops
-   • Previous cycle bottoms
-   • Historical pivot zones
+   - Previous cycle tops
+   - Previous cycle bottoms
+   - Historical pivot zones
    This confluence creates a powerful macro support zone. If the X-wave descends into this region and receives strong buying support, it greatly increases the probability that:
-   • The X-wave ends there
-   • A new bullish cycle begins
-   • Bitcoin may eventually even break above the bow’s upper boundary in the following cycle
+   - The X-wave ends there
+   - A new bullish cycle begins
+   - Bitcoin may eventually even break above the bow’s upper boundary in the following cycle
    And this would mark the start of a completely new long-term growth phase.
 
 2. If the Bow Support Fails: A Deeper Bearish Scenario
    If the primary support zone does not attract strong demand, then Bitcoin may be forced into a deeper corrective path. This means:
-   • The X-wave extends further downward
-   • Additional support levels come into play
-   • The macro-structure becomes more complex
+   - The X-wave extends further downward
+   - Additional support levels come into play
+   - The macro-structure becomes more complex
    This deeper bearish extension is not the preferred scenario, but it remains entirely valid under NEO Wave guidelines. The next chart will break down exactly how this lower-support scenario looks and what levels to watch.
 
 ## Part 3: The Deeper Support Scenario and the Manipulation Zone
@@ -116,9 +116,9 @@ If the primary bow-bottom support fails to hold during the X-wave correction, Bi
 ### The $4K–$6K Support: A High-Volatility Manipulation Zone
 
 A descent into this zone would indicate:
-• A breakdown of the bow-bottom support.
-• Loss of long-term bullish momentum.
-• Aggressive panic moves fueled by bearish sentiment, liquidations, and large-player manipulation.
+- A breakdown of the bow-bottom support.
+- Loss of long-term bullish momentum.
+- Aggressive panic moves fueled by bearish sentiment, liquidations, and large-player manipulation.
 
 This zone reflects the final meaningful support before the macro structure invalidates entirely. It is also the area where long-term buyers have historically stepped in with force. But a rebound from here means nothing unless Bitcoin performs one critical move.
 
@@ -127,10 +127,10 @@ This zone reflects the final meaningful support before the macro structure inval
 The only confirmation that a deep correction was actually a manipulation—and not the beginning of a multi-year bear market—is a strong reclaim of the previous $19,000 level.
 
 Why $19K level again?
-• It was the key support of the previous cycles.
-• It broke during the correction and now acts as major resistance.
-• Reclaiming it would prove that buyers regained dominance.
-• It would also confirm that the X-wave has likely bottomed.
+- It was the key support of the previous cycles.
+- It broke during the correction and now acts as major resistance.
+- Reclaiming it would prove that buyers regained dominance.
+- It would also confirm that the X-wave has likely bottomed.
 
 If Bitcoin were to fall into the $4K–$6K zone and then surge back above $19K with strong volume and momentum, the entire move downward could be classified as a manipulative shakeout, designed to exhaust sellers and trap late shorts. Only then could we confidently say:
 “The deep correction was manipulation, and the next bullish macro cycle has begun.”
@@ -138,9 +138,9 @@ If Bitcoin were to fall into the $4K–$6K zone and then surge back above $19K w
 ### What If Price Goes Even Lower?
 
 While the $4K–$6K region is the second major support zone, it may not be the final one. If Bitcoin fails to hold this area—or fails to reclaim $19K afterward—a far more bearish scenario emerges. The next chart will explore:
-• The final macro supports
-• The structure invalidation levels
-• And what the long-term implications are if Bitcoin enters those zones
+- The final macro supports
+- The structure invalidation levels
+- And what the long-term implications are if Bitcoin enters those zones
 
 ## Part 4: The Final Bearish Scenario and the Long-Term Wave B Cycle
 
@@ -151,34 +151,34 @@ If both major support zones fail—or even if the second support at $4K–$6K pr
 ### Reclassifying the Entire Structure: Wave A and Wave B
 
 If Bitcoin reaches the $1,000 zone, the entire decade-long climb from early prices to $123K loses its status as a finished multi-leg cycle. Instead, the upward movement becomes redefined as a single, massive Wave A of a much larger pattern. In this scenario:
-• The multi-year upward progression pattern (A, B, C, D, E, F, G to I) was Wave A of an even bigger cycle.
-• All corrective movements from 123k so far were only the early subdivisions of Wave B.
-• The actual Wave B correction would only be confirmed after the break to $1K.
+- The multi-year upward progression pattern (A, B, C, D, E, F, G to I) was Wave A of an even bigger cycle.
+- All corrective movements from 123k so far were only the early subdivisions of Wave B.
+- The actual Wave B correction would only be confirmed after the break to $1K.
 This would completely shift Bitcoin into a long-term bearish cycle.
 
 ### How Long Can Wave B Last?
 
 Wave B in large-scale patterns is known for being:
-• Taking more time to complete
-• Erratic and volatile
-• Filled with swings up and down movements
+- Taking more time to complete
+- Erratic and volatile
+- Filled with swings up and down movements
 
 If this scenario plays out, Bitcoin’s Wave B could potentially stretch all the way to 2040, forming a multi-decade consolidation and correction cycle. During this long-term structure:
-• Different rallies will appear
-• Deep declines will follow
-• Sentiment will switch repeatedly
-• Price action will become slower and drawn out in comparison to wave A
+- Different rallies will appear
+- Deep declines will follow
+- Sentiment will switch repeatedly
+- Price action will become slower and drawn out in comparison to wave A
 
 And critically: Wave B can extend even deeper—potentially to extreme historical support near $16. While such a level seems unthinkable today, it remains structurally possible under this scenario.
 
 ## A Note on Speculation and Probabilities
 
 Even though the charts imply both bullish and bearish long-term possibilities, all of these projections remain just a speculation. What actually unfolds and happens depends entirely on:
-• How Bitcoin reacts to each support level discussed in this article
-• Whether price reaches $19K level or not
-• Whether 19k level is supported or rejected
-• How deep the corrective structure extends
-• Whether momentum returns at each scenario at the support zones or not
+- How Bitcoin reacts to each support level discussed in this article
+- Whether price reaches $19K level or not
+- Whether 19k level is supported or rejected
+- How deep the corrective structure extends
+- Whether momentum returns at each scenario at the support zones or not
 
 As always, price action must be followed step by step. These scenarios are not certainties—they are roadmaps that help us navigate the market one phase at a time. We have to wait for price movements and update each scenario through time.
 
