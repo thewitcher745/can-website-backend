@@ -30,4 +30,37 @@ FILUSDT remains in accumulation. Expect a possible fake breakout (mSOS) followed
 [View full chart](https://www.tradingview.com/x/bquldlcT/)
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
+---
 
+time: 2025-11-06T21:18:25+03:30
+
+---
+
+![Fil Chart](https://www.tradingview.com/x/8eyUeAwk/)
+[View full chart](https://www.tradingview.com/x/8eyUeAwk/)
+
+## Buy Zone Reaction & First Target Hit ✅
+
+Early buyers got trapped exactly as expected while market makers drove price into our ideal buy zone. 📌
+
+Once orders were filled, FILUSDT pumped over 15% straight into the first target area. 🔝
+
+The smart move here is securing profits at each level and keeping the remaining position risk-free. 👛
+
+
+---
+
+time: 2025-11-07T09:46:25+03:30
+
+---
+
+![Fil Chart](https://www.tradingview.com/x/7iOw1qIJ/)
+[View full chart](https://www.tradingview.com/x/7iOw1qIJ/)
+
+## Full Move Delivered: 70% Growth 🚀
+
+Price exploded from the buy zone and delivered more than 70% upside, showing a clear SOS (Sign of Strength). ✅
+
+At this stage, patience pays. Waiting for a healthy pullback gives bulls a better chance to aim for higher levels. 📉📈
+
+Stay sharp and we’ll see if this roadmap continues lining up with market makers’ next steps. 👀

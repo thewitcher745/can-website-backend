@@ -28,5 +28,16 @@ Careful observation of candlestick reactions and volume at these zones can provi
 [View full chart](https://www.tradingview.com/x/g4Unsswq/)
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
+---
 
+time: 2025-11-08T12:18:25+03:30
+
+---
+
+![AR Chart](https://www.tradingview.com/x/46205hPx/)
+[View full chart](https://www.tradingview.com/x/46205hPx/)
+
+Arweave is showing strong bullish momentum and challenging its descending trendline . The latest weekly candle signals a potential move toward higher targets 🔄.
+
+Buying on pullbacks could offer good growth opportunities as the market aims for the next key resistance levels 📈🪧.
 
