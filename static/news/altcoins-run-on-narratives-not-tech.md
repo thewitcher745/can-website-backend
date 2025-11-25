@@ -31,8 +31,6 @@ In altcoin markets, **storytelling creates consensus**, and consensus drives pri
 
 ### 🔹 2017: “Decentralization” & “New Global Money”
 
-![2017 altcoin cycle](https://images2.imgbox.com/dd/5b/O6kwqgqN_o.png)
-
 This was the ideological boom. Bitcoin was rebellion. Ethereum was revolution.
 ICOs exploded with promises like:
 
