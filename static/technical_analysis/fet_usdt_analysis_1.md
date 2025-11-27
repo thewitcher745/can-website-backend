@@ -69,3 +69,19 @@ Revisit initial support, wait for price to test our original buy zone again. �
 ## 🧭 Plan of action
 
 We’ll take it step-by-step: watch how price behaves around the shadow and the initial support, then decide which scenario confirms first before adding size. Stay focused on price structure and volume for the confirmation. ⌛
+
+---
+
+time: 2025-11-10T13:17:25+03:30
+
+---
+
+![FET chart](https://www.tradingview.com/x/wefSkNeg/)  
+[View full chart](https://www.tradingview.com/x/wefSkNeg/) 
+
+## 🟢 Recovery since 1st entry: 238%
+## 🟢 Recovery since 2nd entry: 141.81%
+
+Fet has been showing solid momentum, especially after giving us multiple chances to enter earlier in the trend 📌. The chart structure and overall technical analysis still support the main roadmap, and price continues to respect the key market levels we’ve been tracking.
+
+We’ll keep following the plan and look to secure profits as price approaches the highlighted resistance zones, watching for clean signals and healthy price action along the way 🪙

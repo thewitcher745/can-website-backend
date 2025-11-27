@@ -133,3 +133,39 @@ Now, the market is setting up for a possible retracement before the next major s
 2️⃣ **Extended retracement to main resistance:** Price may attempt to reclaim the upper resistance zone, aiming to sweep stops above previous highs before the next drop. ⚠️
 
 Stay alert and manage trades carefully as BTC approaches these crucial zones, volatility is likely to spike. ⚡️
+
+---
+
+time: 2025-11-09T18:25:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/eP99iq3h/)
+[View full chart](https://www.tradingview.com/x/eP99iq3h/)
+
+## ➕ Retracement since last update: 5% 🛍
+
+The chart is still following our original analysis, and we’ve already seen a clean 5% bounce after price tapped our support zone 📤.
+
+From here, we just need to see whether the market can push a little higher and revisit the first resistance area 🔝. How price reacts there will give us clearer signals about Bitcoin’s next move and the overall price action for the week.
+
+---
+
+time: 2025-11-14T10:13:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/RrzLRpK3/)
+[View full chart](https://www.tradingview.com/x/RrzLRpK3/)
+
+**🔽 Correction since Update: 10%**
+
+BTC has been following our roadmap almost perfectly, dropping over **10%** after tapping our resistance zone. ☄️
+
+Right now, the focus is on catching price at the end of wave C. 📈
+But keep in mind that wave C can still stretch deeper toward the lower boundary of the box.
+
+Because of that, it’s important to prepare a solid trading plan that covers both our black and blue scenarios. 🗓
+
+Smart positioning will matter more than ever here. 💡
+
