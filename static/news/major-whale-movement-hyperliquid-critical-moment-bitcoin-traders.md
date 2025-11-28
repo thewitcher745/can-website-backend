@@ -8,8 +8,6 @@ tags: [Bitcoin, Hyperliquid, whale activity, derivatives market, trading strateg
 desc: A top Hyperliquid whale secures $6.4M profit and exits shorts as Bitcoin reverses near $109K — signaling a shift from greed to caution in the crypto market.
 ---
 
-# 🚨 Major Whale Movement on Hyperliquid — Critical Moment for Bitcoin Traders?
-
 A huge signal just appeared in the **derivatives market**.
 The **#2 top-ranked whale on the Hyperliquid Leaderboard** has closed his massive short position — securing over **$6.4M in realized profit** and bringing his total **PNL to an incredible $99M+** on the platform.
 

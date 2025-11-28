@@ -11,6 +11,7 @@ desc: Learn how to respond effectively after a major crypto market crash — inc
 ![Crypto market crash](https://images2.imgbox.com/9d/09/c5x7WUmQ_o.png)
 
 When the crypto market crashes, panic spreads quickly. Prices fall sharply, volatility spikes, and traders start asking the same question:
+
 **What should I do when the market goes through a heavy crash?**
 
 In this article, we’ll break down what actually happens after a major crypto sell-off, why the market often enters a **range phase**, and how both **spot and futures traders** can take advantage of these moments instead of losing capital.
