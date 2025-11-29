@@ -67,3 +67,40 @@ time: 2025-11-13T10:43:25+03:30
 The market reacted exactly as expected, with Tether Dominance bouncing cleanly from our support box and climbing more than 6% so far 🔄. The price action confirms that our analysis and roadmap are still on track.
 
 That said, momentum isn’t strong enough yet to confirm a full bullish leg, so there’s still a chance this index dips back into the box for another go ⚠️. Keep an eye on how the market behaves there and it will offer clearer signals for the next move.
+
+---
+
+time: 2025-11-16T11:14:25+03:30
+
+---
+
+![USDT.D](https://www.tradingview.com/x/NiPpOLve/)
+[View full chart](https://www.tradingview.com/x/NiPpOLve/)
+
+## ↗️ Pattern Continuation: 13.60%
+
+Wave C has pushed this index straight into the first target with nearly 14% upside, exactly as projected. ⚡️
+Now we watch to see whether a reaction forms here: A pause or pullback would make sense at this stage. ⁉️
+
+If bears take profits around this level, a swing low could appear before the index continues higher, which would give alts some room to recover. ➕
+
+---
+
+time: 2025-11-22T18:52:25+03:30
+
+---
+
+![USDT.D](https://www.tradingview.com/x/10MiNL6e/)
+[View full chart](https://www.tradingview.com/x/10MiNL6e/)
+
+Tether Dominance has surged to the top just as outlined in the initial analysis, and momentum now shows that wave (F) of this diametric pattern is nearing completion. ⏱
+
+Once a correction begins, two potential wave (G) scenarios come into play:
+
+## 🥇 Shortened Wave (G):
+A sharp mid-way reversal would trigger a heavy crash across the crypto market.
+
+## 🥈 Extended Wave (G):
+This would send the index all the way back to the previous bottom, the setup that typically triggers a full altseason. ✨
+
+Our main roadmap favors the second scenario, but staying aware of both paths keeps us prepared and cautious. 🏃

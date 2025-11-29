@@ -169,3 +169,49 @@ Because of that, it’s important to prepare a solid trading plan that covers bo
 
 Smart positioning will matter more than ever here. 💡
 
+---
+
+time: 2025-11-20T19:07:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/SjQMxnZa/)
+[View full chart](https://www.tradingview.com/x/SjQMxnZa/)
+
+Price has moved down exactly as expected, reaching 88.5k after we noted on the weekly chart that the 86k zone would likely unlock. 📌
+
+On the daily timeframe, Bitcoin is now approaching a strong support zone, which increases the chances of wave C completing soon and a recovery move beginning under wave D. ➕
+
+Because this support area is fairly wide, swing traders should plan for a wider stop-loss on higher timeframes, while scalpers need to shift to lower timeframes for tighter risk management and cleaner setups. ⚠️
+
+---
+
+time: 2025-11-21T14:11:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/EO17PKU6/)
+[View full chart](https://www.tradingview.com/x/EO17PKU6/)
+
+## ▶️ Correction since Top: 30.06%
+
+Bitcoin’s correction has become quite steep, but the chart shows price touching a strong weekly support zone, which is a key area for potential technical reactions. 📌
+
+As long as this weekly support holds, the analysis remains valid and we could see a recovery phase begin across the market. ✅
+
+Hang in there as strong support zones often bring strong Signals. 🚩
+
+---
+
+time: 2025-11-24T10:11:25+03:30
+
+---
+
+![BTC chart](https://www.tradingview.com/x/jtSFEAsR/)
+[View full chart](https://www.tradingview.com/x/jtSFEAsR/)
+
+The weekly demand zone reacted exactly as expected, pushing the price up on the first touch. ✅
+
+But if bulls fail to break above the 90k resistance, Bitcoin may head lower again to form a double bottom on the chart. 📌
+
+Now we just need to watch whether enough volume comes in to break through this resistance or if the market rejects it again. 🧐

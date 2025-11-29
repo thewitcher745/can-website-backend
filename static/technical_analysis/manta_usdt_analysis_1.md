@@ -40,3 +40,31 @@ Price followed our second scenario perfectly, giving us a clean pullback into su
 Since the move played out smoothly, it’s wise not to get greedy and book half of the position and make the trade risk-free 🪙.
 
 We’ll hold the remaining portion for higher targets as wave C continues developing, watching the trend and price action for the next signals. 🚀
+
+---
+
+time: 2025-11-19T22:33:25+03:30
+
+---
+
+![MANTA Chart](https://www.tradingview.com/x/YHbayTbl/)
+[View full chart](https://www.tradingview.com/x/YHbayTbl/)
+
+We secured a **15% profit** at TP1 in the previous insight and are now set for the next move. 🔄
+Price could either continue upward  or pull back  to complete wave (b). 🧐
+Each path provides a unique trading opportunity for those applying proper risk management. ❗️
+
+---
+
+time: 2025-11-20T10:10:25+03:30
+
+---
+
+![MANTA Chart](https://www.tradingview.com/x/YHbayTbl/)
+[View full chart](https://www.tradingview.com/x/YHbayTbl/)
+
+## 🟢 Breakout Near Full TP: 20.46%
+
+As expected, price surged toward completing wave (c) of our ABC pattern. 🐂
+You can take full profit here and wait for the next setups. 🚀
+

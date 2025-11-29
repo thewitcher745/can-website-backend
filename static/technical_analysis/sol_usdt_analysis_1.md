@@ -194,4 +194,20 @@ With ~25% gain from the buy zone, tighten stops and make positions risk-free now
 
 Reaction at the trendline (rejection vs. clean breakout)
 Price behavior inside the two new demand zones (buyers showing strength)
-Any large volume spikes that confirm a directional move
+Any large volume spikes that confirm a directional move.
+
+---
+
+time: 2025-11-17T22:53:53+03:30
+
+---
+
+![SOL chart](https://www.tradingview.com/x/8isuPjNw/)  
+[View full chart](https://www.tradingview.com/x/8isuPjNw/)
+
+Price has dropped 36.86% since the last update, continuing its move downward with no major supports in between
+A clear reminder of why following the chart and roadmap matters. ☄️🔥
+
+As SOL approaches the key support zone, there’s no need to rush. Buy orders inside this area can be placed in steps to DCA safely into the box. 📉
+
+Now we wait to see where wave B completes before the next move develops. 🥸

@@ -57,3 +57,20 @@ The ETH/BTC pair continues to show a bearish structure, currently moving midway 
 As it stands, the price action suggests a possible continuation toward lower support levels, with the next targets sitting between two key zones — and potentially even the bottom of the second support line. ⚠️
 
 However, everything now depends on how Ethereum reacts to the highlighted orange zone. A strong rejection here could trigger deeper correction on Ethereum and its children, while a weak one may open the path for sooner recovery movement. 👀
+
+---
+
+time: 2025-11-17T10:36:25+03:30
+
+---
+
+![ETHBTC chart](https://www.tradingview.com/x/gs6DviKp/)  
+[View full chart](https://www.tradingview.com/x/gs6DviKp/)
+
+Price has recovered **6.43%** from support, showing a clear shift in momentum. 🔼
+Altcoins and ETH are no longer losing value against BTC as sharply as before.
+
+Ethereum dominance has bounced from a key support zone, gaining over 6%, which signals growing strength compared to Bitcoin. ➕
+
+From here, the focus is on whether ETH can break above the highlighted trendline, or if another rejection will send price back into the range. ⁉️
+Stay alert as Ethereum is at a critical technical point. 👀

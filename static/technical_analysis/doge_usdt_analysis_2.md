@@ -25,4 +25,34 @@ Traders should keep an eye on these key support areas, if DOGE revisits them, it
 [View full chart](https://www.tradingview.com/x/ADfnWTKj/)
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
+---
+
+time: 2025-11-04T18:02:25+03+30
+
+---
+
+![DOGE Chart](https://www.tradingview.com/x/4CobrDik/)
+[View full chart](https://www.tradingview.com/x/4CobrDik/)
+
+Price has finally moved in the exact direction expected after spending a couple of weeks lingering around the retracement zone. 📉
+
+With a 20% drop now completed according to the roadmap, we could soon see another retracement move forming near the highlighted technical orange zone. 🛡
+
+If you're trading based on this chart, make sure to watch each highlighted level carefully as these zones can offer clean signals and trading setups on lower timeframes. 📈
+
+---
+
+time: 2025-11-23T10:53:25+03+30
+
+---
+
+![DOGE Chart](https://www.tradingview.com/x/cpajQUAe/)
+[View full chart](https://www.tradingview.com/x/cpajQUAe/)
+
+## ▶️ Correction since Entry: 32.75%
+
+Wave C of the inner ABC pattern inside leg (F) has now completed over 30% downside, moving exactly according to the roadmap. 📉
+
+From here, small retracements are likely, but the main plan remains unchanged.
+The highlighted gray zone is still the area where we look to make our move. 💵
 

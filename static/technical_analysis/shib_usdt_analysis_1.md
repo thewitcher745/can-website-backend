@@ -30,5 +30,18 @@ A clean move above that level could shift Shiba Inu’s market sentiment and mar
 [View full chart](https://www.tradingview.com/x/4xYDDzDp/)
 [Free Telegram channel](https://t.me/+2znhsiCGpI81MzQ0)
 
+---
+
+time: 2025-11-18T17:51:30+03:30
+
+---
+
+![SHIB Chart](https://www.tradingview.com/x/4xYDDzDp/)
+[View full chart](https://www.tradingview.com/x/4xYDDzDp/)
 
 
+Price has dropped 24.29% since our last insight, giving the second buying opportunity we mentioned which is why patience always pays off with a memecoin. 🫴🔴
+
+Now the chart shows SHIB touching a key support zone, a level that could mark the end of wave (C) if buyers step in. 🔜
+
+Since this support box is quite wide, the safer approach is to DCA gradually if you're interested in adding more meme exposure. 💵

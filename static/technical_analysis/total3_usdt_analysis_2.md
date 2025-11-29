@@ -35,3 +35,39 @@ Buyers continue to push prices higher as TOTAL3, the altcoin market index, exten
 Now, the index has reached the expected resistance zone, marking a critical turning point. Two scenarios are possible: a rejection from the highlighted orange zone, or a break above the previous high to clear remaining liquidity. 🕯
 
 At this stage, traders should remain selective with open positions and cautious about direction, as the market sits at a decisive resistance level. ⚠️
+
+---
+
+time:2025-11-06T10:09:25+03:30
+
+---
+
+![TOTAL3 Chart](https://www.tradingview.com/x/NXo2aNsJ/)
+[View full chart](https://www.tradingview.com/x/NXo2aNsJ/)
+
+## 🔴 Correction since Top: 17.94% 🔴
+
+As expected, this index has continued its correction under wave C of the broader ABC pattern, following the roadmap accurately. 🔤
+
+With nearly 18% downside so far, there’s room for a swing move upward, giving alts a brief breather before the chart likely continues lower again. 📉
+
+Remember, this wave has three potential downside targets, and we’ve only reached the first one. Plan your altcoin positions and risk management carefully as the next levels can still be tapped. 💡
+
+---
+
+time:2025-11-23T19:47:25+03:30
+
+---
+
+![TOTAL3 Chart](https://www.tradingview.com/x/QzQM6B7V/)
+[View full chart](https://www.tradingview.com/x/QzQM6B7V/)
+
+## 🔴 Index Correction since Top: 24%
+
+We perfectly called the top on this index and warned what would likely happen to altcoins, and the chart has followed the roadmap accurately. 🧐
+
+TOTAL3 has now reached the first major target zone, which means we can expect a swing move upward before it continues deeper into wave (C). 📉
+
+If the index keeps respecting this roadmap, a short rally on alts could unfold, retracing back toward the **Flip Zone**. 🪧
+
+The reaction inside this highlighted zone will be crucial as it will signal whether altseason is preparing to begin or if another wave of downside is coming. 🔔
