@@ -44,18 +44,23 @@ def get_latest_videos():
     RSS_response.raise_for_status()
 
     root = ElementTree.fromstring(RSS_response.content)
-    channel_link = (
-        root.find("{http://www.w3.org/2005/Atom}author")
-        .find("{http://www.w3.org/2005/Atom}uri")
-        .text
-    )
+    if root:
+        channel_link = (
+            root.find("{http://www.w3.org/2005/Atom}author")
+            .find("{http://www.w3.org/2005/Atom}uri")
+            .text
+        )
+    else:
+        return jsonify([])
+
     recent_videos = []
     counter = 0
     for entry in root.findall("{http://www.w3.org/2005/Atom}entry"):
         # Filter out the shorts
         link = entry.find("{http://www.w3.org/2005/Atom}link").get("href")
-        if "shorts" in link:
-            continue
+        if link:
+            if "shorts" in link:
+                continue
         recent_videos.append(
             {
                 "channel_link": channel_link,
