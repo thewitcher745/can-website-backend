@@ -24,3 +24,9 @@ LONG_SHORT_RATIO_KRAKEN = (
     "https://api.kraken.com/0/public/Depth?pair={symbol}USDT&count=500"
 )
 TICKER = "https://fapi.binance.com/fapi/v2/ticker/price"
+COIN_INFO_META = (
+    "https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?symbol={symbol}"
+)
+COIN_INFO_CMC = (
+    "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?symbol={symbol}"
+)

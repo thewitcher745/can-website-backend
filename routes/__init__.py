@@ -21,3 +21,4 @@ import routes.technicals.dominance
 import routes.technicals.crypto_heatmap
 import routes.youtube
 import routes.logos.get_logo_link
+import routes.technicals.coin_info
