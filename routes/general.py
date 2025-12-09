@@ -20,7 +20,7 @@ def get_tickers():
     if not tickers_data:
         tickers_data = requests.get(TICKER).json()
 
-        cache.set("tickers", tickers_data, timeout=900)
+        cache.set("tickers", tickers_data, timeout=180)
 
     return tickers_data
 
