@@ -69,6 +69,57 @@ def list_analysis_posts(n: int = 0):
     return jsonify(posts[:n])
 
 
+@app.route("/api/analysis/coin/<symbol>", methods=["GET"])
+def list_analysis_posts_by_coin(symbol: str):
+    # List analysis posts that reference a specific coin (case-insensitive match)
+    if not symbol:
+        abort(400, description="Coin name is required.")
+
+    symbol_normalized = symbol.strip().lower()
+    posts = []
+
+    for filepath in glob.glob(path.join(ANALYSIS_DIR, "*.md")):
+        try:
+            sections = parse_multi_markdown_file(filepath)
+            if not sections:
+                continue
+
+            latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
+            first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
+            time = latest_meta.get("time", "")
+
+            if type(time) is not datetime or time.tzinfo is None:
+                continue
+
+            coins = [c.lower() for c in first_meta.get("coins", [])]
+            if symbol_normalized not in coins:
+                continue
+
+            slug = get_slug(filepath)
+            post = {
+                "slug": slug,
+                "title": first_meta.get("title", slug),
+                "time": time,
+                "thumbnail": first_meta.get(
+                    "thumbnail",
+                    get_logo_link_from_symbol(first_meta.get("coins", [])[0]),
+                ),
+                "image": first_meta.get("image", ""),
+                "author": first_meta.get("author", ""),
+                "tags": first_meta.get("tags", []),
+                "coins": first_meta.get("coins", []),
+                "desc": first_meta.get("desc", ""),
+            }
+
+            posts.append(post)
+        except Exception as e:
+            print(f"Error parsing {filepath}: {e}")
+            continue
+
+    posts.sort(key=lambda x: x["time"], reverse=True)
+    return jsonify(posts)
+
+
 @app.route("/api/vip_analysis", methods=["GET"])
 @app.route("/api/vip_analysis/", methods=["GET"])
 def list_vip_analysis_posts(n: int = 0):
