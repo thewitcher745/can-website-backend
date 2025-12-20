@@ -66,3 +66,34 @@ def get_meta():
     # Meta data changes infrequently, so cache for 24h.
     cache.set(cache_key, data, timeout=86400)
     return jsonify(data)
+
+
+
+@app.route("/api/coin_info/chart")
+def get_chart():
+    symbol = _normalize_symbol(request.args.get("symbol"))
+    period = int(request.args.get("period", 30))
+    if not symbol:
+        return jsonify({"error": "Symbol not provided"}), 400
+
+    cache_key = f"coin_info_chart_{symbol}_{period}"
+    cached = cache.get(cache_key)
+    if cached:
+        return jsonify(cached)
+
+    try:
+        data = CoinInfo.fetch_chart_data(symbol.upper(), period)
+    except Exception as exc:
+        return (
+            jsonify(
+                {
+                    "error": "Unable to fetch chart data from Binance API",
+                    "detail": str(exc),
+                }
+            ),
+            502,
+        )
+
+    # Chart data changes over time, so cache for 1h.
+    cache.set(cache_key, data, timeout=3600)
+    return jsonify(data)

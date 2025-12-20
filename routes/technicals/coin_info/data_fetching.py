@@ -1,11 +1,12 @@
 """The code in this file fetches the data related to the separated coin information webpage."""
 
 import os
+import time
 from typing import Any, Dict, Optional
 
 import requests
 
-from ..urls import COIN_INFO_META, COIN_INFO_CMC
+from ..urls import COIN_INFO_META, COIN_INFO_CMC, COIN_INFO_CHART
 
 
 class CoinInfo:
@@ -120,3 +121,54 @@ class CoinInfo:
             "logo": asset.get("logo"),
             "urls": normalized_urls,
         }
+
+    @staticmethod
+    def fetch_chart_data(symbol: str, period: int) -> list:
+        """
+        Fetch the closing prices of the coin in a given period. The timeframe is set according to the period.
+
+        Args:
+            symbol (str): The symbol of the coin.
+            period (int): The period of the chart in days.
+
+        Returns:
+            list: Normalized coin closing prices pulled from Binance API.
+        """
+        # Interval is set based on the period (number of days). We want a maximum of 400 points returned.
+        if period <= 7:
+            timeframe = "1h"
+        elif period <= 30:
+            timeframe = "4h"
+        elif period <= 90:
+            timeframe = "12h"
+        elif period <= 360:
+            timeframe = "1d"
+        elif period <= 365:
+            timeframe = "3d"
+        else:
+            timeframe = "1w"
+
+        end_time = int(time.time() * 1000)
+        start_time = end_time - period * 24 * 60 * 60 * 1000
+
+        api_url = (
+            COIN_INFO_CHART
+            + "?symbol="
+            + symbol
+            + "USDT&interval="
+            + timeframe
+            + "&startTime="
+            + str(start_time)
+            + "&endTime="
+            + str(end_time)
+        )
+
+        response = requests.get(api_url)
+        response.raise_for_status()
+
+        data = response.json()
+
+        # Returned data is a list of lists, we just want the times and closing prices.
+        chart_data = [{"time": candle[0], "close": candle[4]} for candle in data]
+
+        return chart_data

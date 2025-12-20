@@ -30,3 +30,4 @@ COIN_INFO_META = (
 COIN_INFO_CMC = (
     "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest?symbol={symbol}"
 )
+COIN_INFO_CHART = "https://api.binance.com/api/v3/klines"
