@@ -1,8 +1,9 @@
 from flask_cors import CORS
 from flask import Flask, request, jsonify
 from flask_caching import Cache
-from functools import wraps
-import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -20,7 +21,7 @@ cors = CORS(
         r"/*": {
             "origins": ALLOWED_ORIGINS,
             "methods": ["GET", "POST", "OPTIONS"],
-            "allow_headers": ["Content-Type"],
+            "allow_headers": ["Content-Type", "Authorization"],
         }
     },
 )

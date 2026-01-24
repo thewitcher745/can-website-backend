@@ -8,6 +8,7 @@ import routes.blog
 import routes.news
 import routes.high_potential_tokens
 import routes.general
+import routes.admin
 import routes.technicals.top_gainers
 import routes.technicals.top_losers
 import routes.technicals.trending
@@ -20,5 +21,5 @@ import routes.technicals.top_coins
 import routes.technicals.dominance
 import routes.technicals.crypto_heatmap
 import routes.youtube
-import routes.logos.get_logo_link
-import routes.technicals.coin_info
+import routes.logos.get_logo_link as _get_logo_link
+import routes.technicals.coin_info as _coin_info
