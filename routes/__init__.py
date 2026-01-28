@@ -8,7 +8,9 @@ import routes.blog
 import routes.news
 import routes.high_potential_tokens
 import routes.general
-import routes.admin
+import routes.admin.articles
+import routes.admin.postNewArticle
+import routes.admin.helpers
 import routes.technicals.top_gainers
 import routes.technicals.top_losers
 import routes.technicals.trending
