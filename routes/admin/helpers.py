@@ -111,3 +111,59 @@ def upload_json_to_supabase(
 
     base_url = _get_supabase_url()
     return f"{base_url}/storage/v1/object/public/{bucket}/{object_path}"
+
+
+def list_objects_in_supabase(bucket: str, prefix: str) -> List[Dict[str, Any]]:
+    prefix = (prefix or "").strip().strip("/")
+    client = _get_supabase_client()
+    storage = client.storage.from_(bucket)
+
+    try:
+        items = storage.list(prefix)
+    except TypeError:
+        items = storage.list(path=prefix)
+
+    if not isinstance(items, list):
+        raise RuntimeError("Supabase list failed")
+
+    results: List[Dict[str, Any]] = []
+    for item in items:
+        if isinstance(item, dict):
+            results.append(item)
+    return results
+
+
+def download_json_from_supabase(bucket: str, object_path: str) -> Dict[str, Any]:
+    object_path = object_path.lstrip("/")
+    client = _get_supabase_client()
+    storage = client.storage.from_(bucket)
+
+    try:
+        data = storage.download(object_path)
+    except TypeError:
+        data = storage.download(path=object_path)
+
+    if isinstance(data, (bytes, bytearray)):
+        raw = bytes(data)
+    elif isinstance(data, str):
+        raw = data.encode("utf-8")
+    elif (
+        isinstance(data, dict)
+        and "data" in data
+        and isinstance(data["data"], (bytes, bytearray))
+    ):
+        raw = bytes(data["data"])
+    else:
+        raw = cast(Any, data)
+
+    try:
+        decoded = (
+            raw.decode("utf-8") if isinstance(raw, (bytes, bytearray)) else str(raw)
+        )
+        parsed = json.loads(decoded)
+    except Exception as e:
+        raise RuntimeError(f"Supabase download failed: invalid JSON ({e})")
+
+    if not isinstance(parsed, dict):
+        raise RuntimeError("Supabase download failed: JSON is not an object")
+    return cast(Dict[str, Any], parsed)
