@@ -64,6 +64,7 @@ def post_new_article():
                 "published_at": published_at,
                 "title": data.get("title"),
                 "author": data.get("author"),
+                "thumbnail": data.get("thumbnail"),
                 "tags": _normalize_str_list(data.get("tags")),
             },
             "body": data.get("body"),
