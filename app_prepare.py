@@ -20,7 +20,7 @@ cors = CORS(
     resources={
         r"/*": {
             "origins": ALLOWED_ORIGINS,
-            "methods": ["GET", "POST", "OPTIONS"],
+            "methods": ["GET", "POST", "OPTIONS", "DELETE"],
             "allow_headers": ["Content-Type", "Authorization"],
         }
     },

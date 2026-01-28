@@ -4,6 +4,7 @@ from flask import jsonify, request
 
 from app_prepare import app
 from .helpers import (
+    delete_object_from_supabase,
     download_json_from_supabase,
     list_objects_in_supabase,
     validate_slug,
@@ -29,7 +30,9 @@ def _meta_title(meta: Dict[str, Any]) -> Any:
     return None
 
 
-def _build_object_path(type_: str, slug: str, is_vip: Optional[bool]) -> Tuple[bool, str, str]:
+def _build_object_path(
+    type_: str, slug: str, is_vip: Optional[bool]
+) -> Tuple[bool, str, str]:
     if type_ in {"blog", "news", "high_potential"}:
         return True, "", f"{type_}/{slug}.json"
 
@@ -45,14 +48,21 @@ def _build_object_path(type_: str, slug: str, is_vip: Optional[bool]) -> Tuple[b
 @token_required
 def list_articles():
     type_filter = request.args.get("type")
-    type_filter = type_filter.strip().lower() if isinstance(type_filter, str) and type_filter.strip() else None
+    type_filter = (
+        type_filter.strip().lower()
+        if isinstance(type_filter, str) and type_filter.strip()
+        else None
+    )
 
     results: List[Dict[str, Any]] = []
 
     prefixes: List[Tuple[str, Optional[bool], str]]
     if type_filter:
         if type_filter == "analysis":
-            prefixes = [("analysis", True, "analysis/vip"), ("analysis", False, "analysis/public")]
+            prefixes = [
+                ("analysis", True, "analysis/vip"),
+                ("analysis", False, "analysis/public"),
+            ]
         else:
             prefixes = [(type_filter, None, type_filter)]
     else:
@@ -108,7 +118,7 @@ def list_articles():
     return jsonify({"ok": True, "items": results})
 
 
-@app.route("/api/admin/article", methods=["GET"])
+@app.route("/api/admin/getArticle", methods=["GET"])
 @token_required
 def get_article():
     type_ = request.args.get("type")
@@ -116,7 +126,6 @@ def get_article():
 
     type_ = type_.strip().lower() if isinstance(type_, str) else ""
     slug = slug.strip() if isinstance(slug, str) else ""
-
     ok, err = validate_slug(slug)
     if not ok:
         return jsonify({"error": err}), 400
@@ -137,7 +146,15 @@ def get_article():
         for vip, object_path in candidates:
             try:
                 doc = download_json_from_supabase("articles", object_path)
-                return jsonify({"ok": True, "type": "analysis", "slug": slug, "vip": vip, "data": doc})
+                return jsonify(
+                    {
+                        "ok": True,
+                        "type": "analysis",
+                        "slug": slug,
+                        "vip": vip,
+                        "data": doc,
+                    }
+                )
             except Exception as e:
                 last_err = e
 
@@ -153,3 +170,60 @@ def get_article():
         return jsonify({"error": str(e)}), 404
 
     return jsonify({"ok": True, "type": type_, "slug": slug, "data": doc})
+
+
+@app.route("/api/admin/deleteArticle", methods=["DELETE"])
+@token_required
+def delete_article():
+    type_ = request.args.get("type")
+    slug = request.args.get("slug")
+
+    type_ = type_.strip().lower() if isinstance(type_, str) else ""
+    slug = slug.strip() if isinstance(slug, str) else ""
+
+    ok, err = validate_slug(slug)
+    if not ok:
+        return jsonify({"error": err}), 400
+
+    if type_ == "analysis":
+        vip_raw = request.args.get("isVip")
+        if vip_raw is None:
+            candidates = [
+                (True, f"analysis/vip/{slug}.json"),
+                (False, f"analysis/public/{slug}.json"),
+            ]
+        else:
+            vip = str(vip_raw).strip().lower() in {"1", "true", "yes"}
+            candidates = [(vip, f"analysis/{'vip' if vip else 'public'}/{slug}.json")]
+
+        deleted: List[Dict[str, Any]] = []
+        errors: List[str] = []
+        for vip, object_path in candidates:
+            try:
+                delete_object_from_supabase("articles", object_path)
+                deleted.append({"vip": vip, "object_path": object_path})
+            except Exception as e:
+                errors.append(str(e))
+
+        if deleted:
+            return jsonify(
+                {
+                    "ok": True,
+                    "type": "analysis",
+                    "slug": slug,
+                    "deleted": deleted,
+                    "errors": errors,
+                }
+            )
+        return jsonify({"error": errors[-1] if errors else "Delete failed"}), 404
+
+    ok2, err2, object_path = _build_object_path(type_, slug, None)
+    if not ok2:
+        return jsonify({"error": err2}), 400
+
+    try:
+        delete_object_from_supabase("articles", object_path)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 404
+
+    return jsonify({"ok": True, "type": type_, "slug": slug, "deleted": object_path})

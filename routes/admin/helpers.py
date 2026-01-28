@@ -167,3 +167,14 @@ def download_json_from_supabase(bucket: str, object_path: str) -> Dict[str, Any]
     if not isinstance(parsed, dict):
         raise RuntimeError("Supabase download failed: JSON is not an object")
     return cast(Dict[str, Any], parsed)
+
+
+def delete_object_from_supabase(bucket: str, object_path: str) -> None:
+    object_path = object_path.lstrip("/")
+    client = _get_supabase_client()
+    storage = client.storage.from_(bucket)
+
+    try:
+        storage.remove([object_path])
+    except TypeError:
+        storage.remove(paths=[object_path])
