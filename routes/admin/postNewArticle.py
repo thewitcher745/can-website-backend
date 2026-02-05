@@ -1,4 +1,5 @@
 from flask import jsonify, request
+from time import time
 
 from app_prepare import app
 from .helpers import (
@@ -46,8 +47,6 @@ def post_new_article():
     # if not ok:
     #     return jsonify({"error": err}), 400
 
-    published_at = data.get("published_at")
-
     if type_ in {"blog", "news"}:
         ok, err = require_fields(
             data,
@@ -61,8 +60,10 @@ def post_new_article():
                 "type": type_,
                 "slug": slug,
                 "status": status,
-                "published_at": published_at,
+                "lastModifiedTime": time() * 1000,
+                "time": data.get("time"),
                 "title": data.get("title"),
+                "description": data.get("description"),
                 "author": data.get("author"),
                 "thumbnail": data.get("thumbnail"),
                 "tags": _normalize_str_list(data.get("tags")),
@@ -83,7 +84,8 @@ def post_new_article():
                 "type": type_,
                 "slug": slug,
                 "status": status,
-                "published_at": published_at,
+                "time": data.get("time"),
+                "lastModifiedTime": time() * 1000,
                 "title": data.get("title"),
                 "author": data.get("author"),
                 "tags": _normalize_str_list(data.get("tags")),
@@ -99,7 +101,7 @@ def post_new_article():
     elif type_ == "high_potential":
         ok, err = require_fields(
             data,
-            ["tokenName", "symbol", "category", "logo", "image"],
+            ["title", "symbol", "category", "logo", "image"],
         )
         if not ok:
             return jsonify({"error": err}), 400
@@ -109,11 +111,11 @@ def post_new_article():
                 "type": type_,
                 "slug": slug,
                 "status": status,
-                "published_at": published_at,
-                "title": data.get("title"),
+                "time": data.get("time"),
+                "lastModifiedTime": time() * 1000,
                 "author": data.get("author"),
                 "tags": _normalize_str_list(data.get("tags")),
-                "tokenName": data.get("tokenName"),
+                "title": data.get("title"),
                 "symbol": data.get("symbol"),
                 "category": data.get("category"),
                 "logo": data.get("logo"),

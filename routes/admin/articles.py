@@ -18,10 +18,6 @@ def _extract_slug_from_name(name: str) -> str:
     return name
 
 
-def _meta_published_at(meta: Dict[str, Any]) -> Any:
-    return meta.get("published_at") if "published_at" in meta else meta.get("time")
-
-
 def _meta_title(meta: Dict[str, Any]) -> Any:
     if meta.get("title") is not None:
         return meta.get("title")
@@ -105,14 +101,15 @@ def list_articles():
                     "slug": slug,
                     "type": type_,
                     "status": meta.get("status"),
-                    "published_at": _meta_published_at(meta),
+                    "time": meta.get("time"),
+                    "lastModifiedTime": meta.get("lastModifiedTime"),
                     "title": _meta_title(meta),
                     "vip": is_vip if type_ == "analysis" else None,
                 }
             )
 
     def _sort_key(item: Dict[str, Any]):
-        return item.get("published_at") or ""
+        return str(item.get("lastModifiedTime") or item.get("time") or "")
 
     results.sort(key=_sort_key, reverse=True)
     return jsonify({"ok": True, "items": results})
