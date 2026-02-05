@@ -104,7 +104,7 @@ def list_articles():
                     "time": meta.get("time"),
                     "lastModifiedTime": meta.get("lastModifiedTime"),
                     "title": _meta_title(meta),
-                    "vip": is_vip if type_ == "analysis" else None,
+                    "isVip": is_vip if type_ == "analysis" else None,
                 }
             )
 
@@ -148,7 +148,7 @@ def get_article():
                         "ok": True,
                         "type": "analysis",
                         "slug": slug,
-                        "vip": vip,
+                        "isVip": vip,
                         "data": doc,
                     }
                 )
@@ -198,7 +198,7 @@ def delete_article():
         for vip, object_path in candidates:
             try:
                 delete_object_from_supabase("articles", object_path)
-                deleted.append({"vip": vip, "object_path": object_path})
+                deleted.append({"isVip": vip, "object_path": object_path})
             except Exception as e:
                 errors.append(str(e))
 

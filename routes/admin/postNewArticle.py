@@ -26,10 +26,6 @@ def _normalize_str_list(value):
 @token_required
 def post_new_article():
     data = request.get_json(silent=True) or {}
-    print(data)
-    # ok, err = require_fields(data, ["type", "slug", "status", "published_at", "body"])
-    # if not ok:
-    #     return jsonify({"error": err}), 400
 
     type_ = str(data.get("type") or "").strip().lower()
 
@@ -89,7 +85,7 @@ def post_new_article():
                 "title": data.get("title"),
                 "author": data.get("author"),
                 "tags": _normalize_str_list(data.get("tags")),
-                "vip": is_vip,
+                "isVip": is_vip,
                 "image": data.get("image"),
                 "coins": _normalize_str_list(data.get("coins")),
             },
