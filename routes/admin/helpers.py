@@ -13,6 +13,8 @@ def validate_slug(value: Any) -> Tuple[bool, str]:
     # Keep slugs simple/safe for object storage paths
     if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}", slug):
         return False, "Invalid slug format"
+
+        
     return True, ""
 
 
