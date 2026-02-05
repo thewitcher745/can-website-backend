@@ -92,7 +92,7 @@ def post_new_article():
             "body": data.get("body"),
         }
 
-        object_path = f"analysis/{'vip' if is_vip else 'public'}/{slug}.json"
+        object_path = f"analysis/{slug}.json"
 
     elif type_ == "high_potential":
         ok, err = require_fields(

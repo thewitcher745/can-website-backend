@@ -66,8 +66,7 @@ def list_articles():
             ("blog", None, "blog"),
             ("news", None, "news"),
             ("high_potential", None, "high_potential"),
-            ("analysis", True, "analysis/vip"),
-            ("analysis", False, "analysis/public"),
+            ("analysis", None, "analysis"),
         ]
 
     for type_, is_vip, prefix in prefixes:
@@ -104,7 +103,7 @@ def list_articles():
                     "time": meta.get("time"),
                     "lastModifiedTime": meta.get("lastModifiedTime"),
                     "title": _meta_title(meta),
-                    "isVip": is_vip if type_ == "analysis" else None,
+                    "isVip": meta.get("isVip") if type_ == "analysis" else None,
                 }
             )
 
@@ -128,34 +127,22 @@ def get_article():
         return jsonify({"error": err}), 400
 
     if type_ == "analysis":
-        vip_raw = request.args.get("isVip")
-        if vip_raw is None:
-            # Try VIP first, then public
-            candidates = [
-                (True, f"analysis/vip/{slug}.json"),
-                (False, f"analysis/public/{slug}.json"),
-            ]
-        else:
-            vip = str(vip_raw).strip().lower() in {"1", "true", "yes"}
-            candidates = [(vip, f"analysis/{'vip' if vip else 'public'}/{slug}.json")]
-
-        last_err: Optional[Exception] = None
-        for vip, object_path in candidates:
-            try:
-                doc = download_json_from_supabase("articles", object_path)
-                return jsonify(
-                    {
-                        "ok": True,
-                        "type": "analysis",
-                        "slug": slug,
-                        "isVip": vip,
-                        "data": doc,
-                    }
-                )
-            except Exception as e:
-                last_err = e
-
-        return jsonify({"error": str(last_err) if last_err else "Not found"}), 404
+        object_path = f"analysis/{slug}.json"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+            meta = doc.get("meta") if isinstance(doc, dict) else None
+            is_vip = bool(meta.get("isVip")) if isinstance(meta, dict) else False
+            return jsonify(
+                {
+                    "ok": True,
+                    "type": "analysis",
+                    "slug": slug,
+                    "isVip": is_vip,
+                    "data": doc,
+                }
+            )
+        except Exception as e:
+            return jsonify({"error": str(e)}), 404
 
     ok2, err2, object_path = _build_object_path(type_, slug, None)
     if not ok2:
@@ -183,36 +170,19 @@ def delete_article():
         return jsonify({"error": err}), 400
 
     if type_ == "analysis":
-        vip_raw = request.args.get("isVip")
-        if vip_raw is None:
-            candidates = [
-                (True, f"analysis/vip/{slug}.json"),
-                (False, f"analysis/public/{slug}.json"),
-            ]
-        else:
-            vip = str(vip_raw).strip().lower() in {"1", "true", "yes"}
-            candidates = [(vip, f"analysis/{'vip' if vip else 'public'}/{slug}.json")]
-
-        deleted: List[Dict[str, Any]] = []
-        errors: List[str] = []
-        for vip, object_path in candidates:
-            try:
-                delete_object_from_supabase("articles", object_path)
-                deleted.append({"isVip": vip, "object_path": object_path})
-            except Exception as e:
-                errors.append(str(e))
-
-        if deleted:
+        object_path = f"analysis/{slug}.json"
+        try:
+            delete_object_from_supabase("articles", object_path)
             return jsonify(
                 {
                     "ok": True,
                     "type": "analysis",
                     "slug": slug,
-                    "deleted": deleted,
-                    "errors": errors,
+                    "deleted": object_path,
                 }
             )
-        return jsonify({"error": errors[-1] if errors else "Delete failed"}), 404
+        except Exception as e:
+            return jsonify({"error": str(e)}), 404
 
     ok2, err2, object_path = _build_object_path(type_, slug, None)
     if not ok2:
