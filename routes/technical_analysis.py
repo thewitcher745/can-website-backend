@@ -2,260 +2,248 @@
 This file contains the endpoints for the analysis section-related stuff.
 """
 
-from datetime import datetime
-import yaml
-from os import path, getcwd
-import glob
 from flask import abort, jsonify
-from markdown import markdown
 
 from app_prepare import app
 from utils import get_slug
-from routes.logos.get_logo_link import get_logo_link_from_symbol
-
-ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis")
-VIP_ANALYSIS_DIR = path.join(getcwd(), "static/technical_analysis/vip")
+from routes.admin.helpers import download_json_from_supabase, list_objects_in_supabase
 
 
 @app.route("/api/analysis", methods=["GET"])
 @app.route("/api/analysis/", methods=["GET"])
 def list_analysis_posts(n: int = 0):
-    # List all analysis posts, sorted by latest update time
+    # List all public analysis posts
     posts = []
-    for filepath in glob.glob(path.join(ANALYSIS_DIR, "*.md")):
-        try:
-            sections = parse_multi_markdown_file(filepath)
 
-            if not sections:
-                continue
-
-            # Use the last metadata section for the latest update
-            latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
-            first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
-            time = latest_meta.get("time", "")
-
-            # If the time field is mistyped, skip this post.
-            if type(time) is not datetime or time.tzinfo is None:
-                print(f"Invalid time format in {filepath}: {time}")
-                continue
-
-            slug = get_slug(filepath)
-            post = {
-                "slug": slug,
-                "title": first_meta.get("title", slug),
-                "time": time,  # Use latest update time
-                "thumbnail": first_meta.get(
-                    "thumbnail",
-                    get_logo_link_from_symbol(first_meta.get("coins", [])[0]),
-                ),
-                "image": first_meta.get("image", ""),
-                "author": first_meta.get("author", ""),
-                "tags": first_meta.get("tags", []),
-                "coins": first_meta.get("coins", []),
-                "desc": first_meta.get("desc", ""),
-            }
-
-            posts.append(post)
-
-        except Exception as e:
-            print(f"Error parsing {filepath}: {e}")
+    objects = list_objects_in_supabase("articles", "analysis")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
             continue
 
-    posts.sort(key=lambda x: x["time"], reverse=True)
+        slug = get_slug(name)
+        object_path = f"analysis/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
+            continue
+
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        body = doc.get("body") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
+
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        if meta.get("isVip"):
+            continue
+
+        post = {"slug": slug, "meta": meta, "body": body}
+        posts.append(post)
+
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
 
     if n == 0:
         return jsonify(posts)
-
     return jsonify(posts[:n])
 
 
 @app.route("/api/analysis/coin/<symbol>", methods=["GET"])
 def list_analysis_posts_by_coin(symbol: str):
-    # List analysis posts that reference a specific coin (case-insensitive match)
+    # List public analysis posts that reference a specific coin (case-insensitive match)
     if not symbol:
         abort(400, description="Coin name is required.")
 
     symbol_normalized = symbol.strip().lower()
     posts = []
 
-    for filepath in glob.glob(path.join(ANALYSIS_DIR, "*.md")):
-        try:
-            sections = parse_multi_markdown_file(filepath)
-            if not sections:
-                continue
-
-            latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
-            first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
-            time = latest_meta.get("time", "")
-
-            if type(time) is not datetime or time.tzinfo is None:
-                continue
-
-            coins = [c.lower() for c in first_meta.get("coins", [])]
-            if symbol_normalized not in coins:
-                continue
-
-            slug = get_slug(filepath)
-            post = {
-                "slug": slug,
-                "title": first_meta.get("title", slug),
-                "time": time,
-                "thumbnail": first_meta.get(
-                    "thumbnail",
-                    get_logo_link_from_symbol(first_meta.get("coins", [])[0]),
-                ),
-                "image": first_meta.get("image", ""),
-                "author": first_meta.get("author", ""),
-                "tags": first_meta.get("tags", []),
-                "coins": first_meta.get("coins", []),
-                "desc": first_meta.get("desc", ""),
-            }
-
-            posts.append(post)
-        except Exception as e:
-            print(f"Error parsing {filepath}: {e}")
+    objects = list_objects_in_supabase("articles", "analysis")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
             continue
 
-    posts.sort(key=lambda x: x["time"], reverse=True)
+        slug = get_slug(name)
+        object_path = f"analysis/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
+            continue
+
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        body = doc.get("body") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
+
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        if meta.get("isVip"):
+            continue
+
+        coins = [c.lower() for c in meta.get("coins", [])]
+        if symbol_normalized not in coins:
+            continue
+
+        post = {"slug": slug, "meta": meta, "body": body}
+        posts.append(post)
+
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
+    return jsonify(posts)
+
+
+@app.route("/api/vip_analysis/coin/<symbol>", methods=["GET"])
+def list_vip_analysis_posts_by_coin(symbol: str):
+    # List VIP analysis posts that reference a specific coin (case-insensitive match)
+    if not symbol:
+        abort(400, description="Coin name is required.")
+
+    symbol_normalized = symbol.strip().lower()
+    posts = []
+
+    objects = list_objects_in_supabase("articles", "analysis")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
+            continue
+
+        slug = get_slug(name)
+        object_path = f"analysis/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
+            continue
+
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        body = doc.get("body") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
+
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        if not meta.get("isVip"):
+            continue
+
+        coins = [c.lower() for c in meta.get("coins", [])]
+        if symbol_normalized not in coins:
+            continue
+
+        post = {"slug": slug, "meta": meta, "body": body}
+        posts.append(post)
+
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
     return jsonify(posts)
 
 
 @app.route("/api/vip_analysis", methods=["GET"])
 @app.route("/api/vip_analysis/", methods=["GET"])
 def list_vip_analysis_posts(n: int = 0):
-    # List all analysis posts, sorted by latest update time
+    # List all VIP analysis posts
     posts = []
-    for filepath in glob.glob(path.join(VIP_ANALYSIS_DIR, "*.md")):
-        sections = parse_multi_markdown_file(filepath)
-        if not sections:
+
+    objects = list_objects_in_supabase("articles", "analysis")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
             continue
 
-        # Use the last metadata section for the latest update
-        latest_meta = sections[-1]["meta"] if "meta" in sections[-1] else {}
-        first_meta = sections[0]["meta"] if "meta" in sections[0] else {}
-        time = latest_meta.get("time", "")
-
-        # If the time field is mistyped, skip this post.
-        if type(time) is str:
+        slug = get_slug(name)
+        object_path = f"analysis/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
             continue
 
-        slug = get_slug(filepath)
-        post = {
-            "slug": slug,
-            "title": first_meta.get("title", slug),
-            "time": time,  # Use latest update time
-            "thumbnail": first_meta.get(
-                "thumbnail", get_logo_link_from_symbol(first_meta.get("coins", [])[0])
-            ),
-            "image": first_meta.get("image", ""),
-            "author": first_meta.get("author", ""),
-            "tags": first_meta.get("tags", []),
-            "coins": first_meta.get("coins", []),
-            "desc": first_meta.get("desc", ""),
-        }
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        body = doc.get("body") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
 
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        if not meta.get("isVip"):
+            continue
+
+        post = {"slug": slug, "meta": meta, "body": body}
         posts.append(post)
 
-    posts.sort(key=lambda x: x["time"], reverse=True)
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
 
     if n == 0:
         return jsonify(posts)
-
     return jsonify(posts[:n])
-
-
-def parse_multi_markdown_file(filepath):
-    """
-    Parse a markdown file with multiple YAML sections (---). Returns a list of dicts:
-    [{meta: ..., body: ...}, ...]
-    """
-
-    with open(filepath, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    sections = content.split("---")
-    results = []
-
-    idx = 1 if sections[0].strip() == "" else 0
-
-    while idx < len(sections) - 1:
-        meta = yaml.safe_load(sections[idx]) if sections[idx].strip() else {}
-        body = sections[idx + 1].strip() if idx + 1 < len(sections) else ""
-        results.append({"meta": meta, "body": body})
-        idx += 2
-
-    return results
 
 
 @app.route("/api/analysis/<slug>", methods=["GET"])
 def get_analysis_post(slug):
-    # Get a specific analysis post (main + updates)
+    # Get a specific public analysis post
 
-    filepath = path.join(ANALYSIS_DIR, f"{slug}.md")
-    if not path.isfile(filepath):
+    object_path = f"analysis/{slug}.json"
+    try:
+        doc = download_json_from_supabase("articles", object_path)
+    except Exception:
         abort(404)
 
-    sections = parse_multi_markdown_file(filepath)
-    results = []
+    meta = doc.get("meta") if isinstance(doc, dict) else None
+    body = doc.get("body") if isinstance(doc, dict) else None
+    if not isinstance(meta, dict):
+        meta = {}
 
-    for i, section in enumerate(sections):
-        meta = section.get("meta", {})
-        body = section.get("body", "")
-        item = {"content_html": markdown(body)}
+    if str(meta.get("status") or "").strip().lower() != "published":
+        abort(404)
 
-        if i == 0:
-            item.update(
-                {
-                    "slug": slug,
-                    "title": meta.get("title", slug),
-                    "time": meta.get("time", ""),
-                    "author": meta.get("author", ""),
-                    "tags": meta.get("tags", []),
-                    "desc": meta.get("desc", ""),
-                    "image": meta.get("image", ""),
-                }
-            )
+    if meta.get("isVip"):
+        abort(404)
 
-        else:
-            item["time"] = meta.get("time", "")
-
-        results.append(item)
-
-    return jsonify(results)
+    return jsonify({"slug": slug, "meta": meta, "body": body})
 
 
 @app.route("/api/vip_analysis/<slug>", methods=["GET"])
 def get_vip_analysis_post(slug):
-    # Get a specific analysis post (main + updates)
+    # Get a specific VIP analysis post
 
-    filepath = path.join(VIP_ANALYSIS_DIR, f"{slug}.md")
-    if not path.isfile(filepath):
+    object_path = f"analysis/{slug}.json"
+    try:
+        doc = download_json_from_supabase("articles", object_path)
+    except Exception:
         abort(404)
 
-    sections = parse_multi_markdown_file(filepath)
-    results = []
+    meta = doc.get("meta") if isinstance(doc, dict) else None
+    body = doc.get("body") if isinstance(doc, dict) else None
+    if not isinstance(meta, dict):
+        meta = {}
 
-    for i, section in enumerate(sections):
-        meta = section.get("meta", {})
-        body = section.get("body", "")
-        item = {"content_html": markdown(body)}
+    if str(meta.get("status") or "").strip().lower() != "published":
+        abort(404)
 
-        if i == 0:
-            item.update(
-                {
-                    "slug": slug,
-                    "title": meta.get("title", slug),
-                    "time": meta.get("time", ""),
-                    "author": meta.get("author", ""),
-                    "tags": meta.get("tags", []),
-                    "desc": meta.get("desc", ""),
-                    "image": meta.get("image", ""),
-                }
-            )
+    if not meta.get("isVip"):
+        abort(404)
 
-        else:
-            item["time"] = meta.get("time", "")
-
-        results.append(item)
-
-    return jsonify(results)
+    return jsonify({"slug": slug, "meta": meta, "body": body})

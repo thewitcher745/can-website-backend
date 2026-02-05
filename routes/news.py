@@ -1,120 +1,72 @@
 """
-This file contains the endpoints for the news section.
+This file contains the endpoints for the blog section-related stuff.
 """
 
-import yaml
-from os import path, getcwd
-import glob
 from flask import abort, jsonify
-from markdown import markdown
 
 from app_prepare import app
-from utils import get_slug, get_random_thumbnail
+from utils import get_slug
 
-
-NEWS_DIR = path.join(getcwd(), "static/news")
-
-
-def parse_news_markdown_file(filepath):
-    # Read the file content and return the metadata and markdown content
-    with open(filepath, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    if content.startswith("---"):
-        parts = content.split("---", 2)
-        if len(parts) >= 3:
-            meta = yaml.safe_load(parts[1])
-            md_content = parts[2].strip()
-        else:
-            meta = {}
-            md_content = content
-    else:
-        meta = {}
-        md_content = content
-
-    return meta, md_content
+from routes.admin.helpers import download_json_from_supabase, list_objects_in_supabase
 
 
 @app.route("/api/news", methods=["GET"])
 @app.route("/api/news/", methods=["GET"])
-def list_news_articles():
-    # List all news articles
-    articles = []
+def list_news_posts():
+    # List all news posts
+    posts = []
 
-    for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
-        meta, _ = parse_news_markdown_file(filepath)
-        slug = get_slug(filepath)
-        time = meta.get("time", "")
-
-        if type(time) is str:
+    objects = list_objects_in_supabase("articles", "news")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
             continue
 
-        article = {
-            "slug": slug,
-            "title": meta.get("title", slug),
-            "time": time,
-            "author": meta.get("author", ""),
-            "tags": meta.get("tags", []),
-            "desc": meta.get("desc", ""),
-            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
-            # The seed being provided from the slug in the entire news listing items AND the recent news items causes the same post in both
-            # lists to have the same thumbnail
-        }
-        articles.append(article)
+        slug = get_slug(name)
+        object_path = f"news/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
+            continue
 
-    # Sort by time, newest first
-    articles.sort(key=lambda x: x["time"], reverse=True)
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
 
-    return jsonify(articles)
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        post = {"slug": slug, "meta": meta}
+
+        posts.append(post)
+
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
+
+    return jsonify(posts)
 
 
 @app.route("/api/news/<slug>", methods=["GET"])
-def get_news_article(slug):
-    # Get a specific news article
-    filepath = path.join(NEWS_DIR, f"{slug}.md")
+def get_news_post(slug):
+    # Get a specific news post
 
-    if not path.isfile(filepath):
+    object_path = f"news/{slug}.json"
+    try:
+        doc = download_json_from_supabase("articles", object_path)
+    except Exception:
         abort(404)
 
-    meta, md_content = parse_news_markdown_file(filepath)
-    html_content = markdown(md_content)
-    article = {
-        "slug": slug,
-        "title": meta.get("title", slug),
-        "time": meta.get("time", ""),
-        "author": meta.get("author", ""),
-        "tags": meta.get("tags", []),
-        "desc": meta.get("desc", ""),
-        "content_html": html_content,
-    }
+    meta = doc.get("meta") if isinstance(doc, dict) else None
+    body = doc.get("body") if isinstance(doc, dict) else None
+    if not isinstance(meta, dict):
+        meta = {}
 
-    return jsonify(article)
+    if str(meta.get("status") or "").strip().lower() != "published":
+        abort(404)
 
-
-@app.route("/api/recent_news", methods=["GET"])
-def get_top_news():
-    # Get the top 5 headlines
-    articles = []
-
-    for filepath in glob.glob(path.join(NEWS_DIR, "*.md")):
-        meta, _ = parse_news_markdown_file(filepath)
-        slug = get_slug(filepath)
-        time = meta.get("time", "")
-        
-        if type(time) is str:
-            continue
-
-        article = {
-            "slug": slug,
-            "title": meta.get("title", slug),
-            "time": time,
-            "thumbnail": meta.get("thumbnail", get_random_thumbnail(seed=slug)),
-        }
-        articles.append(article)
-
-    # Sort by time, newest first
-    articles.sort(key=lambda x: x["time"], reverse=True)
-
-    articles = articles[:5]
-
-    return jsonify(articles)
+    return jsonify({"slug": slug, "meta": meta, "body": body})

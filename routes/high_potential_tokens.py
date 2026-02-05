@@ -1,63 +1,72 @@
 """
-This file contains the endpoints for the analysis section-related stuff.
+This file contains the endpoints for the HPT section-related stuff.
 """
 
-import yaml
-from os import path, getcwd
-import glob
-from flask import abort, jsonify, request
-from markdown import markdown
+from flask import abort, jsonify
 
 from app_prepare import app
 from utils import get_slug
 
-TOKENS_DIR = path.join(getcwd(), "static/high_potential_tokens")
+from routes.admin.helpers import download_json_from_supabase, list_objects_in_supabase
 
 
 @app.route("/api/high_potential_tokens", methods=["GET"])
 @app.route("/api/high_potential_tokens/", methods=["GET"])
-def list_high_potential_tokens():
-    # List all high potential tokens, sorted by name
-    n = request.args.get("n", default=0, type=int)
-    tokens = []
-    for filepath in glob.glob(path.join(TOKENS_DIR, "*.md")):
-        meta, _ = parse_token_markdown_file(filepath)
-        if not meta:
+def list_hpt_posts():
+    # List all HPT posts
+    posts = []
+
+    objects = list_objects_in_supabase("articles", "high_potential")
+    for obj in objects:
+        name = obj.get("name") if isinstance(obj, dict) else None
+        if not isinstance(name, str) or not name.endswith(".json"):
             continue
-        slug = get_slug(filepath)
-        token = {"slug": slug}
-        token.update(meta)
-        tokens.append(token)
-    tokens.sort(key=lambda x: x.get("name", "").lower())
-    if n == 0:
-        return jsonify(tokens)
-    return jsonify(tokens[:n])
 
+        slug = get_slug(name)
+        object_path = f"high_potential/{name}"
+        try:
+            doc = download_json_from_supabase("articles", object_path)
+        except Exception:
+            continue
 
-def parse_token_markdown_file(filepath):
-    """
-    Parse a markdown file with a YAML frontmatter (---). Returns meta dict and markdown body.
-    """
-    with open(filepath, "r", encoding="utf-8") as f:
-        content = f.read()
-    if content.startswith("---"):
-        parts = content.split("---", 2)
-        if len(parts) >= 3:
-            meta = yaml.safe_load(parts[1].strip())
-            body = parts[2].strip()
-            return meta, body
-    return {}, content
+        meta = doc.get("meta") if isinstance(doc, dict) else None
+        if not isinstance(meta, dict):
+            meta = {}
+
+        if str(meta.get("status") or "").strip().lower() != "published":
+            continue
+
+        post = {"slug": slug, "meta": meta}
+
+        posts.append(post)
+
+    def _sort_key(item):
+        meta = item.get("meta") if isinstance(item, dict) else None
+        if not isinstance(meta, dict):
+            return ""
+        return str(meta.get("lastModifiedTime") or "")
+
+    posts.sort(key=_sort_key, reverse=True)
+
+    return jsonify(posts)
 
 
 @app.route("/api/high_potential_tokens/<slug>", methods=["GET"])
-def get_high_potential_token(slug):
-    # Get a specific high potential token (meta + HTML body)
-    filepath = path.join(TOKENS_DIR, f"{slug}.md")
-    if not path.isfile(filepath):
+def get_hpt_post(slug):
+    # Get a specific HPT post
+
+    object_path = f"high_potential/{slug}.json"
+    try:
+        doc = download_json_from_supabase("articles", object_path)
+    except Exception:
         abort(404)
-    meta, md_content = parse_token_markdown_file(filepath)
-    html_content = markdown(md_content)
-    token = {"slug": slug}
-    token.update(meta)
-    token["content_html"] = html_content
-    return jsonify(token)
+
+    meta = doc.get("meta") if isinstance(doc, dict) else None
+    body = doc.get("body") if isinstance(doc, dict) else None
+    if not isinstance(meta, dict):
+        meta = {}
+
+    if str(meta.get("status") or "").strip().lower() != "published":
+        abort(404)
+
+    return jsonify({"slug": slug, "meta": meta, "body": body})
