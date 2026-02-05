@@ -9,7 +9,7 @@ def get_slug(filename):
     return path.splitext(path.basename(filename))[0]
 
 
-def get_random_thumbnail(seed: str = None):
+def get_random_thumbnail(seed: str | None = None):
     # Gets a random thumbnail link from the cached links with a seed, if provided
     with open(path.join(getcwd(), "static/thumbnail_placeholders.json"), "r") as f:
         if seed:
