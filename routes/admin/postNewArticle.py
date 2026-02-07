@@ -5,6 +5,7 @@ from app_prepare import app
 from .helpers import (
     require_fields,
     upload_json_to_supabase,
+    download_json_from_supabase,
 )
 from .login import token_required
 
@@ -26,6 +27,7 @@ def _normalize_str_list(value):
 @token_required
 def post_new_article():
     data = request.get_json(silent=True) or {}
+    edit_mode = request.args.get("edit", "").lower() in {"true", "1", "yes"}
 
     type_ = str(data.get("type") or "").strip().lower()
 
@@ -33,6 +35,19 @@ def post_new_article():
     # if not ok:
     #     return jsonify({"error": err}), 400
     slug = data["slug"].strip()
+
+    # Check for duplicate slug within the same type (skip if edit mode)
+    if not edit_mode:
+        existing_path = f"{type_}/{slug}.json"
+        try:
+            download_json_from_supabase("articles", existing_path)
+            return jsonify(
+                {
+                    "error": f"An article with slug '{slug}' already exists for type '{type_}'"
+                }
+            ), 409
+        except Exception:
+            pass  # Not found, proceed
 
     # ok, err = validate_status(data.get("status"))
     # if not ok:
