@@ -29,7 +29,6 @@ def list_analysis_posts(n: int = 0):
             continue
 
         meta = doc.get("meta") if isinstance(doc, dict) else None
-        body = doc.get("body") if isinstance(doc, dict) else None
         if not isinstance(meta, dict):
             meta = {}
 
@@ -39,7 +38,7 @@ def list_analysis_posts(n: int = 0):
         if meta.get("isVip"):
             continue
 
-        post = {"slug": slug, "meta": meta, "body": body}
+        post = {"slug": slug, "meta": meta}
         posts.append(post)
 
     def _sort_key(item):
@@ -78,7 +77,6 @@ def list_analysis_posts_by_coin(symbol: str):
             continue
 
         meta = doc.get("meta") if isinstance(doc, dict) else None
-        body = doc.get("body") if isinstance(doc, dict) else None
         if not isinstance(meta, dict):
             meta = {}
 
@@ -92,7 +90,7 @@ def list_analysis_posts_by_coin(symbol: str):
         if symbol_normalized not in coins:
             continue
 
-        post = {"slug": slug, "meta": meta, "body": body}
+        post = {"slug": slug, "meta": meta}
         posts.append(post)
 
     def _sort_key(item):
@@ -128,7 +126,6 @@ def list_vip_analysis_posts_by_coin(symbol: str):
             continue
 
         meta = doc.get("meta") if isinstance(doc, dict) else None
-        body = doc.get("body") if isinstance(doc, dict) else None
         if not isinstance(meta, dict):
             meta = {}
 
@@ -142,7 +139,7 @@ def list_vip_analysis_posts_by_coin(symbol: str):
         if symbol_normalized not in coins:
             continue
 
-        post = {"slug": slug, "meta": meta, "body": body}
+        post = {"slug": slug, "meta": meta}
         posts.append(post)
 
     def _sort_key(item):
@@ -175,7 +172,6 @@ def list_vip_analysis_posts(n: int = 0):
             continue
 
         meta = doc.get("meta") if isinstance(doc, dict) else None
-        body = doc.get("body") if isinstance(doc, dict) else None
         if not isinstance(meta, dict):
             meta = {}
 
@@ -185,7 +181,7 @@ def list_vip_analysis_posts(n: int = 0):
         if not meta.get("isVip"):
             continue
 
-        post = {"slug": slug, "meta": meta, "body": body}
+        post = {"slug": slug, "meta": meta}
         posts.append(post)
 
     def _sort_key(item):
