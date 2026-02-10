@@ -2,7 +2,7 @@
 This file contains the endpoints for the blog section-related stuff.
 """
 
-from flask import abort, jsonify
+from flask import abort, jsonify, request
 
 from app_prepare import app
 from utils import get_slug
@@ -10,10 +10,11 @@ from utils import get_slug
 from routes.admin.helpers import download_json_from_supabase, list_objects_in_supabase
 
 
-@app.route("/api/blog", methods=["GET"])
-@app.route("/api/blog/", methods=["GET"])
-def list_blog_posts():
-    # List all blog posts
+def fetch_blog_posts(n: int = 0) -> list:
+    """
+    Lists the n most recent posts.
+    """
+
     posts = []
 
     objects = list_objects_in_supabase("articles", "blog")
@@ -48,7 +49,24 @@ def list_blog_posts():
 
     posts.sort(key=_sort_key, reverse=True)
 
-    return jsonify(posts)
+    return posts
+
+
+@app.route("/api/blog", methods=["GET"])
+@app.route("/api/blog/", methods=["GET"])
+def list_blog_posts():
+    # Returns all blog posts as a JSON response
+
+    return jsonify(fetch_blog_posts())
+
+
+@app.route("/api/recent_blog", methods=["GET"])
+@app.route("/api/recent_blog/", methods=["GET"])
+def list_recent_blog_posts():
+    # Returns n most recent blog posts as a JSON response
+
+    n = int(request.args.get("n", 5))
+    return jsonify(fetch_blog_posts(n))
 
 
 @app.route("/api/blog/<slug>", methods=["GET"])
