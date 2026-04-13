@@ -209,6 +209,7 @@ def get_analysis_post(slug):
 
     meta = doc.get("meta") if isinstance(doc, dict) else None
     body = doc.get("body") if isinstance(doc, dict) else None
+    updates = doc.get("updates") if isinstance(doc, dict) else None
     if not isinstance(meta, dict):
         meta = {}
 
@@ -218,7 +219,7 @@ def get_analysis_post(slug):
     if meta.get("isVip"):
         abort(404)
 
-    return jsonify({"slug": slug, "meta": meta, "body": body})
+    return jsonify({"slug": slug, "meta": meta, "body": body, "updates": updates})
 
 
 @app.route("/api/vip_analysis/<slug>", methods=["GET"])
@@ -233,6 +234,7 @@ def get_vip_analysis_post(slug):
 
     meta = doc.get("meta") if isinstance(doc, dict) else None
     body = doc.get("body") if isinstance(doc, dict) else None
+    updates = doc.get("updates") if isinstance(doc, dict) else None
     if not isinstance(meta, dict):
         meta = {}
 
@@ -242,4 +244,4 @@ def get_vip_analysis_post(slug):
     if not meta.get("isVip"):
         abort(404)
 
-    return jsonify({"slug": slug, "meta": meta, "body": body})
+    return jsonify({"slug": slug, "meta": meta, "body": body, "updates": updates})
