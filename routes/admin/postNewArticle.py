@@ -106,6 +106,7 @@ def post_new_article():
                 "coins": _normalize_str_list(data.get("coins")),
             },
             "body": data.get("body"),
+            "updates": data.get("updates"),
         }
 
         object_path = f"analysis/{slug}.json"
