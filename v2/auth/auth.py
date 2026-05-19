@@ -144,7 +144,6 @@ class AuthManager:
         """
         data: dict[str, Any] = request.get_json(silent=True) or {}
 
-        print(data)
         username = str(data.get("username", "")).strip()
         password = str(data.get("password", ""))
 
