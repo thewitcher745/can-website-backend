@@ -27,12 +27,12 @@ class AuthManager:
     def register_routes():
         """Registers the auth endpoints."""
         app.add_url_rule(
-            "/api/admin/login",
+            "/api/v2/auth/login",
             view_func=AuthManager.admin_login,
             methods=["POST"],
         )
         app.add_url_rule(
-            "/api/admin/me",
+            "/api/v2/auth/me",
             view_func=AuthManager.admin_me,
             methods=["GET"],
         )
