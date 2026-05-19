@@ -3,8 +3,11 @@ import os
 from app_prepare import app
 from routes import *
 
+from v2.posts import PublicPostsRouter, AdminPostsRouter
 from v2.auth import AuthManager
 
+PublicPostsRouter.register_routes()
+AdminPostsRouter.register_routes()
 AuthManager.register_routes()
 
 if __name__ == "__main__":

@@ -6,3 +6,4 @@ __pycache__/
 **/process_logo_links.py
 **/logo_texts.txt
 **test**.py
+.env.local
