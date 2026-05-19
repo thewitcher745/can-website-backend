@@ -23,10 +23,10 @@ class SupabaseClient:
 
     @staticmethod
     def _get_supabase_url() -> str:
-        url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL")
+        url = os.environ.get("SUPABASE_API_URL")
 
         if not url:
-            raise RuntimeError("NEXT_PUBLIC_SUPABASE_URL is not set")
+            raise RuntimeError("SUPABASE_API_URL is not set")
 
         return url.rstrip("/")
 
