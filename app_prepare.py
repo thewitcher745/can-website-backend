@@ -35,7 +35,7 @@ def check_origin():
 
     origin = request.headers.get("Origin")
     if origin and origin not in ALLOWED_ORIGINS:
-        return jsonify({"error": "Access denied"}), 403
+        return jsonify({"error": "access_denied", "message": "Access denied"}), 403
     return None
 
 
