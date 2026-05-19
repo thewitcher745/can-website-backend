@@ -3,13 +3,13 @@ from typing import Any, Dict, List, Optional, Tuple
 from flask import jsonify, request
 
 from app_prepare import app
+from v2.auth import AuthManager
 from .helpers import (
     delete_object_from_supabase,
     download_json_from_supabase,
     list_objects_in_supabase,
     validate_slug,
 )
-from .login import token_required
 
 
 def _extract_slug_from_name(name: str) -> str:
@@ -41,7 +41,7 @@ def _build_object_path(
 
 
 @app.route("/api/admin/articles", methods=["GET"])
-@token_required
+@AuthManager.auth_required
 def list_articles():
     type_filter = request.args.get("type")
     type_filter = (
@@ -115,7 +115,7 @@ def list_articles():
 
 
 @app.route("/api/admin/getArticle", methods=["GET"])
-@token_required
+@AuthManager.auth_required
 def get_article():
     type_ = request.args.get("type")
     slug = request.args.get("slug")
@@ -157,7 +157,7 @@ def get_article():
 
 
 @app.route("/api/admin/deleteArticle", methods=["DELETE"])
-@token_required
+@AuthManager.auth_required
 def delete_article():
     type_ = request.args.get("type")
     slug = request.args.get("slug")

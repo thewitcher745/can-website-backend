@@ -2,12 +2,12 @@ from flask import jsonify, request
 from time import time
 
 from app_prepare import app
+from v2.auth import AuthManager
 from .helpers import (
     require_fields,
     upload_json_to_supabase,
     download_json_from_supabase,
 )
-from .login import token_required
 
 
 def _normalize_str_list(value):
@@ -24,7 +24,7 @@ def _normalize_str_list(value):
 
 
 @app.route("/api/admin/postNewArticle", methods=["POST"])
-@token_required
+@AuthManager.auth_required
 def post_new_article():
     data = request.get_json(silent=True) or {}
     edit_mode = request.args.get("edit", "").lower() in {"true", "1", "yes"}
